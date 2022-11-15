@@ -1,7 +1,7 @@
 // Libs
-import React, { useContext } from "react";
-import PropTypes from "prop-types";
 import classnames from "classnames";
+import PropTypes from "prop-types";
+import React, { useContext } from "react";
 
 const ThemeContext = React.createContext({});
 
@@ -23,14 +23,14 @@ export function useTheme() {
 }
 
 export function ThemeProvider({ children, className, theme: themeProp, ...otherProps }) {
-    const { theme: themeContext } = useTheme();
+    const { theme: themeContext = THEME.LIGHT } = useTheme();
 
     let theme;
 
     if (themeProp === THEME.REVERSE) {
-        theme = THEME_REVERSE[themeContext ?? THEME.LIGHT];
+        theme = THEME_REVERSE[themeContext];
     } else {
-        theme = themeProp ?? themeContext ?? THEME.LIGHT;
+        theme = themeProp ?? themeContext;
     }
 
     const rootClassName = classnames(
