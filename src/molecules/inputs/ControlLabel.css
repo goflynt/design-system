@@ -26,7 +26,7 @@
 }
 
 .thc-c-control-label--right .thc-c-control-label__label {
-    margin-left: var(--thc-spacing--S);
+    margin-left: var(--thc-spacing--M);
 }
 
 .thc-c-control-label--bottom {
@@ -42,5 +42,5 @@
 }
 
 .thc-c-control-label--left .thc-c-control-label__label {
-    margin-right: var(--thc-spacing--S);
+    margin-right: var(--thc-spacing--M);
 }

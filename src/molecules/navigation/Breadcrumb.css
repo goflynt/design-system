@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
 
-    padding: var(--thc-spacing--S);
+    padding: var(--thc-spacing--M);
 
     width: fit-content;
     align-self: stretch;
@@ -29,7 +29,7 @@
 }
 
 .thc-c-breadcrumb__icon:not(:last-child) {
-    margin-right: var(--thc-spacing--S);
+    margin-right: var(--thc-spacing--M);
 }
 
 .thc-c-breadcrumb__label {

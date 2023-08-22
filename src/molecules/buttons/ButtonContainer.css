@@ -1,5 +1,5 @@
 :root {
-    --thc-button-container-spacing: var(--thc-spacing--S);
+    --thc-button-container-spacing: var(--thc-spacing--M);
 }
 
 .thc-c-button-container {

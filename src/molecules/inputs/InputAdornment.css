@@ -1,5 +1,5 @@
 .thc-c-input-adornment {
-    --thc-input-adornment--spacing: var(--thc-spacing--S);
+    --thc-input-adornment--spacing: var(--thc-spacing--M);
 
     display: inline-flex;
     align-items: center;

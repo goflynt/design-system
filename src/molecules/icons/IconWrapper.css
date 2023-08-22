@@ -1,5 +1,5 @@
 :root {
-    --thc-icon-wrapper-spacing--vertical: var(--thc-spacing--S);
+    --thc-icon-wrapper-spacing--vertical: var(--thc-spacing--M);
     --thc-icon-wrapper-spacing--horizontal: var(--thc-spacing--XS);
 }
 

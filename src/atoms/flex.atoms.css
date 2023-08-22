@@ -34,11 +34,11 @@
 }
 
 .thc-o-flex--spaced:not(.thc-o-flex--column) > * + * {
-    margin-left: var(--thc-spacing--S);
+    margin-left: var(--thc-spacing--M);
 }
 
 .thc-o-flex--spaced.thc-o-flex--column > * + * {
-    margin-top: var(--thc-spacing--S);
+    margin-top: var(--thc-spacing--M);
 }
 
 /* Items */

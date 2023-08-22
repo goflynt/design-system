@@ -6,7 +6,7 @@
     --thc-button-border-color--disabled: none;
     --thc-button-border-radius: var(--thc-radius--L);
 
-    --thc-button-padding: var(--thc-spacing--S);
+    --thc-button-padding: var(--thc-spacing--M);
 }
 
 .thc-c-button {

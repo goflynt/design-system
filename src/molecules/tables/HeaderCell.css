@@ -14,7 +14,7 @@
     height: var(--thc-header-cell-height);
     min-width: var(--thc-header-cell-min-width);
     width: fit-content;
-    padding: 0 var(--thc-spacing--S);
+    padding: 0 var(--thc-spacing--M);
     border-bottom: var(--thc-borderSolid--S);
     border-right: var(--thc-borderSolid--S);
 

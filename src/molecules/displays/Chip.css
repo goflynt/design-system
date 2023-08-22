@@ -4,7 +4,7 @@
     --thc-chip-border: none;
     --thc-chip-border-radius: var(--thc-radius--L);
 
-    --thc-chip-padding: var(--thc-spacing--XS) var(--thc-spacing--S);
+    --thc-chip-padding: var(--thc-spacing--XS) var(--thc-spacing--M);
 }
 
 .thc-c-chip {

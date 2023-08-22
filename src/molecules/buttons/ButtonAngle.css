@@ -1,6 +1,6 @@
 .thc-c-button-angle {
     border-radius: 0 0 0 var(--thc-radius--L);
-    padding: var(--thc-spacing--XS) var(--thc-spacing--XS) var(--thc-spacing--S) var(--thc-spacing--S);
+    padding: var(--thc-spacing--XS) var(--thc-spacing--XS) var(--thc-spacing--M) var(--thc-spacing--M);
 }
 
 /* Without background (secondary) the box-shadow overflows from the button */
