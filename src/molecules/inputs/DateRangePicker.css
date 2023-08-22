@@ -3,7 +3,7 @@
 }
 
 .thc-c-date-range-picker__calendar .CalendarMonth_caption {
-    --thc-text-fontFamily: var(--thc-spacing--roboto);
+    --thc-text-fontFamily: var(--thc-fontFamily--roboto);
     --thc-text-fontSize: var(--thc-fontSize--L);
     --thc-text-lineHeight: var(--thc-lineHeight--L);
 }
