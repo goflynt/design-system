@@ -1,6 +1,6 @@
 :root {
-    --thc-card-spacing: var(--thc-spacing--M);
-    --thc-card-spacing--condensed: var(--thc-spacing--S);
+    --thc-card-spacing: var(--thc-spacing--XL);
+    --thc-card-spacing--condensed: var(--thc-spacing--M);
 }
 
 .thc-c-card {

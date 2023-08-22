@@ -3,8 +3,8 @@
     --thc-switch-color--hover: var(--thc-color--black-20);
     --thc-switch-color--disabled: var(--thc-color--black-20);
 
-    --thc-switch-color--checked: var(--thc-color--skyblue-100);
-    --thc-switch-color--checked-hover: var(--thc-color--skyblue-80);
+    --thc-switch-color--checked: var(--thc-color--blue-500);
+    --thc-switch-color--checked-hover: var(--thc-color--blue-400);
 
     --thc-switch-background-color: none;
     --thc-switch-background-color--disabled: var(--thc-color--black-10);
@@ -22,11 +22,11 @@
 }
 
 .thc-c-switch--error {
-    --thc-switch-color: var(--thc-color--red-40);
-    --thc-switch-color--hover: var(--thc-color--red-20);
+    --thc-switch-color: var(--thc-color--error-200);
+    --thc-switch-color--hover: var(--thc-color--error-100);
 
-    --thc-switch-color--checked: var(--thc-color--red-100);
-    --thc-switch-color--checked-hover: var(--thc-color--red-80);
+    --thc-switch-color--checked: var(--thc-color--error-500);
+    --thc-switch-color--checked-hover: var(--thc-color--error-400);
 }
 
 .thc-theme--dark .thc-c-switch--error {

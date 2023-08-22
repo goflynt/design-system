@@ -1,7 +1,7 @@
 .thc-theme--light,
 .thc-theme--dark {
     --thc-menu-item-background-color: none;
-    --thc-menu-item-background-color--active: var(--thc-color--blue-100);
+    --thc-menu-item-background-color--active: var(--thc-color--primary-500);
 }
 
 /* Common */
@@ -35,7 +35,7 @@
 
     background-color: var(--thc-menu-item-background-color);
 
-    padding: var(--thc-spacing--S) 0;
+    padding: var(--thc-spacing--M) 0;
 }
 
 .thc-c-menu-item-icon-label__icon {
@@ -50,8 +50,8 @@
 /* Icon */
 
 .thc-c-menu-item-icon {
-    margin: var(--thc-spacing--S) auto;
-    padding: var(--thc-spacing--S);
+    margin: var(--thc-spacing--M) auto;
+    padding: var(--thc-spacing--M);
 
     border: var(--thc-borderSolid--S);
     border-radius: var(--thc-radius--L);

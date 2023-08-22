@@ -37,7 +37,7 @@ export function Primary() {
                 <Tab>Tab two two</Tab>
                 <Tab icon="cube">Tab three three three</Tab>
             </Tabs>
-            <div style={{ marginTop: "var(--thc-spacing--M)" }}>
+            <div style={{ marginTop: "var(--thc-spacing--XL)" }}>
                 <TabPanel value={0} currentValue={currentValue}>
                     Panel one
                 </TabPanel>

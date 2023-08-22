@@ -1,6 +1,6 @@
 :root {
-    --thc-display-container-h-spacing: var(--thc-spacing--S);
-    --thc-display-container-v-spacing: var(--thc-spacing--M);
+    --thc-display-container-h-spacing: var(--thc-spacing--M);
+    --thc-display-container-v-spacing: var(--thc-spacing--XL);
 }
 
 .thc-c-display-container {
@@ -10,13 +10,13 @@
 /* Row */
 
 .thc-c-display-container--row {
-    --thc-display-container-v-spacing: var(--thc-spacing--S);
+    --thc-display-container-v-spacing: var(--thc-spacing--M);
 }
 
 /* Column  */
 
 .thc-c-display-container--column {
-    --thc-display-container-v-spacing: var(--thc-spacing--M);
+    --thc-display-container-v-spacing: var(--thc-spacing--XL);
 }
 
 /* Horizontal */

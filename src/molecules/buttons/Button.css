@@ -6,11 +6,11 @@
     --thc-button-border-color--disabled: none;
     --thc-button-border-radius: var(--thc-radius--L);
 
-    --thc-button-padding: var(--thc-spacing--S);
+    --thc-button-padding: var(--thc-spacing--M);
 }
 
 .thc-c-button {
-    --thc-text-fontWeight: var(--thc-fontWeight--extrabold);
+    --thc-text-fontWeight: var(--thc-fontWeight--bold);
     --thc-text-transform: uppercase;
 
     display: inline-flex;
@@ -35,11 +35,11 @@
 /* Primary & Caution type variations */
 
 .thc-c-button--primary:not([disabled]) {
-    --thc-button-background-color: var(--thc-color--skyblue-100);
+    --thc-button-background-color: var(--thc-color--blue-500);
 }
 
 .thc-c-button--caution:not([disabled]) {
-    --thc-button-background-color: var(--thc-color--red-100);
+    --thc-button-background-color: var(--thc-color--error-500);
 }
 
 /* Secondary type variation */

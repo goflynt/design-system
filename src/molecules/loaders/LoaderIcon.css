@@ -39,7 +39,7 @@
     to {
         height: 100%;
         opacity: 1;
-        background: var(--thc-color--green-100);
+        background: var(--thc-color--success-500);
     }
 }
 
@@ -52,7 +52,7 @@
     to {
         height: 90%;
         opacity: 1;
-        background: var(--thc-color--blue-100);
+        background: var(--thc-color--primary-500);
     }
 }
 
@@ -65,6 +65,6 @@
     to {
         height: 80%;
         opacity: 1;
-        background: var(--thc-color--red-100);
+        background: var(--thc-color--error-500);
     }
 }

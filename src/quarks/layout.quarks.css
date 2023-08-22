@@ -2,8 +2,8 @@
     --thc-layout-minWidth: 1280px;
     --thc-layout-minHeight: 768px;
 
-    --thc-layout-v-padding: var(--thc-spacing--L);
-    --thc-layout-h-padding: var(--thc-spacing--M);
+    --thc-layout-v-padding: var(--thc-spacing--XXL);
+    --thc-layout-h-padding: var(--thc-spacing--XL);
 }
 
 .thc-theme--light {
@@ -16,8 +16,8 @@
 
 @media (max-width: 1440px) {
     :root {
-        --thc-layout-v-padding: var(--thc-spacing--M);
-        --thc-layout-h-padding: var(--thc-spacing--S);
+        --thc-layout-v-padding: var(--thc-spacing--XL);
+        --thc-layout-h-padding: var(--thc-spacing--M);
     }
 }
 

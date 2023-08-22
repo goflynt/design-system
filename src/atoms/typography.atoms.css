@@ -1,141 +1,67 @@
 :root {
-    --thc-fontFamily--montserrat: Montserrat;
-    --thc-fontFamily--muli: Muli;
+    --thc-fontFamily--roboto: 'Roboto';
 }
 
 :root {
-    --thc-fontSize--S: 10px;
-    --thc-fontSize--M: 12px;
-    --thc-fontSize--L: 14px;
-    --thc-fontSize--XL: 24px;
+    --thc-fontSize--XS: 11px;
+    --thc-fontSize--S: 13px;
+    --thc-fontSize--M: 16px;
+    --thc-fontSize--L: 23px;
+    --thc-fontSize--XL: 33px;
 }
 
 :root {
-    --thc-fontWeight--light: 100;
     --thc-fontWeight--regular: 400;
-    --thc-fontWeight--medium: 600;
-    --thc-fontWeight--extrabold: 800;
+    --thc-fontWeight--medium: 500;
+    --thc-fontWeight--semi-bold: 600;
+    --thc-fontWeight--bold: 700;
 }
 
 :root {
-    --thc-lineHeight--S: 12px;
-    --thc-lineHeight--M: 15px;
-    --thc-lineHeight--L: 23px;
-    --thc-lineHeight--XL: 29px;
+    --thc-lineHeight--XS: 15.4px;
+    --thc-lineHeight--S: 18.2px;
+    --thc-lineHeight--M: 22.4px;
+    --thc-lineHeight--L: 32.2px;
+    --thc-lineHeight--XL: 46.2px;
 }
 
 .thc-u-typography--headline-1 {
-    font-family: var(--thc-fontFamily--montserrat);
-    font-weight: var(--thc-fontWeight--light);
-    font-size: 80px;
-    line-height: 129px;
-    letter-spacing: -1.5px;
+    font-family: var(--thc-fontFamily--roboto);
+    font-weight: var(--thc-fontWeight--regular);
+    font-size: var(--thc-fontSize--XL);
+    line-height: var(----thc-lineHeight-XL);
     text-transform: none;
 }
 
 .thc-u-typography--headline-2 {
-    font-family: var(--thc-fontFamily--montserrat);
-    font-weight: var(--thc-fontWeight--light);
-    font-size: 50px;
-    line-height: 80px;
-    letter-spacing: -0.5px;
-    text-transform: none;
-}
-
-.thc-u-typography--headline-3 {
-    font-family: var(--thc-fontFamily--montserrat);
+    font-family: var(--thc-fontFamily--roboto);
     font-weight: var(--thc-fontWeight--regular);
-    font-size: 39px;
-    line-height: 63px;
-    letter-spacing: 0px;
-    text-transform: none;
-}
-
-.thc-u-typography--headline-4 {
-    font-family: var(--thc-fontFamily--montserrat);
-    font-weight: var(--thc-fontWeight--regular);
-    font-size: 28px;
-    line-height: 45px;
-    letter-spacing: 0.25px;
-    text-transform: none;
-}
-
-.thc-u-typography--headline-5 {
-    font-family: var(--thc-fontFamily--montserrat);
-    font-weight: var(--thc-fontWeight--regular);
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: 0px;
-    text-transform: none;
-}
-
-.thc-u-typography--headline-6 {
-    font-family: var(--thc-fontFamily--montserrat);
-    font-weight: var(--thc-fontWeight--medium);
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0.15px;
+    font-size: var(--thc-fontSize--L);
+    line-height: var(----thc-lineHeight-L);
     text-transform: none;
 }
 
 .thc-u-typography--subtitle-1 {
-    font-family: var(--thc-fontFamily--montserrat);
+    font-family: var(--thc-fontFamily--roboto);
     font-weight: var(--thc-fontWeight--regular);
-    font-size: 13px;
-    line-height: 21px;
-    letter-spacing: 0.15px;
+    font-size: var(--thc-fontSize--M);
+    line-height: var(--thc-lineHeight--M);
     text-transform: none;
 }
 
-.thc-u-typography--subtitle-2 {
-    font-family: var(--thc-fontFamily--montserrat);
-    font-weight: var(--thc-fontWeight--medium);
-    font-size: 11px;
-    line-height: 18px;
-    letter-spacing: 0.1px;
-}
-
-.thc-u-typography--body-1 {
-    font-family: var(--thc-fontFamily--muli);
-    font-weight: var(--thc-fontWeight--regular);
-    font-size: 14px;
-    line-height: 23px;
-    letter-spacing: 0.5px;
-    text-transform: none;
-}
-
-.thc-u-typography--body-2 {
-    font-family: var(--thc-fontFamily--muli);
-    font-weight: var(--thc-fontWeight--regular);
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: 0.25px;
-    text-transform: none;
-}
-
+.thc-u-typography--body-1,
 .thc-u-typography--button {
-    font-family: var(--thc-fontFamily--muli);
-    font-weight: var(--thc-fontWeight--medium);
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: 1.25px;
-    text-transform: uppercase;
+    font-family: var(--thc-fontFamily--roboto);
+    font-weight: var(--thc-fontWeight--regular);
+    font-size: var(--thc-fontSize--S);
+    line-height: var(--thc-lineHeight--S);
+    text-transform: none;
 }
 
 .thc-u-typography--caption {
-    font-family: var(--thc-fontFamily--muli);
+    font-family: var(--thc-fontFamily--roboto);
     font-weight: var(--thc-fontWeight--regular);
-    font-size: 11px;
-    line-height: 18px;
-    letter-spacing: 0.4px;
+    font-size: var(--thc-fontSize--XS);
+    line-height: var(--thc-lineHeight--XS);
     text-transform: none;
-}
-
-.thc-u-typography--overline {
-    font-family: var(--thc-fontFamily--muli);
-    font-weight: var(--thc-fontWeight--regular);
-    font-size: 8px;
-    line-height: 13px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
 }

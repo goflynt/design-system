@@ -1,6 +1,6 @@
 .thc-c-breadcrumb {
-    --thc-actionable-box-shadow-color--hover: var(--thc-color--blue-20);
-    --thc-actionable-box-shadow-color--active: var(--thc-color--blue-40);
+    --thc-actionable-box-shadow-color--hover: var(--thc-color--primary-100);
+    --thc-actionable-box-shadow-color--active: var(--thc-color--primary-200);
 
     --thc-breadcrumb-color: var(--thc-textColor--accent);
     --thc-breadcrumb-color--active: var(--thc-textColor--primary);
@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
 
-    padding: var(--thc-spacing--S);
+    padding: var(--thc-spacing--M);
 
     width: fit-content;
     align-self: stretch;
@@ -29,7 +29,7 @@
 }
 
 .thc-c-breadcrumb__icon:not(:last-child) {
-    margin-right: var(--thc-spacing--S);
+    margin-right: var(--thc-spacing--M);
 }
 
 .thc-c-breadcrumb__label {

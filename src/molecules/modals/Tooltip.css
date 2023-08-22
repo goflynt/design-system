@@ -27,7 +27,7 @@
     background-color: var(--thc-tooltip-background-color);
     border-radius: var(--thc-o-box-border-radius);
 
-    padding: var(--thc-spacing--S);
+    padding: var(--thc-spacing--M);
 
     visibility: hidden;
     pointer-events: none;

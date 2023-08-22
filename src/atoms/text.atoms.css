@@ -1,15 +1,9 @@
 :root {
-    --thc-text-fontFamily: var(--thc-fontFamily--muli);
+    --thc-text-fontFamily: var(--thc-fontFamily--roboto);
     --thc-text-fontSize: var(--thc-fontSize--M);
     --thc-text-lineHeight: var(--thc-lineHeight--M);
     --thc-text-fontWeight: var(--thc-fontWeight--regular);
     --thc-text-transform: inherit;
-
-    /* --thc-text-fontFamily: var(--thc-fontFamily--muli);
-    --thc-text-fontSize: 14px;
-    --thc-text-lineHeight: 23px;
-    --thc-text-fontWeight: var(--thc-fontWeight--regular);
-    --thc-text-transform: inherit; */
 }
 
 /* Variables are resolved when copied. We need to explicitly give light & dark */
@@ -31,20 +25,20 @@
 }
 
 .thc-u-text--title {
-    --thc-text-fontFamily: var(--thc-fontFamily--montserrat);
+    --thc-text-fontFamily: var(--thc-fontFamily--roboto);
     --thc-text-fontSize: var(--thc-fontSize--XL);
     --thc-text-lineHeight: var(--thc-lineHeight--XL);
 }
 
 .thc-u-text--subtitle,
 .thc-u-text--subtitle-bold {
-    --thc-text-fontFamily: var(--thc-fontFamily--montserrat);
+    --thc-text-fontFamily: var(--thc-fontFamily--roboto);
     --thc-text-fontSize: var(--thc-fontSize--L);
     --thc-text-lineHeight: var(--thc-lineHeight--L);
 }
 
 .thc-u-text--subtitle-bold {
-    --thc-text-fontWeight: var(--thc-fontWeight--extrabold);
+    --thc-text-fontWeight: var(--thc-fontWeight--bold);
 }
 
 .thc-u-text--label,
@@ -53,7 +47,7 @@
 }
 
 .thc-u-text--label-bold {
-    --thc-text-fontWeight: var(--thc-fontWeight--extrabold);
+    --thc-text-fontWeight: var(--thc-fontWeight--bold);
 }
 
 .thc-u-text--subnormal {
@@ -62,7 +56,7 @@
 }
 
 .thc-u-text--bold {
-    --thc-text-fontWeight: var(--thc-fontWeight--extrabold);
+    --thc-text-fontWeight: var(--thc-fontWeight--bold);
 }
 
 .thc-u-text--secondary {
@@ -74,7 +68,7 @@
 }
 
 .thc-u-text--skyblue {
-    --thc-text-color: var(--thc-color--skyblue-100);
+    --thc-text-color: var(--thc-color--blue-500);
 }
 
 .thc-u-text--capitalize {

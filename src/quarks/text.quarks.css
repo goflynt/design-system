@@ -1,30 +1,33 @@
 :root {
-    --thc-fontFamily--montserrat: Montserrat;
-    --thc-fontFamily--muli: Muli;
+    --thc-fontFamily--roboto: "Roboto";
 }
 
 :root {
-    --thc-fontSize--S: 10px;
-    --thc-fontSize--M: 12px;
-    --thc-fontSize--L: 14px;
-    --thc-fontSize--XL: 24px;
+    --thc-fontSize--XS: 11px;
+    --thc-fontSize--S: 13px;
+    --thc-fontSize--M: 16px;
+    --thc-fontSize--L: 23px;
+    --thc-fontSize--XL: 33px;
 }
 
 :root {
     --thc-fontWeight--regular: 400;
-    --thc-fontWeight--extrabold: 800;
+    --thc-fontWeight--medium: 500;
+    --thc-fontWeight--semi-bold: 600;
+    --thc-fontWeight--bold: 700;
 }
 
 :root {
-    --thc-lineHeight--S: 12px;
-    --thc-lineHeight--M: 15px;
-    --thc-lineHeight--L: 23px;
-    --thc-lineHeight--XL: 29px;
+    --thc-lineHeight--XS: 15.4px;
+    --thc-lineHeight--S: 18.2px;
+    --thc-lineHeight--M: 22.4px;
+    --thc-lineHeight--L: 32.2px;
+    --thc-lineHeight--XL: 46.2px;
 }
 
 .thc-theme--light {
     --thc-textColor--primary: var(--thc-color--black-100);
-    --thc-textColor--accent: var(--thc-color--blue-100);
+    --thc-textColor--accent: var(--thc-color--primary-500);
     --thc-textColor--secondary: var(--thc-color--black-40);
 }
 

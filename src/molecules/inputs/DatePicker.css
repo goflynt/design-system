@@ -1,9 +1,9 @@
 .thc-c-date-picker__calendar .CalendarMonth_table {
-    margin-top: var(--thc-spacing--S);
+    margin-top: var(--thc-spacing--M);
 }
 
 .thc-c-date-picker__calendar .CalendarMonth_caption {
-    --thc-text-fontFamily: var(--thc-fontFamily--montserrat);
+    --thc-text-fontFamily: var(--thc-fontFamily--roboto);
     --thc-text-fontSize: var(--thc-fontSize--L);
     --thc-text-lineHeight: var(--thc-lineHeight--L);
 }
@@ -28,6 +28,6 @@
 .thc-c-date-picker__calendar .CalendarDay__selected,
 .thc-c-date-picker__calendar .CalendarDay__selected:active,
 .thc-c-date-picker__calendar .CalendarDay__selected:hover {
-    background: var(--thc-color--skyblue-100);
-    border-color: var(--thc-color--skyblue-100);
+    background: var(--thc-color--blue-500);
+    border-color: var(--thc-color--blue-500);
 }

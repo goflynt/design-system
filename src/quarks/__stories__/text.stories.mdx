@@ -8,15 +8,14 @@ import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
 
 ### Font families
 
--   `--thc-fontFamily--montserrat`: Montserrat
--   `--thc-fontFamily--muli`: Muli
+-   `--thc-fontFamily--roboto`: Roboto
 
 #### Examples
 
 <Canvas>
-    <Story name="--thc-fontFamily--montserrat">
-        <h5>Montserrat</h5>
-        <div style={{ fontFamily: "var(--thc-fontFamily--montserrat)" }}>
+    <Story name="--thc-fontFamily--roboto">
+        <h5>Roboto</h5>
+        <div style={{ fontFamily: "var(--thc-fontFamily--roboto)" }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit dignissim lectus, sed fringilla quam
             sodales sed. Praesent diam neque, pulvinar at ultrices consectetur, tristique at justo. Suspendisse id
             pulvinar augue. Vivamus sed augue ut elit volutpat euismod. Praesent vulputate at mi sed mattis. Maecenas
@@ -26,32 +25,22 @@ import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
             lorem nec vulputate. Nam laoreet vestibulum justo, at rutrum mauris hendrerit nec.
         </div>
     </Story>
-    <Story name="--thc-fontFamily--muli">
-        <h5>Muli</h5>
-        <div style={{ fontFamily: "var(--thc-fontFamily--muli)" }}>
-            Morbi eu mauris feugiat quam commodo finibus nec et neque. Fusce pharetra mauris in urna bibendum, a aliquet
-            neque hendrerit. Nam nec felis ultrices, laoreet massa volutpat, fermentum ligula. Mauris justo lectus,
-            finibus eget molestie nec, laoreet eget lacus. Nam aliquam est vitae tellus volutpat, ac tempor arcu
-            vehicula. Phasellus quis turpis sit amet purus tempus ultricies. Fusce ultricies tortor sit amet neque
-            malesuada congue. Etiam faucibus ante ac lacus ornare rutrum. Pellentesque quis nisl id ipsum consequat
-            faucibus. Pellentesque porttitor diam ac cursus semper. Aenean aliquet quis urna vitae tincidunt. Duis
-            euismod neque augue, quis lacinia nisl accumsan vitae. Aenean magna libero, fermentum non scelerisque vitae,
-            dapibus non ipsum. Duis facilisis lorem risus, et lacinia lacus consectetur ut. Nam vulputate diam eget elit
-            pulvinar ornare. Praesent elit lorem, fermentum et mollis quis, fermentum quis risus.
-        </div>
-    </Story>
 </Canvas>
 
 ### Font sizes
 
--   `--thc-fontSize--S`: 10px
--   `--thc-fontSize--M`: 12px
--   `--thc-fontSize--L`: 14px
--   `--thc-fontSize--XL`: 24px
+-   `--thc-fontSize--XS: 11px`
+-   `--thc-fontSize--S: 13px`
+-   `--thc-fontSize--M: 16px`
+-   `--thc-fontSize--L: 23px`
+-   `--thc-fontSize--XL: 33px`
 
 #### Examples
 
 <Canvas>
+    <Story name="--thc-fontSize--XS">
+        <div style={{ fontSize: "var(--thc-fontSize--XS)" }}>--thc-fontSize--XS</div>
+    </Story>
     <Story name="--thc-fontSize--S">
         <div style={{ fontSize: "var(--thc-fontSize--S)" }}>--thc-fontSize--S</div>
     </Story>
@@ -68,30 +57,44 @@ import { Meta, Canvas, Story } from "@storybook/addon-docs/blocks";
 
 ### Font weights
 
--   `--thc-fontWeight--regular`: 400
--   `--thc-fontWeight--extrabold`: 800
+-   `--thc-fontWeight--regular: 400`
+-   `--thc-fontWeight--medium: 500`
+-   `--thc-fontWeight--semi-bold: 600`
+-   `--thc-fontWeight--bold: 700`
 
 #### Examples
 
 <Canvas>
     <Story name="--thc-fontWeight--regular">
-        <div style={{ fontWeight: "--thc-fontWeight--regular)" }}>--thc-fontWeight--regular</div>
+        <div style={{ fontWeight: "--thc-fontWeight--regular" }}>--thc-fontWeight--regular</div>
     </Story>
-    <Story name="--thc-fontWeight--extrabold">
-        <div style={{ fontWeight: "var(--thc-fontWeight--extrabold)" }}>--thc-fontWeight--extrabold</div>
+    <Story name="--thc-fontWeight--medium">
+        <div style={{ fontWeight: "--thc-fontWeight--medium" }}>--thc-fontWeight--medium</div>
+    </Story>
+    <Story name="--thc-fontWeight--semi-bold">
+        <div style={{ fontWeight: "--thc-fontWeight--semi-bold" }}>--thc-fontWeight--semi-bold</div>
+    </Story>
+    <Story name="--thc-fontWeight--bold">
+        <div style={{ fontWeight: "var(--thc-fontWeight--bold)" }}>--thc-fontWeight--bold</div>
     </Story>
 </Canvas>
 
 ### Line heights
 
--   `--thc-lineHeight--S`: 12px
--   `--thc-lineHeight--M`: 15px
--   `--thc-lineHeight--L`: 23px
--   `--thc-lineHeight--XL`: 29px
+-   `--thc-lineHeight--XS`: 15.4px
+-   `--thc-lineHeight--S`: 18.2px
+-   `--thc-lineHeight--M`: 22.4px
+-   `--thc-lineHeight--L`: 32.2px
+-   `--thc-lineHeight--XL`: 46.2px
 
 #### Examples
 
 <Canvas>
+    <Story name="--thc-lineHeight--XS">
+        <div style={{ lineHeight: "var(--thc-lineHeight--XS)", border: "var(--thc-borderSolid--S)" }}>
+            --thc-lineHeight--XS
+        </div>
+    </Story>
     <Story name="--thc-lineHeight--S">
         <div style={{ lineHeight: "var(--thc-lineHeight--S)", border: "var(--thc-borderSolid--S)" }}>
             --thc-lineHeight--S
