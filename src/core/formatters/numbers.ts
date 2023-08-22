@@ -1,4 +1,4 @@
-import { isInteger } from "lodash/fp";
+import { isInteger } from "lodash";
 
 /**
  * Format a value
@@ -6,7 +6,7 @@ import { isInteger } from "lodash/fp";
  * @param {*} precision Precision to use (@default 2)
  * @returns Formatter value
  */
-export function formatNumber(num, precision = 2) {
+export function formatNumber(num: number, precision = 2): string {
     if (num === undefined || num === null) {
         return "";
     }
@@ -41,7 +41,7 @@ export function formatNumber(num, precision = 2) {
  * @param {any} value Value to test
  * @returns {bool} Test result
  */
-export function isNumberOrFloat(value) {
+export function isNumberOrFloat(value: string): boolean {
     return /\d+$/.test(value) || /\d+\.\d+$/.test(value);
 }
 
@@ -51,6 +51,6 @@ export function isNumberOrFloat(value) {
  * @param {bool} convert Convert to base 100
  * @returns Formatted number
  */
-export function formatPercentage(num, convert = false) {
+export function formatPercentage(num: number, convert = false): string {
     return `${formatNumber(num * (convert ? 100 : 1), 2)} %`;
 }

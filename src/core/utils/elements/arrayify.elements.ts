@@ -3,7 +3,7 @@
  * @param {any} element Element to arrayify
  * @returns Array
  */
-export function arrayify(element) {
+export function arrayify(element: any) {
     if (Array.isArray(element)) {
         return element;
     }

@@ -6,14 +6,14 @@ import { compact } from "lodash";
 import * as reactEvents from "./_events";
 import { htmlAttributes } from "./_html-attributes";
 
-const allReactEvents = compact(Object.values(reactEvents));
+const allReactEvents = compact(Object.values(reactEvents)).flat();
 
 /**
  * Filter the initial props, so only valid props are passed through.
  * @param {object} props The initial props
  * @returns The filtered props
  */
-export function filterProps(props) {
+export function filterProps(props: Record<string, unknown>) {
     if (typeof props === "undefined") {
         return undefined;
     }

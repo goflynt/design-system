@@ -1,6 +1,6 @@
 // Libs
-import React from "react";
 import { compact } from "lodash";
+import React from "react";
 
 // Utils
 import { mergeProps } from "./mergeProps.elements";
@@ -11,7 +11,7 @@ import { wrapLabel } from "./wrapLabel.elements";
  * @param {React.node} children Child element(s)
  * @param {object} props Props to merge
  */
-export function alterElement(children, props) {
+export function alterElement(children: React.ReactNode, props: any) {
     if (typeof children === "undefined" || children === null) {
         return;
     }

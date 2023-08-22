@@ -11,7 +11,11 @@ import { useFocus } from "./useFocus.hook";
  * @param {func} onBlur Blur handler
  * @returns { focus, setFocus, _handleFocus, _handleBlur }
  */
-export function useFocusAndBlur(disabled = false, onFocus, onBlur) {
+export function useFocusAndBlur(
+    disabled = false,
+    onFocus: (focus: React.FocusEvent<any>) => void,
+    onBlur: (focus: React.FocusEvent<any>) => void
+) {
     const { focus, setFocus, _handleFocus } = useFocus(disabled, onFocus);
 
     const _handleBlur = useCallback(

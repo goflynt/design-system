@@ -14,10 +14,10 @@ import { useQueryString } from "./useQueryString.hook";
  * @param {string|object} initialValue Initial values for query parameters
  * @returns {[value, onSetValue]}
  */
-export function useModalHandler(qsKey, closeCallback, initialValue) {
+export function useModalHandler(qsKey: string, closeCallback: () => void, initialValue: string) {
     const [value, onSetValue] = useQueryString(qsKey, initialValue);
 
-    const closeCallbackRef = useRef();
+    const closeCallbackRef = useRef<() => void>();
     useEffect(() => {
         closeCallbackRef.current = closeCallback;
     }, [closeCallback]);

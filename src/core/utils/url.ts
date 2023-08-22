@@ -2,11 +2,11 @@
 import { omit } from "lodash";
 import qs from "qs";
 
-function stripQuestionMark(queryString) {
+function stripQuestionMark(queryString: string): string {
     return queryString.startsWith("?") ? queryString.slice(1) : queryString;
 }
 
-export function setQueryStringValue(key, value, queryString = "") {
+export function setQueryStringValue(key: string, value: string, queryString = ""): string {
     const values = qs.parse(stripQuestionMark(queryString));
 
     let newValues = { ...values, [key]: value };
@@ -19,8 +19,8 @@ export function setQueryStringValue(key, value, queryString = "") {
     return `?${newQsValue}`;
 }
 
-export function getQueryStringValue(key, queryString) {
+export function getQueryStringValue(key: string, queryString: string): string | undefined {
     const values = qs.parse(stripQuestionMark(queryString));
 
-    return values[key];
+    return values[key] as string;
 }

@@ -1,9 +1,12 @@
 // Libs
+import { parse, stringify } from "qs";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useLocation, useHistory } from "react-router-dom";
-import { stringify, parse } from "qs";
+import { useHistory, useLocation } from "react-router-dom";
 
 import { filterEntriesKeys, getQueryStringValue, objectify, removeUndefinedKeys, setQueryStringValue } from "../utils";
+
+export type QsKey = string | string[];
+export type QsKeyValue = string | number | Record<string, number | string>;
 
 /**
  * The hook has two signatures:
@@ -13,10 +16,12 @@ import { filterEntriesKeys, getQueryStringValue, objectify, removeUndefinedKeys,
  * It will return like useState an array with: [value, setValue]
  * The setValue function accepts the same type as initialValueProp
  *
- * @param {any} qsKey
- * @param {any} initialValueProp
  */
-export function useQueryString(qsKey, initialValueProp) {
+export function useQueryString<T = QsKeyValue>(
+    qsKey: QsKey,
+    initialValueProp: T | undefined = undefined,
+    { parseOptions, stringifyOptions }: { parseOptions?: any; stringifyOptions?: any } = {}
+): [T, (t: T) => void] {
     const location = useLocation();
     const history = useHistory();
 
@@ -26,13 +31,13 @@ export function useQueryString(qsKey, initialValueProp) {
 
     // Remove non considered params from query string before computing currentQsValues
     // Because useMemo compare strings by values -> to not trigger if other qs param change
-    const qsParsed = parse(location.search.slice(1));
+    const qsParsed = parse(location.search.slice(1), parseOptions);
     const filteredQsParsed = objectify(filterEntriesKeys(Object.entries(qsParsed), keys));
-    const filteredQsString = stringify(filteredQsParsed);
+    const filteredQsString = stringify(filteredQsParsed, stringifyOptions);
 
     const currentQsValues = useMemo(() => {
         return keys.reduce((acc, key) => {
-            const qsValue = getQueryStringValue(key, filteredQsString);
+            const qsValue = getQueryStringValue(key, filteredQsString, { parseOptions });
 
             return { ...acc, [key]: qsValue };
         }, {});
@@ -50,12 +55,13 @@ export function useQueryString(qsKey, initialValueProp) {
             const newValues = simpleMode ? { [qsKey]: newValueProp } : newValueProp;
 
             const newQsValue = Object.entries(newValues).reduce(
-                (qsString, [key, val]) => setQueryStringValue(key, val, qsString),
+                (qsString, [key, val]) =>
+                    setQueryStringValue(key, val as string | number, qsString, { parseOptions, stringifyOptions }),
                 location.search
             );
 
             setValues((state) => ({ ...state, ...newValues }));
-            history.push(`${location.pathname}${newQsValue}`);
+            history.replace(`${location.pathname}${newQsValue}`);
         },
         [location.search, location.pathname, history, qsKey, simpleMode]
     );
@@ -69,8 +75,8 @@ export function useQueryString(qsKey, initialValueProp) {
         );
         const valuesSorted = objectify(Object.entries(values).sort(([keyA], [keyB]) => keyA.localeCompare(keyB)));
 
-        const currentQsValuesString = stringify(currentQsValuesSorted);
-        const valueString = stringify(valuesSorted);
+        const currentQsValuesString = stringify(currentQsValuesSorted, stringifyOptions);
+        const valueString = stringify(valuesSorted, stringifyOptions);
 
         if (
             (Object.keys(removeUndefinedKeys(currentQsValuesRef.current)).length > 0 ||
