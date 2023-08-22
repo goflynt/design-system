@@ -10,7 +10,7 @@
 }
 
 .thc-c-button {
-    --thc-text-fontWeight: var(--thc-fontWeight--extrabold);
+    --thc-text-fontWeight: var(--thc-fontWeight--bold);
     --thc-text-transform: uppercase;
 
     display: inline-flex;
