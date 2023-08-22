@@ -72,8 +72,8 @@ export function MenuItem({
     const matches = toList.map((to) => matchPath(location.pathname, to));
     const active = toList.length > 0 && matches.some(Boolean);
 
-    const itemClassName = classnames("thc-c-menu-item", { "thc-c-menu-item--active": active }, className);
-    const linkClassName = classnames("thc-c-menu-item__link", linkClassNameProp);
+    const itemClassName = classnames("ds-c-menu-item", { "ds-c-menu-item--active": active }, className);
+    const linkClassName = classnames("ds-c-menu-item__link", linkClassNameProp);
 
     let child;
     if (children) {
@@ -137,13 +137,13 @@ interface MenuItemIconLabelProps {
 
 function MenuItemIconLabel({ active, className, icon, label, ...otherProps }: MenuItemIconLabelProps) {
     const itemClassName = classnames(
-        { "thc-theme--color": active },
-        "thc-o-actionable",
-        "thc-c-menu-item-icon-label",
+        { "ds-theme--color": active },
+        "ds-o-actionable",
+        "ds-c-menu-item-icon-label",
         className
     );
-    const iconClassName = classnames("thc-c-menu-item-icon-label__icon");
-    const labelClassName = classnames("thc-c-menu-item-icon-label__label", "thc-u-text--subnormal");
+    const iconClassName = classnames("ds-c-menu-item-icon-label__icon");
+    const labelClassName = classnames("ds-c-menu-item-icon-label__label", "ds-u-text--subnormal");
 
     return (
         <div {...otherProps} className={itemClassName}>
@@ -190,13 +190,13 @@ function MenuItemIcon({
     ...otherProps
 }: MenuItemIconProps) {
     const itemClassName = classnames(
-        { "thc-theme--color": active },
-        "thc-o-actionable",
-        "thc-c-menu-item-icon",
+        { "ds-theme--color": active },
+        "ds-o-actionable",
+        "ds-c-menu-item-icon",
         className
     );
-    const iconClassName = classnames("thc-c-menu-item-icon__icon");
-    const tooltipClassName = classnames("thc-c-menu-item-icon__tooltip", tooltipClassNameProp);
+    const iconClassName = classnames("ds-c-menu-item-icon__icon");
+    const tooltipClassName = classnames("ds-c-menu-item-icon__tooltip", tooltipClassNameProp);
 
     return (
         <Tooltip {...tooltipProps} className={tooltipClassName} placement="right" tooltip={tooltip}>

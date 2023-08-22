@@ -55,16 +55,16 @@ export const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>(function 
 ) {
     const itemClassName = classnames(
         {
-            "thc-o-actionable": !!onClick,
+            "ds-o-actionable": !!onClick,
         },
-        "thc-c-list-item",
+        "ds-c-list-item",
         {
-            "thc-c-list-item--condensed": condensed,
-            "thc-c-list-item--fullWidth": fullWidth,
+            "ds-c-list-item--condensed": condensed,
+            "ds-c-list-item--fullWidth": fullWidth,
         },
         className
     );
-    const itemContainerClassName = "thc-c-list-item__container";
+    const itemContainerClassName = "ds-c-list-item__container";
 
     const handleOnClick = wrapPrevent(onClick, disabled);
     const handleKeyUp = wrapKeyUp(handleOnClick);

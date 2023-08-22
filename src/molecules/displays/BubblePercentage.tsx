@@ -17,12 +17,12 @@ export interface BubblePercentageProps extends React.PropsWithChildren<{}> {
 }
 
 export function BubblePercentage({ className, percentage = 0, ...otherProps }: BubblePercentageProps) {
-    const rootClassName = classnames("thc-c-bubble-percentage thc-u-text--subtitle-bold", className);
+    const rootClassName = classnames("ds-c-bubble-percentage ds-u-text--subtitle-bold", className);
 
     return (
         <div {...otherProps} className={rootClassName}>
-            <div className="thc-c-bubble-percentage__mask" style={{ height: `${percentage}%` }} />
-            <div className="thc-c-bubble-percentage__percentage">{`${formatNumber(percentage)}%`}</div>
+            <div className="ds-c-bubble-percentage__mask" style={{ height: `${percentage}%` }} />
+            <div className="ds-c-bubble-percentage__percentage">{`${formatNumber(percentage)}%`}</div>
         </div>
     );
 }

@@ -138,16 +138,16 @@ export function FieldHoc<P>(
         );
 
         const fieldClassName = classnames(
-            "thc-c-field",
+            "ds-c-field",
             {
-                "thc-c-field--warning": hasWarning,
-                "thc-c-field--error": hasError,
+                "ds-c-field--warning": hasWarning,
+                "ds-c-field--error": hasError,
             },
             className
         );
-        const inputClassName = classnames("thc-c-field__input", inputClassNameProp);
-        const labelClassName = classnames("thc-c-field__label", labelClassNameProp);
-        const helperTextClassName = classnames("thc-c-field__helper-text", helperTextClassNameProp);
+        const inputClassName = classnames("ds-c-field__input", inputClassNameProp);
+        const labelClassName = classnames("ds-c-field__label", labelClassNameProp);
+        const helperTextClassName = classnames("ds-c-field__helper-text", helperTextClassNameProp);
 
         return (
             <div {...filterProps(fieldProps)} className={fieldClassName} disabled={disabled === true} ref={ref}>

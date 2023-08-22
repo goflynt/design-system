@@ -52,7 +52,7 @@ export interface BannerProps extends React.PropsWithChildren<{}> {
 export function Banner({
     children,
     className,
-    color: colorProp = "--thc-color--primary-500",
+    color: colorProp = "--ds-color--primary-500",
     modalClassName: modalClassNameProp,
     modalProps,
     onClose,
@@ -62,9 +62,9 @@ export function Banner({
     slideProps,
     ...otherProps
 }: BannerProps) {
-    const rootClassName = classnames("thc-theme--color thc-c-banner", className);
-    const modalClassName = classnames("thc-c-banner__modal", modalClassNameProp);
-    const paperClassName = classnames("thc-c-banner__paper", paperClassNameProp);
+    const rootClassName = classnames("ds-theme--color ds-c-banner", className);
+    const modalClassName = classnames("ds-c-banner__modal", modalClassNameProp);
+    const paperClassName = classnames("ds-c-banner__paper", paperClassNameProp);
 
     const isMounted = useIsMounted();
 
@@ -76,7 +76,7 @@ export function Banner({
                 <Slide {...slideProps} appear={isMounted.current} direction="down" in={open}>
                     <div {...paperProps} className={paperClassName} style={{ backgroundColor: color }}>
                         {React.Children.map(children, (child) =>
-                            alterElement(child, { className: "thc-c-banner__child" })
+                            alterElement(child, { className: "ds-c-banner__child" })
                         )}
                     </div>
                 </Slide>

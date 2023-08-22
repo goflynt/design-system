@@ -172,16 +172,16 @@ export const Autocomplete = React.forwardRef<HTMLInputElement, AutocompleteProps
 ) {
     const { translate } = useTranslation(translationKey);
 
-    const rootClassName = classnames("thc-c-autocomplete", className);
+    const rootClassName = classnames("ds-c-autocomplete", className);
 
-    const inputClassName = classnames("thc-c-autocomplete__input", inputClassNameProp);
+    const inputClassName = classnames("ds-c-autocomplete__input", inputClassNameProp);
     const dropdownClassName = classnames(
-        "thc-c-autocomplete__dropdown",
+        "ds-c-autocomplete__dropdown",
         dropdownClassNameProp,
         dropdownProps?.className
     );
-    const listClassName = classnames("thc-c-autocomplete__list", listClassNameProp);
-    const listItemClassName = classnames("thc-c-autocomplete__list-item", listItemClassNameProp);
+    const listClassName = classnames("ds-c-autocomplete__list", listClassNameProp);
+    const listItemClassName = classnames("ds-c-autocomplete__list-item", listItemClassNameProp);
 
     const inputRef = useRef(null);
     const forkedRef = useForkRef(inputRef, ref);
@@ -247,7 +247,7 @@ export const Autocomplete = React.forwardRef<HTMLInputElement, AutocompleteProps
 
     const endAdornment = useMemo(
         () => [
-            <InputAdornment className="thc-c-select__icon" onClick={valueProp ? handleClearAutocomplete : undefined}>
+            <InputAdornment className="ds-c-select__icon" onClick={valueProp ? handleClearAutocomplete : undefined}>
                 {valueProp ? iconClear : icon}
             </InputAdornment>,
             ...(inputProps && Array.isArray(inputProps.endAdornment)
@@ -301,16 +301,16 @@ export const Autocomplete = React.forwardRef<HTMLInputElement, AutocompleteProps
                                 primary={!isEmpty(label) ? label : <span>&nbsp;</span>}
                                 secondary={
                                     error ? (
-                                        <span className="thc-u-status--error">{error}</span>
+                                        <span className="ds-u-status--error">{error}</span>
                                     ) : warning ? (
-                                        <span className="thc-u-status--warning">{warning}</span>
+                                        <span className="ds-u-status--warning">{warning}</span>
                                     ) : undefined
                                 }
                             />
                         </ListItem>
                     ))}
                     {(optionsState.options?.length ?? 0) < (optionsState.totalCount ?? 0) && (
-                        <ListItem className="thc-u-text--secondary" condensed>
+                        <ListItem className="ds-u-text--secondary" condensed>
                             {translate(moreResultLabel)}
                         </ListItem>
                     )}

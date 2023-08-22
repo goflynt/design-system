@@ -45,18 +45,18 @@ export function Step({
     const completed = completedProp ?? activeStep > index;
 
     const rootClassName = classnames(
-        "thc-c-step",
+        "ds-c-step",
         {
-            "thc-c-step--active": active,
-            "thc-c-step--completed": completed,
+            "ds-c-step--active": active,
+            "ds-c-step--completed": completed,
         },
         className
     );
 
     return (
         <div {...otherProps} className={rootClassName}>
-            <div className="thc-c-step__label thc-u-text--subtitle">{label}</div>
-            <Icon className="thc-c-step__icon" size="m">
+            <div className="ds-c-step__label ds-u-text--subtitle">{label}</div>
+            <Icon className="ds-c-step__icon" size="m">
                 {completed ? "success" : `number-${number[index]}`}
             </Icon>
 

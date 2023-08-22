@@ -13,7 +13,7 @@ export const CardHeader = React.forwardRef<HTMLDivElement, CardHeaderProps>(func
     { children, className },
     ref
 ) {
-    const rootClassName = classnames("thc-c-card__header", className);
+    const rootClassName = classnames("ds-c-card__header", className);
 
     return (
         <div className={rootClassName} ref={ref}>

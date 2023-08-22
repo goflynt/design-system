@@ -15,8 +15,8 @@ export interface ChipContainerProps extends React.PropsWithChildren<{}> {
 
 export function ChipContainer({ children, className, condensed = false, ...otherProps }: ChipContainerProps) {
     const containerClassName = classnames(
-        "thc-c-chip-container",
-        { "thc-c-chip-container__condensed": condensed },
+        "ds-c-chip-container",
+        { "ds-c-chip-container__condensed": condensed },
         className
     );
 

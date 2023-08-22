@@ -10,7 +10,7 @@ export interface ButtonContainerProps extends React.PropsWithChildren<{}> {
 }
 
 export function ButtonContainer({ children, className }: ButtonContainerProps) {
-    const rootClassName = classnames("thc-c-button-container", className);
+    const rootClassName = classnames("ds-c-button-container", className);
 
     return <div className={rootClassName}>{children}</div>;
 }

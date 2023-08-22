@@ -82,10 +82,10 @@ export function Dialog({
 }: DialogProps) {
     const { translate } = useTranslation(translationKey ?? THC_DESIGN_SYSTEM_COMMON_TRANSLATION_KEY);
 
-    const dialogClassName = classnames("thc-c-dialog", className);
-    const modalClassName = classnames("thc-c-dialog__modal", modalClassNameProp);
-    const cardClassName = classnames("thc-c-dialog__card", cardClassNameProp);
-    const cardContentClassName = classnames("thc-c-dialog__card-content", cardContentClassNameProp);
+    const dialogClassName = classnames("ds-c-dialog", className);
+    const modalClassName = classnames("ds-c-dialog__modal", modalClassNameProp);
+    const cardClassName = classnames("ds-c-dialog__card", cardClassNameProp);
+    const cardContentClassName = classnames("ds-c-dialog__card-content", cardContentClassNameProp);
 
     const actions = useMemo(
         () =>

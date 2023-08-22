@@ -50,8 +50,8 @@ export function Tabs({
 
     const valueToIndex: Record<number | string, number> = {};
 
-    const rootClassName = classnames("thc-o-paper thc-c-tabs", className);
-    const tabIndicatorClassName = classnames("thc-c-tabs__indicator", tabIndicatorClassNameProp);
+    const rootClassName = classnames("ds-o-paper ds-c-tabs", className);
+    const tabIndicatorClassName = classnames("ds-c-tabs__indicator", tabIndicatorClassNameProp);
 
     const getTabsMeta = useCallback(() => {
         const tabsNode = tabsRef.current;
@@ -169,8 +169,8 @@ export function Tabs({
 
     return (
         <div {...otherProps} className={rootClassName}>
-            <div className="thc-c-tabs__container" ref={tabsRef}>
-                <div className="thc-c-tabs__list-container" ref={tabsListRef}>
+            <div className="ds-c-tabs__container" ref={tabsRef}>
+                <div className="ds-c-tabs__list-container" ref={tabsListRef}>
                     {children}
                 </div>
                 {isMounted.current && indicator}

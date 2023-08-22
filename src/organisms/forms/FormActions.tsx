@@ -10,7 +10,7 @@ export interface FormActionsProps extends React.PropsWithChildren<{}> {
 }
 
 export function FormActions({ children, className }: FormActionsProps) {
-    const rootClassName = classnames("thc-c-form-actions", className);
+    const rootClassName = classnames("ds-c-form-actions", className);
 
     return <div className={rootClassName}>{children}</div>;
 }

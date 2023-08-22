@@ -79,7 +79,7 @@ export function RadioGroup({
     value,
     ...otherProps
 }: RadioGroupProps) {
-    const rootClassName = classnames("thc-c-radio-group", className);
+    const rootClassName = classnames("ds-c-radio-group", className);
 
     const type = typeProp ?? "radio";
     const RadioComponent = RadioComponentProp ?? RADIO_GROUP_TYPE_MAPPER[type];

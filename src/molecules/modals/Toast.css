@@ -1,38 +1,38 @@
-.thc-c-toast {
+.ds-c-toast {
     align-items: center;
 
-    padding: var(--thc-spacing--M);
+    padding: var(--ds-spacing--M);
 
-    border-radius: var(--thc-radius--S);
+    border-radius: var(--ds-radius--S);
 }
 
-.thc-c-toast .Toastify__toast-body {
+.ds-c-toast .Toastify__toast-body {
     margin: 0;
 
     display: flex;
     align-items: center;
 }
 
-.thc-c-toast.Toastify__toast--dark,
-.thc-c-toast.Toastify__toast--info,
-.thc-c-toast.Toastify__toast--success,
-.thc-c-toast.Toastify__toast--warning,
-.thc-c-toast.Toastify__toast--error {
-    --thc-text-color: var(--thc-color--white-100);
+.ds-c-toast.Toastify__toast--dark,
+.ds-c-toast.Toastify__toast--info,
+.ds-c-toast.Toastify__toast--success,
+.ds-c-toast.Toastify__toast--warning,
+.ds-c-toast.Toastify__toast--error {
+    --ds-text-color: var(--ds-color--white-100);
 }
 
-.thc-c-toast.Toastify__toast--info {
-    background-color: var(--thc-color--primary-500);
+.ds-c-toast.Toastify__toast--info {
+    background-color: var(--ds-color--primary-500);
 }
 
-.thc-c-toast.Toastify__toast--success {
-    background-color: var(--thc-color--success-500);
+.ds-c-toast.Toastify__toast--success {
+    background-color: var(--ds-color--success-500);
 }
 
-.thc-c-toast.Toastify__toast--warning {
-    background-color: var(--thc-color--warning-500);
+.ds-c-toast.Toastify__toast--warning {
+    background-color: var(--ds-color--warning-500);
 }
 
-.thc-c-toast.Toastify__toast--error {
-    background-color: var(--thc-color--error-500);
+.ds-c-toast.Toastify__toast--error {
+    background-color: var(--ds-color--error-500);
 }

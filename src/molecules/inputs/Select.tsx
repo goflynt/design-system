@@ -170,11 +170,11 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProps>(function S
 ) {
     const { translate } = useTranslation(translationKey);
 
-    const selectClassName = classnames("thc-c-select", className);
-    const inputClassName = classnames("thc-c-select__input", inputClassNameProp);
-    const dropdownClassName = classnames("thc-c-select__dropdown", dropdownClassNameProp, dropdownProps?.className);
-    const listClassName = classnames("thc-c-select__list", listClassNameProp);
-    const listItemClassName = classnames("thc-c-select__list-item", listItemClassNameProp);
+    const selectClassName = classnames("ds-c-select", className);
+    const inputClassName = classnames("ds-c-select__input", inputClassNameProp);
+    const dropdownClassName = classnames("ds-c-select__dropdown", dropdownClassNameProp, dropdownProps?.className);
+    const listClassName = classnames("ds-c-select__list", listClassNameProp);
+    const listItemClassName = classnames("ds-c-select__list-item", listItemClassNameProp);
 
     const inputRef = useRef<HTMLInputElement>(null);
     const forkedRef = useForkRef(inputRef, ref);
@@ -211,7 +211,7 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProps>(function S
 
     const endAdornment = useMemo(
         () => [
-            <InputAdornment className="thc-c-select__icon">{open ? iconFocus : icon}</InputAdornment>,
+            <InputAdornment className="ds-c-select__icon">{open ? iconFocus : icon}</InputAdornment>,
             ...(inputProps && Array.isArray(inputProps.endAdornment)
                 ? inputProps.endAdornment
                 : [inputProps?.endAdornment].filter(Boolean)),
@@ -263,9 +263,9 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProps>(function S
                                 primary={!isEmpty(label) ? label : <span>&nbsp;</span>}
                                 secondary={
                                     error ? (
-                                        <span className="thc-u-status--error">{error}</span>
+                                        <span className="ds-u-status--error">{error}</span>
                                     ) : warning ? (
-                                        <span className="thc-u-status--warning">{warning}</span>
+                                        <span className="ds-u-status--warning">{warning}</span>
                                     ) : undefined
                                 }
                             />

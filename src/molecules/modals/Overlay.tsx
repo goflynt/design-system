@@ -26,9 +26,9 @@ export interface OverlayProps {
 
 export function Overlay({ className, invisible = false, onClick, open = false, ...otherProps }: OverlayProps) {
     const overlayClassName = classnames(
-        "thc-c-overlay",
+        "ds-c-overlay",
         {
-            "thc-c-overlay--invisible": invisible,
+            "ds-c-overlay--invisible": invisible,
         },
         className
     );

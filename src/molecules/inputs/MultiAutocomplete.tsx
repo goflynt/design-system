@@ -190,14 +190,14 @@ export function MultiAutocomplete({
     value,
     ...otherProps
 }: MultiAutocompleteProps) {
-    const multiClassName = classnames("thc-c-multi-autocomplete", className);
-    const chipClassName = classnames("thc-c-multi-autocomplete__chip", chipClassNameProp);
-    const chipContainerClassName = classnames("thc-c-multi-autocomplete__chip-container", chipContainerClassNameProp);
-    const dropdownClassName = classnames("thc-c-multi-autocomplete__dropdown", dropdownClassNameProp);
-    const inputClassName = classnames("thc-c-multi-autocomplete__input", inputClassNameProp);
-    const listClassName = classnames("thc-c-multi-autocomplete__list", listClassNameProp);
-    const listItemClassName = classnames("thc-c-multi-autocomplete__list-item", listItemClassNameProp);
-    const autocompleteClassName = classnames("thc-c-multi-autocomplete__autocomplete", autocompleteClassNameProp);
+    const multiClassName = classnames("ds-c-multi-autocomplete", className);
+    const chipClassName = classnames("ds-c-multi-autocomplete__chip", chipClassNameProp);
+    const chipContainerClassName = classnames("ds-c-multi-autocomplete__chip-container", chipContainerClassNameProp);
+    const dropdownClassName = classnames("ds-c-multi-autocomplete__dropdown", dropdownClassNameProp);
+    const inputClassName = classnames("ds-c-multi-autocomplete__input", inputClassNameProp);
+    const listClassName = classnames("ds-c-multi-autocomplete__list", listClassNameProp);
+    const listItemClassName = classnames("ds-c-multi-autocomplete__list-item", listItemClassNameProp);
+    const autocompleteClassName = classnames("ds-c-multi-autocomplete__autocomplete", autocompleteClassNameProp);
 
     const autocompleteRef = useRef<HTMLInputElement>(null);
 

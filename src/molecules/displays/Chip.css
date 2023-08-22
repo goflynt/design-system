@@ -1,22 +1,22 @@
 :root {
-    --thc-chip-background-color: none;
+    --ds-chip-background-color: none;
 
-    --thc-chip-border: none;
-    --thc-chip-border-radius: var(--thc-radius--L);
+    --ds-chip-border: none;
+    --ds-chip-border-radius: var(--ds-radius--L);
 
-    --thc-chip-padding: var(--thc-spacing--XS) var(--thc-spacing--M);
+    --ds-chip-padding: var(--ds-spacing--XS) var(--ds-spacing--M);
 }
 
-.thc-c-chip {
-    background-color: var(--thc-chip-background-color);
+.ds-c-chip {
+    background-color: var(--ds-chip-background-color);
 
-    padding: var(--thc-chip-padding);
+    padding: var(--ds-chip-padding);
     width: max-content;
 
     word-break: keep-all;
 
-    border: var(--thc-chip-border);
-    border-radius: var(--thc-chip-border-radius);
+    border: var(--ds-chip-border);
+    border-radius: var(--ds-chip-border-radius);
     outline: none;
 
     display: inline-flex;
@@ -24,15 +24,15 @@
     justify-content: center;
 }
 
-.thc-c-chip--outlined {
-    --thc-chip-border: var(--thc-borderSolid--S);
+.ds-c-chip--outlined {
+    --ds-chip-border: var(--ds-borderSolid--S);
 }
 
-.thc-c-chip span,
-.thc-c-chip.thc-o-actionable {
-    cursor: var(--thc-cursor--default);
+.ds-c-chip span,
+.ds-c-chip.ds-o-actionable {
+    cursor: var(--ds-cursor--default);
 }
 
-.thc-c-chip.thc-o-actionable:not([disabled]) .thc-c-chip__icon {
-    cursor: var(--thc-actionable-cursor);
+.ds-c-chip.ds-o-actionable:not([disabled]) .ds-c-chip__icon {
+    cursor: var(--ds-actionable-cursor);
 }

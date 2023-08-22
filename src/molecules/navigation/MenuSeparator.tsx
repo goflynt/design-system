@@ -9,7 +9,7 @@ export interface MenuSeparatorProps {
 }
 
 export function MenuSeparator({ className, ...otherProps }: MenuSeparatorProps) {
-    const separatorClassName = classnames("thc-c-menu-separator", className);
+    const separatorClassName = classnames("ds-c-menu-separator", className);
 
     return <li {...otherProps} className={separatorClassName} role="separator" />;
 }

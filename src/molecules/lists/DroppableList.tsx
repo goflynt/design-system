@@ -45,7 +45,7 @@ export function DroppableList({
     ListItemComponent = ListItem,
     ...otherProps
 }: DroppableListProps) {
-    const rootClassName = classnames("thc-c-droppable-list", className);
+    const rootClassName = classnames("ds-c-droppable-list", className);
 
     return (
         <Droppable droppableId="simple-droppable-list">
@@ -54,7 +54,7 @@ export function DroppableList({
                     {...otherProps}
                     {...provided.droppableProps}
                     className={classnames(rootClassName, {
-                        "thc-c-droppable-list--dragging": snapshot.isDraggingOver,
+                        "ds-c-droppable-list--dragging": snapshot.isDraggingOver,
                     })}
                     ref={provided.innerRef}
                     snapshot={snapshot}

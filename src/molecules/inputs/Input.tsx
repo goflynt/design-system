@@ -248,18 +248,18 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Inp
         [inputRef, onClick, disabled]
     );
 
-    const rootClassName = classnames("thc-c-input", className);
+    const rootClassName = classnames("ds-c-input", className);
     const containerClassName = classnames(
-        "thc-c-input__container",
+        "ds-c-input__container",
         {
-            "thc-c-input--full-width": fullWidth,
-            "thc-c-input--error": hasError && !disabled,
-            "thc-c-input--focus": focus,
+            "ds-c-input--full-width": fullWidth,
+            "ds-c-input--error": hasError && !disabled,
+            "ds-c-input--focus": focus,
         },
         containerClassNameProp
     );
-    const inputClassName = classnames("thc-c-input__input", inputClassNameProp);
-    const adornmentClassName = classnames("thc-c-input__adornment", adornmentClassNameProp);
+    const inputClassName = classnames("ds-c-input__input", inputClassNameProp);
+    const adornmentClassName = classnames("ds-c-input__adornment", adornmentClassNameProp);
 
     let inputProps = inputPropsProp ?? {};
     let InputComponent = InputComponentProp;
@@ -306,11 +306,11 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Inp
         };
 
         return [
-            <div className="thc-c-input__number-buttons">
-                <Icon className="thc-o-actionable" onClick={handleIncrementClick} role="button" size="xs" tabIndex={-1}>
+            <div className="ds-c-input__number-buttons">
+                <Icon className="ds-o-actionable" onClick={handleIncrementClick} role="button" size="xs" tabIndex={-1}>
                     angle-up
                 </Icon>
-                <Icon className="thc-o-actionable" onClick={handleDecrementClick} role="button" size="xs" tabIndex={-1}>
+                <Icon className="ds-o-actionable" onClick={handleDecrementClick} role="button" size="xs" tabIndex={-1}>
                     angle-down
                 </Icon>
             </div>,
@@ -356,7 +356,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Inp
                     React.Children.map(endAdornment, _adornmentWrapper(adornmentClassName, adornmentProps))}
             </div>
             {showMinMax && (min !== undefined || max !== undefined) && (
-                <div className="thc-c-input__min-max">
+                <div className="ds-c-input__min-max">
                     <div>{min}</div>
                     <div>{max}</div>
                 </div>

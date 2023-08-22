@@ -1,13 +1,13 @@
-.thc-c-date-range-picker__calendar .CalendarMonth_table {
-    margin-top: var(--thc-spacing--M);
+.ds-c-date-range-picker__calendar .CalendarMonth_table {
+    margin-top: var(--ds-spacing--M);
 }
 
-.thc-c-date-range-picker__calendar .CalendarMonth_caption {
-    --thc-text-fontFamily: var(--thc-fontFamily--roboto);
-    --thc-text-fontSize: var(--thc-fontSize--L);
-    --thc-text-lineHeight: var(--thc-lineHeight--L);
+.ds-c-date-range-picker__calendar .CalendarMonth_caption {
+    --ds-text-fontFamily: var(--ds-fontFamily--roboto);
+    --ds-text-fontSize: var(--ds-fontSize--L);
+    --ds-text-lineHeight: var(--ds-lineHeight--L);
 }
 
-.thc-c-date-range-picker .thc-c-icon {
-    --thc-text-color: var(--thc-textColor--primary);
+.ds-c-date-range-picker .ds-c-icon {
+    --ds-text-color: var(--ds-textColor--primary);
 }

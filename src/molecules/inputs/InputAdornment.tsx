@@ -24,7 +24,7 @@ export function InputAdornment({ children, className, onClick, ...otherProps }: 
         return null;
     }
 
-    const rootClassName = classnames("thc-c-input-adornment", { "thc-o-actionable": Boolean(onClick) }, className);
+    const rootClassName = classnames("ds-c-input-adornment", { "ds-o-actionable": Boolean(onClick) }, className);
 
     let child;
 

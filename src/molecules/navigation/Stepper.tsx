@@ -82,7 +82,7 @@ export function Stepper({
     validateLabel = "actions.validate",
     ...otherProps
 }: StepperProps) {
-    const rootClassName = classnames("thc-c-stepper", className);
+    const rootClassName = classnames("ds-c-stepper", className);
     const { translate } = useTranslation(translationKey);
 
     const childrenArray = React.Children.toArray(children);

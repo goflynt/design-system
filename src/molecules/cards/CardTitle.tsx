@@ -61,15 +61,15 @@ export function CardTitle({
     subtitle,
     ...otherProps
 }: CardTitleProps) {
-    const rootClassName = classnames("thc-c-card__title", className);
-    const helperIconClassName = classnames("thc-c-card__title-helper", helperIconClassNameProp);
-    const titleClassName = classnames("thc-u-text--title", titleClassNameProp);
+    const rootClassName = classnames("ds-c-card__title", className);
+    const helperIconClassName = classnames("ds-c-card__title-helper", helperIconClassNameProp);
+    const titleClassName = classnames("ds-u-text--title", titleClassNameProp);
 
     const wrappedChild = alterElement(title ?? children, { className: titleClassName });
 
     return (
         <div className={rootClassName} {...otherProps}>
-            <div className="thc-c-card__title-title">
+            <div className="ds-c-card__title-title">
                 {wrappedChild}
                 {helperText && (
                     <Tooltip tooltip={helperText} tooltipTitle={helperTextTitle}>
@@ -79,7 +79,7 @@ export function CardTitle({
                     </Tooltip>
                 )}
             </div>
-            {subtitle && <div className="thc-c-card__title-subtitle thc-u-text--subtitle">{subtitle}</div>}
+            {subtitle && <div className="ds-c-card__title-subtitle ds-u-text--subtitle">{subtitle}</div>}
         </div>
     );
 }

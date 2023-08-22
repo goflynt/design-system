@@ -10,7 +10,7 @@ export interface TabIndicatorProps extends DivProps {
 }
 
 export function TabIndicator({ className, ...otherProps }: TabIndicatorProps) {
-    const rootClassName = classnames("thc-c-tab-indicator", className);
+    const rootClassName = classnames("ds-c-tab-indicator", className);
 
     return <span {...otherProps} className={rootClassName} />;
 }

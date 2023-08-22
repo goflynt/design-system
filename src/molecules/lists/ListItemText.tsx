@@ -18,12 +18,12 @@ export interface ListItemTextProps {
 }
 
 export function ListItemText({ className, primary, secondary, ...otherProps }: ListItemTextProps) {
-    const rootClassName = classnames("thc-c-list-item-text", className);
+    const rootClassName = classnames("ds-c-list-item-text", className);
 
     return (
         <div {...otherProps} className={rootClassName}>
-            <div className="thc-c-list-item-text__primary">{primary}</div>
-            {secondary && <div className="thc-c-list-item-text__secondary">{secondary}</div>}
+            <div className="ds-c-list-item-text__primary">{primary}</div>
+            {secondary && <div className="ds-c-list-item-text__secondary">{secondary}</div>}
         </div>
     );
 }

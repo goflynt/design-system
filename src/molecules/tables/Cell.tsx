@@ -39,7 +39,7 @@ export const Cell = React.memo(function Cell({
 }: CellProps) {
     const { hover, ...hoverEvents } = useHover(disabled, onHover);
 
-    const rootClassName = classnames("thc-c-cell", { "thc-c-cell--hover": hover || hoverProp }, className);
+    const rootClassName = classnames("ds-c-cell", { "ds-c-cell--hover": hover || hoverProp }, className);
 
     let child = children;
     if (formatter) {

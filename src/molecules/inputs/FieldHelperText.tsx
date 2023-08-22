@@ -48,11 +48,11 @@ export function FieldHelperText({
     ...otherProps
 }: FieldHelperTextProps) {
     const helperClassName = classnames(
-        "thc-c-field-helper-text",
+        "ds-c-field-helper-text",
         {
-            "thc-c-field-helper-text--error": hasError && !disabled,
-            "thc-c-field-helper-text--success": hasSuccess && !disabled,
-            "thc-c-field-helper-text--warning": hasWarning && !disabled,
+            "ds-c-field-helper-text--error": hasError && !disabled,
+            "ds-c-field-helper-text--success": hasSuccess && !disabled,
+            "ds-c-field-helper-text--warning": hasWarning && !disabled,
         },
         className
     );

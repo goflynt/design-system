@@ -2,7 +2,7 @@ import { isEmpty } from "lodash";
 
 export function getCSSVariable(variableName: string, element = document.body) {
     if (isEmpty(variableName) || !variableName.startsWith("--thc")) {
-        throw new Error("You have to give a valid css variable name like: --thc-a-css-variable");
+        throw new Error("You have to give a valid css variable name like: --ds-a-css-variable");
     }
 
     return window.getComputedStyle(element).getPropertyValue(variableName);
@@ -10,7 +10,7 @@ export function getCSSVariable(variableName: string, element = document.body) {
 
 export function setCSSVariable(variableName: string, value: string | null, element = document.body) {
     if (isEmpty(variableName) || !variableName.startsWith("--thc")) {
-        throw new Error("You have to give a valid css variable name like: --thc-a-css-variable");
+        throw new Error("You have to give a valid css variable name like: --ds-a-css-variable");
     }
 
     return window.getComputedStyle(element).setProperty(variableName, value);

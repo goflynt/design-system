@@ -64,13 +64,13 @@ export function Modal({
     const hasTransition = getHasTransition(children);
 
     const rootClassName = classnames(
-        "thc-c-modal",
-        // { "thc-c-modal--hidden": !open && (!hasTransition || exited) },
+        "ds-c-modal",
+        // { "ds-c-modal--hidden": !open && (!hasTransition || exited) },
         className
     );
-    const overlayClassName = classnames("thc-c-modal__overlay", overlayClassNameProp);
+    const overlayClassName = classnames("ds-c-modal__overlay", overlayClassNameProp);
     const contentClassName = classnames(
-        "thc-c-modal__content",
+        "ds-c-modal__content",
         isReactElement(children) ? children.props.className : undefined
     );
 

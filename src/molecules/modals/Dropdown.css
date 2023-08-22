@@ -1,4 +1,4 @@
-.thc-c-dropdown__content {
+.ds-c-dropdown__content {
     position: absolute;
     overflow-y: auto;
     overflow-x: hidden;
@@ -10,5 +10,5 @@
 
     outline: none;
 
-    z-index: var(--thc-zIndex--6);
+    z-index: var(--ds-zIndex--6);
 }

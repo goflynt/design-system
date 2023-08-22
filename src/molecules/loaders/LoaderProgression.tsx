@@ -27,17 +27,17 @@ export function LoaderProgression({
     percent = 0,
 }: LoaderProgressionProps) {
     const rootClassName = classnames(
-        "thc-c-loader-progression",
+        "ds-c-loader-progression",
         {
-            "thc-c-loader-progression--error": hasError,
-            "thc-c-loader-progression--warning": hasWarning,
+            "ds-c-loader-progression--error": hasError,
+            "ds-c-loader-progression--warning": hasWarning,
         },
         className
     );
 
     return (
         <div className={rootClassName}>
-            <div style={{ width: `${percent}%` }} className="thc-c-loader-progression__progress-bar" />
+            <div style={{ width: `${percent}%` }} className="ds-c-loader-progression__progress-bar" />
         </div>
     );
 }

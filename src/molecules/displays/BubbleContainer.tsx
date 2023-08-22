@@ -10,7 +10,7 @@ export interface BubbleValueContainerProps extends React.PropsWithChildren<{}> {
 }
 
 export function BubbleValueContainer({ children, className }: BubbleValueContainerProps) {
-    const rootClassName = classnames("thc-c-bubble-container", className);
+    const rootClassName = classnames("ds-c-bubble-container", className);
 
     return <div className={rootClassName}>{children}</div>;
 }

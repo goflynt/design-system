@@ -61,21 +61,21 @@ export const IconWrapper = React.forwardRef<HTMLDivElement, IconWrapperProps>(fu
     ref
 ) {
     const rootClassName = classnames(
-        "thc-c-icon-wrapper",
+        "ds-c-icon-wrapper",
         {
-            "thc-c-icon-wrapper--full-width": fullWidth,
-            "thc-c-icon-wrapper--top": position === "top",
-            "thc-c-icon-wrapper--right": position === "right",
-            "thc-c-icon-wrapper--bottom": position === "bottom",
-            "thc-c-icon-wrapper--left": position === "left",
+            "ds-c-icon-wrapper--full-width": fullWidth,
+            "ds-c-icon-wrapper--top": position === "top",
+            "ds-c-icon-wrapper--right": position === "right",
+            "ds-c-icon-wrapper--bottom": position === "bottom",
+            "ds-c-icon-wrapper--left": position === "left",
         },
         className
     );
-    const iconClassName = classnames("thc-c-icon-wrapper__icon", iconClassNameProp, iconProps.className);
+    const iconClassName = classnames("ds-c-icon-wrapper__icon", iconClassNameProp, iconProps.className);
 
     return (
         <div {...otherProps} className={rootClassName} ref={ref}>
-            {alterElement(children, { className: "thc-c-icon-wrapper__content" })}
+            {alterElement(children, { className: "ds-c-icon-wrapper__content" })}
             {icon && (
                 <Icon {...iconProps} className={iconClassName} onClick={onClick} size={size}>
                     {icon}

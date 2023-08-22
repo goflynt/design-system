@@ -49,10 +49,10 @@ export const HeaderCell = React.memo(function HeaderCell({
     const { hover, ...hoverEvents } = useHover(disabled);
 
     const rootClassName = classnames(
-        { "thc-theme--color": hover },
-        "thc-o-actionable",
-        "thc-c-header-cell",
-        "thc-u-text--subtitle-bold",
+        { "ds-theme--color": hover },
+        "ds-o-actionable",
+        "ds-c-header-cell",
+        "ds-u-text--subtitle-bold",
         className
     );
 
@@ -70,7 +70,7 @@ export const HeaderCell = React.memo(function HeaderCell({
             tabIndex={onClick ? 0 : -1}
         >
             <IconWrapper className={iconClassName} icon={icon} fullWidth size="m" position="right" {...iconProps}>
-                <div className="thc-o-flex-item--1 thc-c-header-cell__content">{children}</div>
+                <div className="ds-o-flex-item--1 ds-c-header-cell__content">{children}</div>
             </IconWrapper>
         </div>
     );

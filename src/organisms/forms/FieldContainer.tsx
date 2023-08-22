@@ -17,11 +17,11 @@ export interface FieldContainerProps extends React.PropsWithChildren<{}> {
 
 export function FieldContainer({ children, className, orientation = "vertical" }: FieldContainerProps) {
     const rootClassName = classnames(
-        "thc-c-field-container",
+        "ds-c-field-container",
         {
-            "thc-c-field-container--horizontal": ["horizontal", "centered"].includes(orientation),
-            "thc-c-field-container--vertical": orientation === "vertical",
-            "thc-c-field-container--centered": orientation === "centered",
+            "ds-c-field-container--horizontal": ["horizontal", "centered"].includes(orientation),
+            "ds-c-field-container--vertical": orientation === "vertical",
+            "ds-c-field-container--centered": orientation === "centered",
         },
         className
     );

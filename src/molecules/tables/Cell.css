@@ -1,29 +1,29 @@
 :root {
-    --thc-cell-height: 30px;
-    --thc-cell-min-width: 150px;
+    --ds-cell-height: 30px;
+    --ds-cell-min-width: 150px;
 }
 
-.thc-theme--light,
-.thc-theme--dark {
-    --thc-cell-background-color: var(--thc-paper-background-color);
+.ds-theme--light,
+.ds-theme--dark {
+    --ds-cell-background-color: var(--ds-paper-background-color);
 }
 
-.thc-theme--light {
-    --thc-cell-background-color--hover: var(--thc-color--black-10);
+.ds-theme--light {
+    --ds-cell-background-color--hover: var(--ds-color--black-10);
 }
 
-.thc-theme--dark {
-    --thc-cell-background-color--hover: var(--thc-color--white-10);
+.ds-theme--dark {
+    --ds-cell-background-color--hover: var(--ds-color--white-10);
 }
 
-.thc-c-cell {
+.ds-c-cell {
     box-sizing: border-box;
-    height: var(--thc-cell-height);
-    min-width: var(--thc-cell-min-width);
+    height: var(--ds-cell-height);
+    min-width: var(--ds-cell-min-width);
     width: fit-content;
-    padding: 0 var(--thc-spacing--M);
-    border-bottom: var(--thc-borderSolid--S);
-    border-right: var(--thc-borderSolid--S);
+    padding: 0 var(--ds-spacing--M);
+    border-bottom: var(--ds-borderSolid--S);
+    border-right: var(--ds-borderSolid--S);
 
     display: flex;
     align-items: center;
@@ -33,9 +33,9 @@
     white-space: nowrap;
     overflow: hidden;
 
-    background-color: var(--thc-cell-background-color);
+    background-color: var(--ds-cell-background-color);
 }
 
-.thc-c-cell--hover {
-    --thc-cell-background-color: var(--thc-cell-background-color--hover);
+.ds-c-cell--hover {
+    --ds-cell-background-color: var(--ds-cell-background-color--hover);
 }

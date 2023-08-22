@@ -75,29 +75,29 @@ export const DisplayResource = React.forwardRef<HTMLDivElement, DisplayResourceP
     ref
 ) {
     const rootClassName = classnames(
-        "thc-c-display-resource",
-        { "thc-c-display-resource--full-width": fullWidth },
+        "ds-c-display-resource",
+        { "ds-c-display-resource--full-width": fullWidth },
         className
     );
 
-    const containerClassName = classnames("thc-c-display-resource__container", {
-        "thc-c-display-resource__container--full-width": fullWidth,
+    const containerClassName = classnames("ds-c-display-resource__container", {
+        "ds-c-display-resource__container--full-width": fullWidth,
     });
 
     const labelClassName = classnames(
-        "thc-c-display-resource__label",
+        "ds-c-display-resource__label",
         {
-            "thc-c-display-resource__label--full-width": fullWidth,
+            "ds-c-display-resource__label--full-width": fullWidth,
         },
         labelClassNameProp
     );
 
-    const helperClassName = classnames("thc-c-display-resource__helper", {
-        [`thc-u-status--${status}`]: !disabled && status,
+    const helperClassName = classnames("ds-c-display-resource__helper", {
+        [`ds-u-status--${status}`]: !disabled && status,
     });
 
-    const iconClassName = classnames("thc-c-display-resource__icon", {
-        [`thc-u-status--${status}`]: !disabled && status,
+    const iconClassName = classnames("ds-c-display-resource__icon", {
+        [`ds-u-status--${status}`]: !disabled && status,
     });
 
     let content = (

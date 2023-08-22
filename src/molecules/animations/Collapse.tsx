@@ -72,7 +72,7 @@ export const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(function
     },
     ref
 ) {
-    const rootClassName = classnames("thc-c-collapse", className);
+    const rootClassName = classnames("ds-c-collapse", className);
 
     const collapsedSize = typeof collapsedSizeProp === "number" ? `${collapsedSizeProp}px` : collapsedSizeProp;
 
@@ -202,8 +202,8 @@ export const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(function
                     className={classnames(
                         rootClassName,
                         {
-                            "thc-c-collapse--entered": state === "entered",
-                            "thc-c-collapse--hidden": state === "exited" && !inProp && collapsedSize === "0px",
+                            "ds-c-collapse--entered": state === "entered",
+                            "ds-c-collapse--hidden": state === "exited" && !inProp && collapsedSize === "0px",
                         },
                         childProps?.className as string
                     )}
@@ -214,8 +214,8 @@ export const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(function
                     }}
                     ref={handleRef}
                 >
-                    <div className="thc-c-collapse__wrapper" ref={wrapperRef}>
-                        <div className="thc-c-collapse__wrapper-inner">{children}</div>
+                    <div className="ds-c-collapse__wrapper" ref={wrapperRef}>
+                        <div className="ds-c-collapse__wrapper-inner">{children}</div>
                     </div>
                 </div>
             )}

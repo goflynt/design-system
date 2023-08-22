@@ -54,21 +54,21 @@ export function DisplayStatus({
     const { translate: translateCommon } = useTranslation(translationKey ?? THC_DESIGN_SYSTEM_COMMON_TRANSLATION_KEY);
 
     const rootClassName = classnames(
-        "thc-c-display-status",
+        "ds-c-display-status",
         {
-            "thc-c-display-status--draft": status === StatusEnum.Draft,
-            "thc-c-display-status--inProgress": status === StatusEnum.InProgress,
-            "thc-c-display-status--paused": status === StatusEnum.Paused,
-            "thc-c-display-status--done": status === StatusEnum.Done,
-            "thc-c-display-status--failed": status === StatusEnum.Failed,
+            "ds-c-display-status--draft": status === StatusEnum.Draft,
+            "ds-c-display-status--inProgress": status === StatusEnum.InProgress,
+            "ds-c-display-status--paused": status === StatusEnum.Paused,
+            "ds-c-display-status--done": status === StatusEnum.Done,
+            "ds-c-display-status--failed": status === StatusEnum.Failed,
         },
         className
     );
 
-    const iconClassName = classnames("thc-c-display-status__icon", iconClassNameProp);
+    const iconClassName = classnames("ds-c-display-status__icon", iconClassNameProp);
 
     if (!DISPLAY_STATUS_ICONS[status]) {
-        return <span className="thc-u-status--error">{translateDisplay("unknown-status")}</span>;
+        return <span className="ds-u-status--error">{translateDisplay("unknown-status")}</span>;
     }
 
     return (

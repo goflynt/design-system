@@ -110,14 +110,14 @@ export function Tooltip({
 
     const forkedRef = useForkRef(setAnchorEl, isReactElement(children) ? children.props.ref : null);
 
-    const rootClassName = classnames("thc-c-tooltip", className);
+    const rootClassName = classnames("ds-c-tooltip", className);
     const contentClassName = classnames(
-        "thc-c-tooltip__content",
-        { "thc-c-tooltip__content--ellipsis": hasEllipsis },
+        "ds-c-tooltip__content",
+        { "ds-c-tooltip__content--ellipsis": hasEllipsis },
         contentClassNameProp
     );
-    const tooltipClassName = classnames("thc-c-tooltip__tooltip", tooltipClassNameProp);
-    const arrowClassName = classnames("thc-c-tooltip__arrow", arrowClassNameProp);
+    const tooltipClassName = classnames("ds-c-tooltip__tooltip", tooltipClassNameProp);
+    const arrowClassName = classnames("ds-c-tooltip__arrow", arrowClassNameProp);
 
     return (
         <div {...otherProps} className={rootClassName} disabled={disabled === true}>
@@ -134,10 +134,8 @@ export function Tooltip({
                     style={styles.popper}
                     {...attributes.popper}
                 >
-                    {tooltipTitle && (
-                        <div className="thc-c-tooltip__tooltip-title thc-u-text--bold">{tooltipTitle}</div>
-                    )}
-                    <div className="thc-c-tooltip__tooltip-content">{tooltip}</div>
+                    {tooltipTitle && <div className="ds-c-tooltip__tooltip-title ds-u-text--bold">{tooltipTitle}</div>}
+                    <div className="ds-c-tooltip__tooltip-content">{tooltip}</div>
                     <div
                         {...arrowProps}
                         className={arrowClassName}
