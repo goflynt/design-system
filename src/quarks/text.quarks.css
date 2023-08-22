@@ -3,14 +3,17 @@
 }
 
 :root {
-    --thc-fontSize--S: 10px;
-    --thc-fontSize--M: 12px;
-    --thc-fontSize--L: 14px;
-    --thc-fontSize--XL: 24px;
+    --thc-fontSize--XS: 11px;
+    --thc-fontSize--S: 13px;
+    --thc-fontSize--M: 16px;
+    --thc-fontSize--L: 23px;
+    --thc-fontSize--XL: 33px;
 }
 
 :root {
     --thc-fontWeight--regular: 400;
+    --thc-fontWeight--medium: 500;
+    --thc-fontWeight--semi-bold: 600;
     --thc-fontWeight--bold: 700;
 }
 
