@@ -1,11 +1,11 @@
 :root {
-    --thc-list-item-v-padding: var(--thc-spacing--M);
-    --thc-list-item-h-padding: var(--thc-spacing--M);
+    --thc-list-item-v-padding: var(--thc-spacing--XL);
+    --thc-list-item-h-padding: var(--thc-spacing--XL);
 
-    --thc-list-item-v-padding--condensed: var(--thc-spacing--S);
-    --thc-list-item-h-padding--condensed: var(--thc-spacing--M);
+    --thc-list-item-v-padding--condensed: var(--thc-spacing--M);
+    --thc-list-item-h-padding--condensed: var(--thc-spacing--XL);
 
-    --thc-list-item-spacing: var(--thc-spacing--S);
+    --thc-list-item-spacing: var(--thc-spacing--M);
 }
 
 .thc-c-list-item {

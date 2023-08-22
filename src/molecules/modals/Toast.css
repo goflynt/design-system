@@ -1,7 +1,7 @@
 .thc-c-toast {
     align-items: center;
 
-    padding: var(--thc-spacing--S);
+    padding: var(--thc-spacing--M);
 
     border-radius: var(--thc-radius--S);
 }

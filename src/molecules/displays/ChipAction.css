@@ -1,7 +1,7 @@
 .thc-c-chip--action {
     --thc-chip-border-radius: var(--thc-radius--M);
 
-    --thc-chip-padding: var(--thc-spacing--S) var(--thc-spacing--S);
+    --thc-chip-padding: var(--thc-spacing--M) var(--thc-spacing--M);
 
     --thc-chip-action-border: var(--thc-borderSolid--S);
     --thc-chip-action-border-color: var(--thc-color--primary-400);

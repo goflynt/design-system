@@ -11,7 +11,7 @@
     height: var(--thc-header-height);
     box-sizing: border-box;
 
-    padding: 0 var(--thc-spacing--S);
+    padding: 0 var(--thc-spacing--M);
 
     border-bottom: var(--thc-borderSolid--S);
 }
@@ -28,9 +28,9 @@
     display: flex;
     align-items: center;
 
-    margin-left: var(--thc-spacing--S);
+    margin-left: var(--thc-spacing--M);
 }
 
 .thc-c-header__actions .thc-c-button:not(:last-child) {
-    margin-right: var(--thc-spacing--S);
+    margin-right: var(--thc-spacing--M);
 }

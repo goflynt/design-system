@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
 
-    padding: var(--thc-spacing--S) var(--thc-spacing--M);
+    padding: var(--thc-spacing--M) var(--thc-spacing--XL);
 
     box-sizing: border-box;
     min-height: 60px;
@@ -14,5 +14,5 @@
 }
 
 .thc-c-banner__paper > .thc-c-banner__child:not(:last-child) {
-    margin-right: var(--thc-spacing--S);
+    margin-right: var(--thc-spacing--M);
 }

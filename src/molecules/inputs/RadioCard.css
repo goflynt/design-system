@@ -1,5 +1,5 @@
 .thc-c-radio-card {
-    --thc-card-spacing: var(--thc-spacing--S);
+    --thc-card-spacing: var(--thc-spacing--M);
 
     position: relative;
     box-sizing: border-box;
@@ -10,7 +10,7 @@
 }
 
 .thc-c-radio-card--checked {
-    --thc-card-spacing: calc(var(--thc-spacing--S) - var(--thc-border-size--L));
+    --thc-card-spacing: calc(var(--thc-spacing--M) - var(--thc-border-size--L));
 
     --thc-border-color: var(--thc-color--blue-400);
     --thc-o-box-border: var(--thc-borderSolid--L);

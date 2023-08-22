@@ -5,5 +5,5 @@
 }
 
 .thc-c-form-actions > .thc-c-button:not(:last-child) {
-    margin-right: var(--thc-spacing--S);
+    margin-right: var(--thc-spacing--M);
 }

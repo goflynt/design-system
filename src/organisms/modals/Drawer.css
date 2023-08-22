@@ -10,11 +10,11 @@
     display: flex;
     align-items: center;
 
-    margin: var(--thc-spacing--M);
+    margin: var(--thc-spacing--XL);
 }
 
 .thc-c-drawer__header-button {
-    margin-right: var(--thc-spacing--S);
+    margin-right: var(--thc-spacing--M);
 }
 
 .thc-c-drawer__header-subtitle {

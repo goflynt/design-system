@@ -45,7 +45,7 @@
 
     --thc-input-text-color--disabled: var(--thc-textColor--secondary);
 
-    --thc-input-padding: var(--thc-spacing--S);
+    --thc-input-padding: var(--thc-spacing--M);
 
     position: relative;
 
