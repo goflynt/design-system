@@ -1,6 +1,5 @@
 :root {
-    --thc-fontFamily--montserrat: Montserrat;
-    --thc-fontFamily--muli: Muli;
+    --thc-spacing--roboto: "Roboto";
 }
 
 :root {
@@ -12,14 +11,15 @@
 
 :root {
     --thc-fontWeight--regular: 400;
-    --thc-fontWeight--extrabold: 800;
+    --thc-fontWeight--bold: 700;
 }
 
 :root {
-    --thc-lineHeight--S: 12px;
-    --thc-lineHeight--M: 15px;
-    --thc-lineHeight--L: 23px;
-    --thc-lineHeight--XL: 29px;
+    --thc-lineHeight--XS: 15.4px;
+    --thc-lineHeight--S: 18.2px;
+    --thc-lineHeight--M: 22.4px;
+    --thc-lineHeight--L: 32.2px;
+    --thc-lineHeight--XL: 46.2px;
 }
 
 .thc-theme--light {
