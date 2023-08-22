@@ -52,7 +52,7 @@ export interface BannerProps extends React.PropsWithChildren<{}> {
 export function Banner({
     children,
     className,
-    color: colorProp = "--thc-color--primary-900",
+    color: colorProp = "--thc-color--primary-500",
     modalClassName: modalClassNameProp,
     modalProps,
     onClose,

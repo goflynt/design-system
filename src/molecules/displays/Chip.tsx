@@ -69,7 +69,7 @@ export interface ChipProps extends React.PropsWithChildren<{}> {
 export function Chip({
     children,
     className,
-    color: colorProp = "--thc-color--primary-900",
+    color: colorProp = "--thc-color--primary-500",
     disabled = false,
     helperText,
     helperProps,
