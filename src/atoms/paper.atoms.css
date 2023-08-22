@@ -1,6 +1,6 @@
 :root {
     --thc-paper-shadow: var(--thc-shadow--transparent);
-    --thc-paper-shadow--shadow: var(--thc-shadow--regular);
+    --thc-paper-shadow--shadow: var(--thc-shadow-M);
 }
 
 .thc-theme--light {
