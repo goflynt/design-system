@@ -17,7 +17,7 @@ export const List = React.forwardRef<HTMLUListElement, ListProps>(function List(
     { children, className, hasSeparator = false, ...otherProps },
     ref
 ) {
-    const listClassName = classnames("thc-c-list", { "thc-c-list--separator": hasSeparator }, className);
+    const listClassName = classnames("ds-c-list", { "ds-c-list--separator": hasSeparator }, className);
 
     return (
         <ul {...otherProps} className={listClassName} ref={ref}>

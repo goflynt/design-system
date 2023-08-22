@@ -10,7 +10,7 @@ export interface LoaderContainerProps extends React.PropsWithChildren<{}> {
 }
 
 export function LoaderContainer({ children, className, ...otherProps }: LoaderContainerProps) {
-    const rootClassName = classnames("thc-c-loader-container", className);
+    const rootClassName = classnames("ds-c-loader-container", className);
 
     return (
         <div {...otherProps} className={rootClassName}>

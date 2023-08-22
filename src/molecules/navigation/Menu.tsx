@@ -10,7 +10,7 @@ export interface MenuProps extends React.PropsWithChildren<{}> {
 }
 
 export function Menu({ children, className, ...otherProps }: MenuProps) {
-    const menuClassName = classnames("thc-o-paper", "thc-c-menu", className);
+    const menuClassName = classnames("ds-o-paper", "ds-c-menu", className);
 
     return (
         <div {...otherProps} className={menuClassName}>

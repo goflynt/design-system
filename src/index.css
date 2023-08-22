@@ -4,8 +4,8 @@
 
 /* Resets */
 
-.thc-theme--light form,
-.thc-theme--dark form {
+.ds-theme--light form,
+.ds-theme--dark form {
     margin: 0;
     padding: 0;
 }

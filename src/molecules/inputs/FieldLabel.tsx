@@ -43,13 +43,13 @@ export function FieldLabel({
     ...otherProps
 }: FieldLabelProps) {
     const labelClassName = classnames(
-        "thc-c-field-label",
+        "ds-c-field-label",
         {
-            "thc-c-field-label--error": hasError && !disabled,
+            "ds-c-field-label--error": hasError && !disabled,
         },
-        "thc-u-text--label-bold",
+        "ds-u-text--label-bold",
         {
-            "thc-u-status--error": hasError && !disabled,
+            "ds-u-status--error": hasError && !disabled,
         },
         className
     );
@@ -59,7 +59,7 @@ export function FieldLabel({
     return (
         <div {...filterProps(otherProps)} className={labelClassName} id={id} disabled={disabled === true}>
             {wrappedChild}
-            {required && <sup className="thc-c-field-label__required">*</sup>}
+            {required && <sup className="ds-c-field-label__required">*</sup>}
         </div>
     );
 }

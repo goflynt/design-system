@@ -1,19 +1,18 @@
 // Libs
-import React from "react";
-import PropTypes from "prop-types";
 import classnames from "classnames";
+import PropTypes from "prop-types";
 
 // Utils
 import { alterElement } from "../../core/utils";
 
 export function Layout({ children, className, header, menu }) {
-    const rootClassName = classnames("thc-c-layout", className);
+    const rootClassName = classnames("ds-c-layout", className);
 
     return (
         <div className={rootClassName}>
-            {alterElement(menu, { className: "thc-c-layout__menu" })}
-            {alterElement(header, { className: "thc-c-layout__header" })}
-            <div className="thc-c-layout__page">{children}</div>
+            {alterElement(menu, { className: "ds-c-layout__menu" })}
+            {alterElement(header, { className: "ds-c-layout__header" })}
+            <div className="ds-c-layout__page">{children}</div>
         </div>
     );
 }

@@ -1,67 +1,67 @@
 :root {
-    --thc-fontFamily--roboto: 'Roboto';
+    --ds-fontFamily--roboto: "Roboto";
 }
 
 :root {
-    --thc-fontSize--XS: 11px;
-    --thc-fontSize--S: 13px;
-    --thc-fontSize--M: 16px;
-    --thc-fontSize--L: 23px;
-    --thc-fontSize--XL: 33px;
+    --ds-fontSize--XS: 11px;
+    --ds-fontSize--S: 13px;
+    --ds-fontSize--M: 16px;
+    --ds-fontSize--L: 23px;
+    --ds-fontSize--XL: 33px;
 }
 
 :root {
-    --thc-fontWeight--regular: 400;
-    --thc-fontWeight--medium: 500;
-    --thc-fontWeight--semi-bold: 600;
-    --thc-fontWeight--bold: 700;
+    --ds-fontWeight--regular: 400;
+    --ds-fontWeight--medium: 500;
+    --ds-fontWeight--semi-bold: 600;
+    --ds-fontWeight--bold: 700;
 }
 
 :root {
-    --thc-lineHeight--XS: 15.4px;
-    --thc-lineHeight--S: 18.2px;
-    --thc-lineHeight--M: 22.4px;
-    --thc-lineHeight--L: 32.2px;
-    --thc-lineHeight--XL: 46.2px;
+    --ds-lineHeight--XS: 15.4px;
+    --ds-lineHeight--S: 18.2px;
+    --ds-lineHeight--M: 22.4px;
+    --ds-lineHeight--L: 32.2px;
+    --ds-lineHeight--XL: 46.2px;
 }
 
-.thc-u-typography--headline-1 {
-    font-family: var(--thc-fontFamily--roboto);
-    font-weight: var(--thc-fontWeight--regular);
-    font-size: var(--thc-fontSize--XL);
-    line-height: var(----thc-lineHeight-XL);
+.ds-u-typography--headline-1 {
+    font-family: var(--ds-fontFamily--roboto);
+    font-weight: var(--ds-fontWeight--regular);
+    font-size: var(--ds-fontSize--XL);
+    line-height: var(----ds-lineHeight-XL);
     text-transform: none;
 }
 
-.thc-u-typography--headline-2 {
-    font-family: var(--thc-fontFamily--roboto);
-    font-weight: var(--thc-fontWeight--regular);
-    font-size: var(--thc-fontSize--L);
-    line-height: var(----thc-lineHeight-L);
+.ds-u-typography--headline-2 {
+    font-family: var(--ds-fontFamily--roboto);
+    font-weight: var(--ds-fontWeight--regular);
+    font-size: var(--ds-fontSize--L);
+    line-height: var(----ds-lineHeight-L);
     text-transform: none;
 }
 
-.thc-u-typography--subtitle-1 {
-    font-family: var(--thc-fontFamily--roboto);
-    font-weight: var(--thc-fontWeight--regular);
-    font-size: var(--thc-fontSize--M);
-    line-height: var(--thc-lineHeight--M);
+.ds-u-typography--subtitle-1 {
+    font-family: var(--ds-fontFamily--roboto);
+    font-weight: var(--ds-fontWeight--regular);
+    font-size: var(--ds-fontSize--M);
+    line-height: var(--ds-lineHeight--M);
     text-transform: none;
 }
 
-.thc-u-typography--body-1,
-.thc-u-typography--button {
-    font-family: var(--thc-fontFamily--roboto);
-    font-weight: var(--thc-fontWeight--regular);
-    font-size: var(--thc-fontSize--S);
-    line-height: var(--thc-lineHeight--S);
+.ds-u-typography--body-1,
+.ds-u-typography--button {
+    font-family: var(--ds-fontFamily--roboto);
+    font-weight: var(--ds-fontWeight--regular);
+    font-size: var(--ds-fontSize--S);
+    line-height: var(--ds-lineHeight--S);
     text-transform: none;
 }
 
-.thc-u-typography--caption {
-    font-family: var(--thc-fontFamily--roboto);
-    font-weight: var(--thc-fontWeight--regular);
-    font-size: var(--thc-fontSize--XS);
-    line-height: var(--thc-lineHeight--XS);
+.ds-u-typography--caption {
+    font-family: var(--ds-fontFamily--roboto);
+    font-weight: var(--ds-fontWeight--regular);
+    font-size: var(--ds-fontSize--XS);
+    line-height: var(--ds-lineHeight--XS);
     text-transform: none;
 }

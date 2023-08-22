@@ -132,17 +132,17 @@ export function Checkbox({
     ...otherProps
 }: CheckboxProps) {
     const rootClassName = classnames(
-        "thc-c-checkbox",
+        "ds-c-checkbox",
         {
-            "thc-c-checkbox--error": hasError && !disabled,
-            "thc-c-checkbox--checked": checked,
-            "thc-c-checkbox--indeterminate": indeterminate,
+            "ds-c-checkbox--error": hasError && !disabled,
+            "ds-c-checkbox--checked": checked,
+            "ds-c-checkbox--indeterminate": indeterminate,
         },
         className
     );
-    const inputClassName = classnames("thc-c-checkbox__input", inputClassNameProp);
-    const boxClassName = classnames("thc-c-checkbox__box", boxClassNameProp);
-    const iconClassName = classnames("thc-c-checkbox__icon", iconClassNameProp);
+    const inputClassName = classnames("ds-c-checkbox__input", inputClassNameProp);
+    const boxClassName = classnames("ds-c-checkbox__box", boxClassNameProp);
+    const iconClassName = classnames("ds-c-checkbox__icon", iconClassNameProp);
 
     const inputRef = useRef<HTMLInputElement>(null);
     useEffect(() => {
@@ -184,7 +184,7 @@ export function Checkbox({
                             check
                         </Icon>
                     )}
-                    {indeterminate && <div className="thc-c-checkbox__indeterminate" />}
+                    {indeterminate && <div className="ds-c-checkbox__indeterminate" />}
                 </div>
             </div>
         </ControlLabel>

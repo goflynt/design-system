@@ -62,18 +62,18 @@ export function ControlLabel({
     ...otherProps
 }: ControlLabelProps) {
     const controlLabelClassName = classnames(
-        "thc-c-control-label",
+        "ds-c-control-label",
         {
-            "thc-c-control-label--top": labelPosition === "top",
-            "thc-c-control-label--right": labelPosition === "right",
-            "thc-c-control-label--bottom": labelPosition === "bottom",
-            "thc-c-control-label--left": labelPosition === "left",
-            "thc-u-status--error": !disabled && hasError,
+            "ds-c-control-label--top": labelPosition === "top",
+            "ds-c-control-label--right": labelPosition === "right",
+            "ds-c-control-label--bottom": labelPosition === "bottom",
+            "ds-c-control-label--left": labelPosition === "left",
+            "ds-u-status--error": !disabled && hasError,
         },
         className
     );
-    const labelClassName = classnames("thc-c-control-label__label", labelClassNameProp);
-    const controlClassName = classnames("thc-c-control-label__control");
+    const labelClassName = classnames("ds-c-control-label__label", labelClassNameProp);
+    const controlClassName = classnames("ds-c-control-label__control");
 
     return (
         <label {...filterProps(otherProps)} className={controlLabelClassName} disabled={disabled === true} htmlFor={id}>

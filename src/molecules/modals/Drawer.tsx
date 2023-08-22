@@ -90,17 +90,17 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(function Dra
 ) {
     const isMounted = useIsMounted();
 
-    const rootClassName = classnames("thc-c-drawer", { "thc-c-drawer--docked": type === "persistent" }, className);
-    const modalClassName = classnames("thc-c-drawer__modal", modalClassNameProp);
+    const rootClassName = classnames("ds-c-drawer", { "ds-c-drawer--docked": type === "persistent" }, className);
+    const modalClassName = classnames("ds-c-drawer__modal", modalClassNameProp);
     const paperClassName = classnames(
-        "thc-o-paper",
-        "thc-c-drawer__paper",
-        `thc-c-drawer__paper--${anchor}`,
+        "ds-o-paper",
+        "ds-c-drawer__paper",
+        `ds-c-drawer__paper--${anchor}`,
         {
-            "thc-c-drawer__paper--XL": size === "xl",
-            "thc-c-drawer__paper--L": size === "l",
-            "thc-c-drawer__paper--M": size === "m",
-            "thc-c-drawer__paper--S": size === "s",
+            "ds-c-drawer__paper--XL": size === "xl",
+            "ds-c-drawer__paper--L": size === "l",
+            "ds-c-drawer__paper--M": size === "m",
+            "ds-c-drawer__paper--S": size === "s",
         },
         paperClassNameProp
     );

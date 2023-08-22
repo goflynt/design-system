@@ -48,14 +48,14 @@ export function ListItemIcon({
     ...otherProps
 }: ListItemIconProps) {
     const rootClassName = classnames(
-        "thc-c-list-item-icon",
+        "ds-c-list-item-icon",
         {
-            "thc-c-list-item-icon--hover": hover,
-            "thc-c-list-item-icon--accent": accent,
+            "ds-c-list-item-icon--hover": hover,
+            "ds-c-list-item-icon--accent": accent,
         },
         className
     );
-    const iconClassName = classnames("thc-c-list-item-icon__icon", iconClassNameProp);
+    const iconClassName = classnames("ds-c-list-item-icon__icon", iconClassNameProp);
 
     return (
         <div {...otherProps} className={rootClassName}>

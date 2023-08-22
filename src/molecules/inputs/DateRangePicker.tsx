@@ -54,7 +54,7 @@ export function DateRangePicker({
     value: { startDate: startDateProp, endDate: endDateProp } = {},
     ...otherProps
 }: DateRangePickerProps) {
-    const rootClassName = classnames("thc-c-date-range-picker", className);
+    const rootClassName = classnames("ds-c-date-range-picker", className);
 
     const inputRef = useRef<HTMLInputElement>(null);
 
@@ -121,7 +121,7 @@ export function DateRangePicker({
             <Input
                 {...otherProps}
                 adornmentProps={{ onClick: handleClick }}
-                className="thc-c-date-picker__input"
+                className="ds-c-date-picker__input"
                 endAdornment="calendar"
                 focused={open}
                 id={id}
@@ -134,7 +134,7 @@ export function DateRangePicker({
             <Dropdown
                 {...dropdownProps}
                 anchorEl={inputRef}
-                contentClassName="thc-c-date-picker__calendar"
+                contentClassName="ds-c-date-picker__calendar"
                 onClose={handleClose}
                 open={open}
             >

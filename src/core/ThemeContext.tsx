@@ -44,9 +44,9 @@ export function ThemeProvider({ children, className, theme: themeProp, ...otherP
 
     const rootClassName = classnames(
         {
-            "thc-theme--light": theme === "light",
-            "thc-theme--dark": theme === "dark",
-            "thc-theme--color": theme === "color",
+            "ds-theme--light": theme === "light",
+            "ds-theme--dark": theme === "dark",
+            "ds-theme--color": theme === "color",
         },
         className
     );

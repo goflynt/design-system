@@ -8,7 +8,7 @@ import { Button, ButtonProps } from "./Button";
 export interface ButtonAngleProps extends ButtonProps {}
 
 export function ButtonAngle({ children, className, icon, iconSize = "m", ...otherProps }: ButtonAngleProps) {
-    const buttonClassName = classnames("thc-c-button-angle", className);
+    const buttonClassName = classnames("ds-c-button-angle", className);
     const child = icon ?? children;
 
     return (

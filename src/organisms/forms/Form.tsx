@@ -38,7 +38,7 @@ export function Form({
     noValidate = true,
     ...otherProps
 }: FormProps) {
-    const formClassName = classnames("thc-c-form", className);
+    const formClassName = classnames("ds-c-form", className);
 
     let child = children;
     if (!noFieldContainer) {

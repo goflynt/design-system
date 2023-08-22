@@ -13,8 +13,8 @@ export interface MenuListProps extends React.PropsWithChildren<{}> {
 }
 
 export function MenuList({ children, className, ...otherProps }: MenuListProps) {
-    const listClassName = classnames("thc-c-menu-list", className);
-    const menuItemClassName = classnames("thc-c-menu-list__item");
+    const listClassName = classnames("ds-c-menu-list", className);
+    const menuItemClassName = classnames("ds-c-menu-list__item");
 
     return (
         <ul {...otherProps} className={listClassName}>

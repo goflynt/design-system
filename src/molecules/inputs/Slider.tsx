@@ -116,24 +116,24 @@ export function Slider({
     ...otherProps
 }: SliderProps) {
     const rootClassName = classnames(
-        "thc-c-slider",
+        "ds-c-slider",
         {
-            "thc-c-slider--error": !disabled && hasError,
-            "thc-c-slider--success": !disabled && hasSuccess,
+            "ds-c-slider--error": !disabled && hasError,
+            "ds-c-slider--success": !disabled && hasSuccess,
         },
         className
     );
-    const inputClassName = classnames("thc-c-slider__input", inputClassNameProp);
-    const labelClassName = classnames("thc-c-slider__label thc-u-text--bold", {
-        "thc-u-status--error": !disabled && hasError,
-        "thc-u-status--success": !disabled && hasSuccess,
+    const inputClassName = classnames("ds-c-slider__input", inputClassNameProp);
+    const labelClassName = classnames("ds-c-slider__label ds-u-text--bold", {
+        "ds-u-status--error": !disabled && hasError,
+        "ds-u-status--success": !disabled && hasSuccess,
     });
 
     return (
         <div {...filterProps(otherProps)} className={rootClassName} disabled={disabled === true}>
-            <div className="thc-c-slider__texts">
+            <div className="ds-c-slider__texts">
                 <span className={labelClassName}>{label}</span>
-                <span className="thc-c-slider__helper-text">{helperText}</span>
+                <span className="ds-c-slider__helper-text">{helperText}</span>
             </div>
             <input
                 {...filterProps(inputProps)}
@@ -158,9 +158,9 @@ export function Slider({
                 }}
                 type="range"
             />
-            <div className="thc-c-slider__minmax">
-                <div className="thc-c-slider__min">{min}</div>
-                <div className="thc-c-slider__max">{max}</div>
+            <div className="ds-c-slider__minmax">
+                <div className="ds-c-slider__min">{min}</div>
+                <div className="ds-c-slider__max">{max}</div>
             </div>
         </div>
     );

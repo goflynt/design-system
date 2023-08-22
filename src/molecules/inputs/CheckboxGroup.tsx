@@ -89,7 +89,7 @@ export function CheckboxGroup({
     withFormik = false,
     ...otherProps
 }: CheckboxGroupProps) {
-    const rootClassName = classnames("thc-c-checkbox-group", className);
+    const rootClassName = classnames("ds-c-checkbox-group", className);
 
     const { translate } = useTranslation(translationKey);
 

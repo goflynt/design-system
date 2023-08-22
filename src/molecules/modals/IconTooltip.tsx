@@ -1,17 +1,16 @@
 // Libs
-import React from "react";
-import PropTypes from "prop-types";
 import classnames from "classnames";
+import PropTypes from "prop-types";
 
 // Components
-import { Icon, IconWrapper, ICON_SIZE, ICON_POSITION } from "../icons";
+import { ICON_POSITION, ICON_SIZE, Icon, IconWrapper } from "../icons";
 import { Tooltip } from "./Tooltip";
 
 export function IconTooltip({
     children,
     className,
     icon = "question-circle",
-    iconClassName = "thc-u-text--secondary",
+    iconClassName = "ds-u-text--secondary",
     iconPosition = ICON_POSITION.RIGHT,
     iconProps,
     iconSize = ICON_SIZE.S,
@@ -21,7 +20,7 @@ export function IconTooltip({
     tooltipTitle,
     ...otherProps
 }) {
-    const rootClassName = classnames("thc-c-icon-tooltip", className);
+    const rootClassName = classnames("ds-c-icon-tooltip", className);
 
     return (
         <IconWrapper

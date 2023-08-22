@@ -82,14 +82,14 @@ export function Tab({
     ...otherProps
 }: TabProps) {
     const rootClassName = classnames(
-        "thc-c-tab",
+        "ds-c-tab",
         {
-            "thc-c-tab--disabled": disabled,
-            "thc-c-tab--selected": selected,
+            "ds-c-tab--disabled": disabled,
+            "ds-c-tab--selected": selected,
         },
         className
     );
-    const iconClassName = classnames("thc-c-tab__icon", iconClassNameProp);
+    const iconClassName = classnames("ds-c-tab__icon", iconClassNameProp);
 
     const handleClick = useCallback(
         (event) => {
@@ -108,7 +108,7 @@ export function Tab({
 
     return (
         <Button {...otherProps} className={rootClassName} disabled={disabled} onClick={handleClick} type="tab">
-            <span className="thc-c-tab__wrapper">
+            <span className="ds-c-tab__wrapper">
                 <IconWrapper
                     {...iconProps}
                     className={iconClassName}

@@ -39,11 +39,11 @@ export function OpenCloseIcon({
     ...otherProps
 }: OpenCloseIconProps) {
     const rootClassName = classnames(
-        "thc-o-actionable",
-        "thc-c-open-close-icon",
+        "ds-o-actionable",
+        "ds-c-open-close-icon",
         {
-            "thc-c-open-close-icon--open": open,
-            "thc-c-open-close-icon--close": !open,
+            "ds-c-open-close-icon--open": open,
+            "ds-c-open-close-icon--close": !open,
         },
         className
     );

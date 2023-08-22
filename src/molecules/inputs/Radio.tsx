@@ -127,18 +127,18 @@ export function Radio({
     ...otherProps
 }: RadioProps) {
     const rootClassName = classnames(
-        "thc-c-radio",
+        "ds-c-radio",
         {
-            "thc-c-radio--error": hasError && !disabled,
-            "thc-c-radio--checked": checked,
+            "ds-c-radio--error": hasError && !disabled,
+            "ds-c-radio--checked": checked,
         },
         className
     );
 
-    const inputClassName = classnames("thc-c-radio__input", inputClassNameProp);
-    const circleClassName = classnames("thc-c-radio__circle", circleClassNameProp);
-    const thumbClassName = classnames("thc-c-radio__thumb", thumbClassNameProp);
-    const labelClassName = classnames("thc-c-radio__label", labelClassNameProp);
+    const inputClassName = classnames("ds-c-radio__input", inputClassNameProp);
+    const circleClassName = classnames("ds-c-radio__circle", circleClassNameProp);
+    const thumbClassName = classnames("ds-c-radio__thumb", thumbClassNameProp);
+    const labelClassName = classnames("ds-c-radio__label", labelClassNameProp);
 
     return (
         <ControlLabel

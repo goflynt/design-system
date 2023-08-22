@@ -69,7 +69,7 @@ export interface ChipProps extends React.PropsWithChildren<{}> {
 export function Chip({
     children,
     className,
-    color: colorProp = "--thc-color--primary-500",
+    color: colorProp = "--ds-color--primary-500",
     disabled = false,
     helperText,
     helperProps,
@@ -85,16 +85,16 @@ export function Chip({
 }: ChipProps) {
     const chipClassName = classnames(
         {
-            "thc-theme--color": !disabled && type === "colored",
+            "ds-theme--color": !disabled && type === "colored",
         },
-        "thc-c-chip",
+        "ds-c-chip",
         {
-            "thc-c-chip--outlined": type === "outlined",
-            "thc-o-actionable": !disabled && !!onClick,
+            "ds-c-chip--outlined": type === "outlined",
+            "ds-o-actionable": !disabled && !!onClick,
         },
         className
     );
-    const iconClassName = classnames("thc-c-chip__icon", iconClassNameProp);
+    const iconClassName = classnames("ds-c-chip__icon", iconClassNameProp);
 
     let color = disabled || type === "outlined" ? undefined : colorProp;
     if (color && color.startsWith("--thc")) {

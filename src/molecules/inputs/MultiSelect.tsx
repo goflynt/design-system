@@ -181,14 +181,14 @@ export function MultiSelect({
     value,
     ...otherProps
 }: MultiSelectProps) {
-    const multiClassName = classnames("thc-c-multi-select", className);
-    const chipClassName = classnames("thc-c-multi-select__chip", chipClassNameProp);
-    const chipContainerClassName = classnames("thc-c-multi-select__chip-container", chipContainerClassNameProp);
-    const dropdownClassName = classnames("thc-c-multi-select__dropdown", dropdownClassNameProp);
-    const inputClassName = classnames("thc-c-multi-select__input", inputClassNameProp);
-    const listClassName = classnames("thc-c-multi-select__list", listClassNameProp);
-    const listItemClassName = classnames("thc-c-multi-select__list-item", listItemClassNameProp);
-    const selectClassName = classnames("thc-c-multi-select__select", selectClassNameProp);
+    const multiClassName = classnames("ds-c-multi-select", className);
+    const chipClassName = classnames("ds-c-multi-select__chip", chipClassNameProp);
+    const chipContainerClassName = classnames("ds-c-multi-select__chip-container", chipContainerClassNameProp);
+    const dropdownClassName = classnames("ds-c-multi-select__dropdown", dropdownClassNameProp);
+    const inputClassName = classnames("ds-c-multi-select__input", inputClassNameProp);
+    const listClassName = classnames("ds-c-multi-select__list", listClassNameProp);
+    const listItemClassName = classnames("ds-c-multi-select__list-item", listItemClassNameProp);
+    const selectClassName = classnames("ds-c-multi-select__select", selectClassNameProp);
 
     const selectRef = useRef<HTMLInputElement>(null);
 

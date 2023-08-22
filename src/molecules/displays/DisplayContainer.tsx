@@ -33,12 +33,12 @@ export function DisplayContainer({
     ...otherProps
 }: DisplayContainerProps) {
     const containerClassName = classnames(
-        "thc-c-display-container",
+        "ds-c-display-container",
         {
-            "thc-c-display-container--horizontal": orientation === "horizontal",
-            "thc-c-display-container--vertical": orientation === "vertical",
-            "thc-c-display-container--column": displayType === "column",
-            "thc-c-display-container--row": displayType === "row",
+            "ds-c-display-container--horizontal": orientation === "horizontal",
+            "ds-c-display-container--vertical": orientation === "vertical",
+            "ds-c-display-container--column": displayType === "column",
+            "ds-c-display-container--row": displayType === "row",
         },
         className
     );

@@ -1,24 +1,24 @@
-.thc-c-display-status {
+.ds-c-display-status {
     display: flex;
     align-items: center;
 }
 
-.thc-c-display-status--draft {
-    --thc-icon-color: var(--thc-color--warning-500);
+.ds-c-display-status--draft {
+    --ds-icon-color: var(--ds-color--warning-500);
 }
 
-.thc-c-display-status--inProgress {
-    --thc-icon-color: var(--thc-textColor--secondary);
+.ds-c-display-status--inProgress {
+    --ds-icon-color: var(--ds-textColor--secondary);
 }
 
-.thc-c-display-status--paused {
-    --thc-icon-color: var(--thc-textColor--primary);
+.ds-c-display-status--paused {
+    --ds-icon-color: var(--ds-textColor--primary);
 }
 
-.thc-c-display-status--done {
-    --thc-icon-color: var(--thc-color--success-500);
+.ds-c-display-status--done {
+    --ds-icon-color: var(--ds-color--success-500);
 }
 
-.thc-c-display-status--failed {
-    --thc-icon-color: var(--thc-color--error-500);
+.ds-c-display-status--failed {
+    --ds-icon-color: var(--ds-color--error-500);
 }

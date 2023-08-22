@@ -30,13 +30,13 @@ export function LoaderSpinner({
     isLoading = false,
 }: LoaderSpinnerProps) {
     const rootClassName = classnames(
-        "thc-c-loader-spinner",
+        "ds-c-loader-spinner",
         {
-            "thc-c-loader-spinner--loading": isLoading,
+            "ds-c-loader-spinner--loading": isLoading,
         },
         className
     );
-    const iconClassName = classnames("thc-c-loader-spinner__icon", iconClassNameProp);
+    const iconClassName = classnames("ds-c-loader-spinner__icon", iconClassNameProp);
 
     return (
         <div className={rootClassName}>

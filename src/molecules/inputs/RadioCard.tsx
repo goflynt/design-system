@@ -53,10 +53,10 @@ export const RadioCard = React.forwardRef<HTMLDivElement, RadioCardProps>(functi
     ref
 ) {
     const rootClassName = classnames(
-        "thc-c-radio-card",
+        "ds-c-radio-card",
         {
-            "thc-c-radio-card--checked": checked,
-            "thc-u-status--error": !disabled && hasError,
+            "ds-c-radio-card--checked": checked,
+            "ds-u-status--error": !disabled && hasError,
         },
         className
     );
@@ -75,7 +75,7 @@ export const RadioCard = React.forwardRef<HTMLDivElement, RadioCardProps>(functi
     return (
         <Card className={rootClassName} disabled={disabled} onClick={() => {}} outlined ref={ref}>
             <CardHeader>
-                <CardContent className="thc-o-flex-item--1">{child}</CardContent>
+                <CardContent className="ds-o-flex-item--1">{child}</CardContent>
                 <CardContent>
                     <Radio {...otherProps} disabled={disabled} checked={checked} hasError={hasError} />
                 </CardContent>

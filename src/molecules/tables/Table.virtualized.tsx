@@ -11,9 +11,9 @@ import { getCSSVariable } from "../../core/utils";
 import { Cell, CellProps } from "./Cell";
 import { HeaderCell, HeaderCellProps } from "./HeaderCell";
 
-const COLUMN_MIN_WIDTH = Number.parseInt(getCSSVariable("--thc-cell-min-width").replace("px", ""));
-const HEADER_HEIGHT = Number.parseInt(getCSSVariable("--thc-header-cell-height").replace("px", ""));
-const ROW_HEIGHT = Number.parseInt(getCSSVariable("--thc-cell-height").replace("px", ""));
+const COLUMN_MIN_WIDTH = Number.parseInt(getCSSVariable("--ds-cell-min-width").replace("px", ""));
+const HEADER_HEIGHT = Number.parseInt(getCSSVariable("--ds-header-cell-height").replace("px", ""));
+const ROW_HEIGHT = Number.parseInt(getCSSVariable("--ds-cell-height").replace("px", ""));
 
 const defaultDataProp: TableVirtualizedProps["data"] = [];
 
@@ -37,7 +37,7 @@ export interface TableVirtualizedProps {
  * Simple cell measurer exists: see https://github.com/bvaughn/react-virtualized/blob/master/source/CellMeasurer/CellMeasurer.example.js
  */
 export function TableVirtualized({ className, columns = [], data = defaultDataProp }: TableVirtualizedProps) {
-    const rootClassName = classnames("thc-o-paper", "thc-c-table", className);
+    const rootClassName = classnames("ds-o-paper", "ds-c-table", className);
 
     const rowCount = data.length;
     const columnCount = columns.length;
@@ -106,7 +106,7 @@ export function TableVirtualized({ className, columns = [], data = defaultDataPr
                         <div>
                             <Grid
                                 cellRenderer={headerRenderer}
-                                className="thc-c-table__header--virtualized"
+                                className="ds-c-table__header--virtualized"
                                 columnCount={columnCount}
                                 columnWidth={({ index }) => columnsMaxLength[index]}
                                 height={HEADER_HEIGHT}
@@ -117,7 +117,7 @@ export function TableVirtualized({ className, columns = [], data = defaultDataPr
                                 width={width - scrollbarSize()}
                             />
                             <Grid
-                                className="thc-c-table__body--virtualized"
+                                className="ds-c-table__body--virtualized"
                                 cellRenderer={cellRenderer}
                                 columnCount={columnCount}
                                 columnWidth={({ index }) => columnsMaxLength[index]}

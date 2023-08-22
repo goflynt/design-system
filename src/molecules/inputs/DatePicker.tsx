@@ -54,7 +54,7 @@ export function DatePicker({
     value: valueProp,
     ...otherProps
 }: DatePickerProps) {
-    const rootClassName = classnames("thc-c-date-picker", className);
+    const rootClassName = classnames("ds-c-date-picker", className);
 
     const inputRef = useRef<HTMLInputElement>(null);
     const [open, setOpen] = useState(false);
@@ -76,7 +76,7 @@ export function DatePicker({
             <Input
                 {...otherProps}
                 adornmentProps={{ onClick: () => setOpen(true) }}
-                className="thc-c-date-picker__input"
+                className="ds-c-date-picker__input"
                 endAdornment="calendar"
                 focused={open}
                 id={id}
@@ -89,7 +89,7 @@ export function DatePicker({
             <Dropdown
                 {...dropDownProps}
                 anchorEl={inputRef}
-                contentClassName="thc-c-date-picker__calendar"
+                contentClassName="ds-c-date-picker__calendar"
                 onClose={() => setOpen(false)}
                 open={open}
             >

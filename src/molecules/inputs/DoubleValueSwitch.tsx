@@ -51,22 +51,22 @@ export function DoubleValueSwitch({
     value,
     onChange,
 }: DoubleValueSwitchProps) {
-    const rootClassName = classnames("thc-c-double-value-switch", className);
+    const rootClassName = classnames("ds-c-double-value-switch", className);
 
     return (
         <div className={rootClassName}>
             <ControlLabel
-                className={classnames("thc-u-text--bold", {
-                    "thc-u-text--skyblue": value === leftValue,
-                    "thc-u-text--secondary": value !== leftValue,
+                className={classnames("ds-u-text--bold", {
+                    "ds-u-text--skyblue": value === leftValue,
+                    "ds-u-text--secondary": value !== leftValue,
                 })}
                 label={leftValueLabel}
                 labelPosition="left"
             >
                 <ControlLabel
-                    className={classnames("thc-u-text--bold", {
-                        "thc-u-text--skyblue": value === rightValue,
-                        "thc-u-text--secondary": value !== rightValue,
+                    className={classnames("ds-u-text--bold", {
+                        "ds-u-text--skyblue": value === rightValue,
+                        "ds-u-text--secondary": value !== rightValue,
                     })}
                     label={rightValueLabel}
                     labelPosition="right"

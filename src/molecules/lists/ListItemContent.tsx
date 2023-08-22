@@ -17,7 +17,7 @@ export interface ListItemContentProps extends React.PropsWithChildren<{}> {
 }
 
 export function ListItemContent({ children, className, onClick, ...otherProps }: ListItemContentProps) {
-    const rootClassName = classnames("thc-c-list-item-content", className);
+    const rootClassName = classnames("ds-c-list-item-content", className);
 
     return (
         <div className={rootClassName} onClick={onClick} {...filterProps(otherProps)}>

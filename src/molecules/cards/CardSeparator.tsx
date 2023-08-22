@@ -15,8 +15,8 @@ export interface CardSeparatorProps extends React.PropsWithChildren<{}> {
 
 export function CardSeparator({ className, fullWidth = false, ...otherProps }: CardSeparatorProps) {
     const separatorClassName = classnames(
-        "thc-c-card__separator",
-        { "thc-c-card__separator--full-width": fullWidth },
+        "ds-c-card__separator",
+        { "ds-c-card__separator--full-width": fullWidth },
         className
     );
 

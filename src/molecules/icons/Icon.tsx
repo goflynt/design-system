@@ -42,12 +42,12 @@ export const Icon = React.forwardRef<SVGSVGElement, IconProps>(function Icon(
     ref
 ) {
     const iconClassName = classnames(
-        "thc-c-icon",
+        "ds-c-icon",
         {
-            "thc-u-icon--XS": size === "xs",
-            "thc-u-icon--S": size === "s",
-            "thc-u-icon--M": size === "m",
-            "thc-u-icon--L": size === "l",
+            "ds-u-icon--XS": size === "xs",
+            "ds-u-icon--S": size === "s",
+            "ds-u-icon--M": size === "m",
+            "ds-u-icon--L": size === "l",
         },
         className
     );
@@ -77,7 +77,7 @@ export const Icon = React.forwardRef<SVGSVGElement, IconProps>(function Icon(
         >
             {traces.map((trace, i) => (
                 <path
-                    className="thc-c-icon__path"
+                    className="ds-c-icon__path"
                     key={i}
                     fillRule="evenodd"
                     clipRule="evenodd"

@@ -1,12 +1,12 @@
 :root {
-    --thc-spacing--XS: 4px;
-    --thc-spacing--S: 8px;
-    --thc-spacing--M: 12px;
-    --thc-spacing--L: 16px;
-    --thc-spacing--XL: 24px;
-    --thc-spacing--XXL: 32px;
-    --thc-spacing--3XL: 40px;
-    --thc-spacing--4XL: 48px;
-    --thc-spacing--5XL: 56px;
-    --thc-spacing--6XL: 64px;
+    --ds-spacing--XS: 4px;
+    --ds-spacing--S: 8px;
+    --ds-spacing--M: 12px;
+    --ds-spacing--L: 16px;
+    --ds-spacing--XL: 24px;
+    --ds-spacing--XXL: 32px;
+    --ds-spacing--3XL: 40px;
+    --ds-spacing--4XL: 48px;
+    --ds-spacing--5XL: 56px;
+    --ds-spacing--6XL: 64px;
 }

@@ -40,13 +40,13 @@ export const CardContainer = React.forwardRef<HTMLDivElement, CardContainerProps
     ref
 ) {
     const rootClassName = classnames(
-        "thc-c-card-container",
+        "ds-c-card-container",
         {
-            "thc-c-card-container--condensed": condensed,
-            "thc-c-card-container--horizontal": orientation === "horizontal",
-            "thc-c-card-container--vertical": orientation === "vertical",
-            "thc-c-card-container--full-height": fullHeight,
-            "thc-c-card-container--full-width": fullWidth,
+            "ds-c-card-container--condensed": condensed,
+            "ds-c-card-container--horizontal": orientation === "horizontal",
+            "ds-c-card-container--vertical": orientation === "vertical",
+            "ds-c-card-container--full-height": fullHeight,
+            "ds-c-card-container--full-width": fullWidth,
         },
         className
     );

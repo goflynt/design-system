@@ -141,16 +141,16 @@ export const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(function S
     const checked = Boolean(checkedProp ?? value);
 
     const switchClassName = classnames(
-        "thc-c-switch",
+        "ds-c-switch",
         {
-            "thc-c-switch--error": !disabled && hasError,
-            "thc-c-switch--checked": checked,
-            "thc-c-switch--disabled-color-toggle": disabledColorToggle,
+            "ds-c-switch--error": !disabled && hasError,
+            "ds-c-switch--checked": checked,
+            "ds-c-switch--disabled-color-toggle": disabledColorToggle,
         },
         className
     );
-    const inputClassName = classnames("thc-c-switch__input", inputClassNameProp);
-    const thumbClassName = classnames("thc-c-switch__thumb", thumbClassNameProp);
+    const inputClassName = classnames("ds-c-switch__input", inputClassNameProp);
+    const thumbClassName = classnames("ds-c-switch__thumb", thumbClassNameProp);
 
     return (
         <ControlLabel

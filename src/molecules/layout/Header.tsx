@@ -1,12 +1,12 @@
 // Libs
-import React from "react";
-import PropTypes from "prop-types";
 import classnames from "classnames";
+import PropTypes from "prop-types";
+import React from "react";
 
 // Utils
 
 // Components
-import { Button, ButtonIcon, BUTTON_TYPES } from "../buttons";
+import { BUTTON_TYPES, Button, ButtonIcon } from "../buttons";
 import { List } from "../lists";
 import { ButtonDropdown } from "../modals";
 
@@ -47,10 +47,10 @@ export function Header({
     tabs,
     ...otherProps
 }) {
-    const actionButtonClassName = classnames("thc-c-header__action-button", actionButtonClassNameProp);
-    const dropdownClassName = classnames("thc-c-header__dropdown", dropdownClassNameProp);
-    const listClassName = classnames("thc-c-header__list", listClassNameProp);
-    const moreButtonClassName = classnames("thc-c-header__more-button", moreButtonClassNameProp);
+    const actionButtonClassName = classnames("ds-c-header__action-button", actionButtonClassNameProp);
+    const dropdownClassName = classnames("ds-c-header__dropdown", dropdownClassNameProp);
+    const listClassName = classnames("ds-c-header__list", listClassNameProp);
+    const moreButtonClassName = classnames("ds-c-header__more-button", moreButtonClassNameProp);
 
     let actionNode;
     if (actions.length > 3) {
@@ -76,9 +76,9 @@ export function Header({
 
     return (
         <div className={className}>
-            <div {...otherProps} className="thc-o-paper thc-c-header">
-                <div className="thc-c-header__content">{children}</div>
-                {actionNode && <div className="thc-c-header__actions">{actionNode}</div>}
+            <div {...otherProps} className="ds-o-paper ds-c-header">
+                <div className="ds-c-header__content">{children}</div>
+                {actionNode && <div className="ds-c-header__actions">{actionNode}</div>}
             </div>
             {tabs}
         </div>

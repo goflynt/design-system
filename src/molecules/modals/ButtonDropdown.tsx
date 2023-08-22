@@ -99,7 +99,7 @@ export function ButtonDropdown({
     moreButtonProps,
     transformOrigin = DEFAULT_TRANSFORM_ORIGIN,
 }: ButtonDropdown) {
-    const rootClassName = classnames("thc-c-button-dropdown", className);
+    const rootClassName = classnames("ds-c-button-dropdown", className);
 
     const [open, setOpen] = useState(false);
     const anchorRef = useRef<HTMLButtonElement>(null);

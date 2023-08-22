@@ -51,17 +51,17 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(function Card(
     ref
 ) {
     const cardClassName = classnames(
-        "thc-o-box",
-        "thc-o-paper",
+        "ds-o-box",
+        "ds-o-paper",
         {
-            "thc-o-actionable": !!onClick,
-            "thc-o-paper--shadow": !!onClick && !outlined,
-            "thc-o-box--outlined": outlined,
-            "thc-o-box--rectangular": rectangular,
-            "thc-c-card--elevated": !!onClick,
-            "thc-c-card--condensed": condensed,
+            "ds-o-actionable": !!onClick,
+            "ds-o-paper--shadow": !!onClick && !outlined,
+            "ds-o-box--outlined": outlined,
+            "ds-o-box--rectangular": rectangular,
+            "ds-c-card--elevated": !!onClick,
+            "ds-c-card--condensed": condensed,
         },
-        "thc-c-card",
+        "ds-c-card",
         className
     );
 

@@ -11,8 +11,8 @@ import { Collapse, CollapseProps } from "../animations";
 import { Card, CardTitle } from "../cards";
 import { IconWrapper, OpenCloseIcon } from "../icons";
 
-const cardSpacing = convertPxToNumber(getCSSVariable("--thc-card-spacing"));
-const cardSpacingCondensed = convertPxToNumber(getCSSVariable("--thc-card-spacing--condensed"));
+const cardSpacing = convertPxToNumber(getCSSVariable("--ds-card-spacing"));
+const cardSpacingCondensed = convertPxToNumber(getCSSVariable("--ds-card-spacing--condensed"));
 
 export interface AccordionProps extends React.PropsWithChildren<{}> {
     /**
@@ -51,7 +51,7 @@ export function Accordion({
     title,
     ...otherProps
 }: AccordionProps) {
-    const rootClassName = classnames("thc-c-accordion", className);
+    const rootClassName = classnames("ds-c-accordion", className);
 
     const [resizeListener, sizes] = useResizeAware();
 

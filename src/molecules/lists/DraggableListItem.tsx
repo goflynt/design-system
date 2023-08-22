@@ -1,15 +1,14 @@
 // Libs
 import classnames from "classnames";
-import PropTypes from "prop-types";
 import { Draggable } from "react-beautiful-dnd";
 
 // Utils
 import { alterElement } from "../../core/utils";
 
 // Components
+import React from "react";
 import { Icon } from "../icons";
 import { ListItem } from "./ListItem";
-import React from "react";
 
 export interface DraggableItem {
     id: string;
@@ -47,7 +46,7 @@ export function DraggableListItem({
     ListItemComponent = ListItem,
     ...listItemProps
 }: DraggableListItemProps) {
-    const rootClassName = classnames("thc-c-draggable-list-item", className);
+    const rootClassName = classnames("ds-c-draggable-list-item", className);
 
     return (
         <Draggable key={item.id} draggableId={item.id} index={index}>
@@ -57,8 +56,8 @@ export function DraggableListItem({
                     {...listItemProps}
                     {...(hasDragHandle ? {} : provided.dragHandleProps)}
                     className={classnames(rootClassName, {
-                        "thc-c-draggable-list-item--dragging": snapshot.isDragging,
-                        "thc-c-draggable-list-item--drag-handle": hasDragHandle,
+                        "ds-c-draggable-list-item--dragging": snapshot.isDragging,
+                        "ds-c-draggable-list-item--drag-handle": hasDragHandle,
                     })}
                     ref={provided.innerRef}
                     snapshot={snapshot}
@@ -66,7 +65,7 @@ export function DraggableListItem({
                     {alterElement(children, {
                         item,
                         dragHandle: !hasDragHandle ? undefined : (
-                            <div {...provided.dragHandleProps} className="thc-c-draggable-list-item__handle">
+                            <div {...provided.dragHandleProps} className="ds-c-draggable-list-item__handle">
                                 <Icon>dragndrop</Icon>
                             </div>
                         ),

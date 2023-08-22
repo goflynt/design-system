@@ -85,18 +85,18 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
 
     const buttonClassName = classnames(
         {
-            "thc-theme--color": !disabled && ["primary", "caution"].includes(type),
+            "ds-theme--color": !disabled && ["primary", "caution"].includes(type),
         },
-        "thc-o-actionable",
-        "thc-c-button",
+        "ds-o-actionable",
+        "ds-c-button",
         {
-            "thc-c-button--primary": type === "primary",
-            "thc-c-button--secondary": type === "secondary",
-            "thc-c-button--caution": type === "caution",
+            "ds-c-button--primary": type === "primary",
+            "ds-c-button--secondary": type === "secondary",
+            "ds-c-button--caution": type === "caution",
         },
         className
     );
-    const iconClassName = classnames("thc-c-button__icon", iconClassNameProp);
+    const iconClassName = classnames("ds-c-button__icon", iconClassNameProp);
 
     const wrappedChildren = wrapLabel(label ?? children);
 

@@ -99,17 +99,17 @@ export function Display({
     ...otherProps
 }: DisplayProps) {
     const displayClassName = classnames(
-        "thc-c-display",
+        "ds-c-display",
         {
-            "thc-o-actionable": !!onClick,
-            "thc-c-display--horizontal": type === "row",
-            "thc-c-display--vertical": type === "column",
+            "ds-o-actionable": !!onClick,
+            "ds-c-display--horizontal": type === "row",
+            "ds-c-display--vertical": type === "column",
         },
         className
     );
-    const iconClassName = classnames("thc-c-display__icon ", iconClassNameProp);
-    const helperIconClassName = classnames("thc-c-display__helper-text", helperIconClassNameProp);
-    const valueClassName = classnames("thc-c-display__value", valueClassNameProp);
+    const iconClassName = classnames("ds-c-display__icon ", iconClassNameProp);
+    const helperIconClassName = classnames("ds-c-display__helper-text", helperIconClassNameProp);
+    const valueClassName = classnames("ds-c-display__value", valueClassNameProp);
 
     const handleOnClick = wrapPrevent(onClick);
     const handleKeyUp = wrapKeyUp(handleOnClick);
@@ -141,8 +141,8 @@ export function Display({
             tabIndex={onClick ? tabIndex : undefined}
         >
             {label && (
-                <div className="thc-c-display__label-container">
-                    {alterElement(wrapLabel(label), { className: "thc-c-display__label thc-u-text--label" })}
+                <div className="ds-c-display__label-container">
+                    {alterElement(wrapLabel(label), { className: "ds-c-display__label ds-u-text--label" })}
                     {helperText && (
                         <Tooltip tooltip={helperText} placement={TOOLTIP_PLACEMENT.TOP}>
                             <Icon size="s" {...helperIconProps} className={helperIconClassName}>

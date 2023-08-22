@@ -13,7 +13,7 @@ export interface CardContentProps extends React.PropsWithChildren<{}> {
 }
 
 export function CardContent({ children, className, ...otherProps }: CardContentProps) {
-    const contentClassName = classnames("thc-c-card__content", className);
+    const contentClassName = classnames("ds-c-card__content", className);
 
     const wrappedChild = wrapLabel(children);
 

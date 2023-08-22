@@ -9,13 +9,13 @@ export interface LoaderIconProps {
 }
 
 export function LoaderIcon({ className }: LoaderIconProps) {
-    const rootClassName = classnames("thc-c-loader-icon", className);
+    const rootClassName = classnames("ds-c-loader-icon", className);
 
     return (
         <div className={rootClassName}>
-            <div className="thc-c-loader-icon__ball thc-c-loader-icon__a" />
-            <div className="thc-c-loader-icon__ball thc-c-loader-icon__b" />
-            <div className="thc-c-loader-icon__ball thc-c-loader-icon__c" />
+            <div className="ds-c-loader-icon__ball ds-c-loader-icon__a" />
+            <div className="ds-c-loader-icon__ball ds-c-loader-icon__b" />
+            <div className="ds-c-loader-icon__ball ds-c-loader-icon__c" />
         </div>
     );
 }

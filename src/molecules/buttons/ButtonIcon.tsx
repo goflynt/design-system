@@ -12,7 +12,7 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(f
     { className, icon, children, iconSize = "m", iconProps, ...otherProps },
     ref
 ) {
-    const buttonClassName = classnames("thc-c-button-icon", className);
+    const buttonClassName = classnames("ds-c-button-icon", className);
     const child = icon ?? children;
 
     return (

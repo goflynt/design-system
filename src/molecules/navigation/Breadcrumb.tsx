@@ -55,12 +55,12 @@ export function Breadcrumb({
     const active = activeProp ?? useRouteMatch({ path: to, exact: true });
 
     const rootClassName = classnames(
-        { "thc-o-actionable": !active },
-        "thc-c-breadcrumb",
-        { "thc-c-breadcrumb--active": active },
+        { "ds-o-actionable": !active },
+        "ds-c-breadcrumb",
+        { "ds-c-breadcrumb--active": active },
         className
     );
-    const iconClassName = classnames("thc-c-breadcrumb__icon", iconClassNameProp);
+    const iconClassName = classnames("ds-c-breadcrumb__icon", iconClassNameProp);
 
     const ContainerComponent = !to || active ? "div" : Link;
 
@@ -72,9 +72,9 @@ export function Breadcrumb({
                 </Icon>
             )}
             {(concept || name) && (
-                <div className="thc-c-breadcrumb__label">
-                    <div className="thc-c-breadcrumb__concept thc-u-text--label">{concept}</div>
-                    <div className="thc-c-breadcrumb__name thc-u-text--subtitle-bold">{name}</div>
+                <div className="ds-c-breadcrumb__label">
+                    <div className="ds-c-breadcrumb__concept ds-u-text--label">{concept}</div>
+                    <div className="ds-c-breadcrumb__name ds-u-text--subtitle-bold">{name}</div>
                 </div>
             )}
         </ContainerComponent>

@@ -1,15 +1,15 @@
 // Libs
-import React, { useCallback } from "react";
-import PropTypes from "prop-types";
 import classnames from "classnames";
+import PropTypes from "prop-types";
+import { useCallback } from "react";
 import { ToastContainer as ToastifyContainer, toast as toastifyToast } from "react-toastify";
 
 // Utils
-import { useToast, ToastContext } from "../../core/ToastContext";
+import { ToastContext, useToast } from "../../core/ToastContext";
 
 // Components
+import { THEME, useTheme } from "../../core";
 import { ButtonIcon } from "../buttons";
-import { useTheme, THEME } from "../../core";
 import { Toast } from "./Toast";
 
 export { useToast };
@@ -28,8 +28,8 @@ export function ToastProvider({
     position = "bottom-left",
     toastClassName: toastClassNameProp,
 }) {
-    const rootClassName = classnames("thc-c-toast-container", className);
-    const toastClassName = classnames("thc-theme--color thc-c-toast", toastClassNameProp);
+    const rootClassName = classnames("ds-c-toast-container", className);
+    const toastClassName = classnames("ds-theme--color ds-c-toast", toastClassNameProp);
 
     const { theme } = useTheme();
 

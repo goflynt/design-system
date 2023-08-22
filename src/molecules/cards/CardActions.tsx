@@ -27,12 +27,8 @@ export function CardActions({
     actionsElementClassName: actionsElementClassNameProp,
     ...otherProps
 }: CardActionsProps) {
-    const actionsClassName = classnames(
-        "thc-c-card__actions",
-        { "thc-c-card__actions--centered": centered },
-        className
-    );
-    const actionsElementClassName = classnames("thc-c-card__actions-element", actionsElementClassNameProp);
+    const actionsClassName = classnames("ds-c-card__actions", { "ds-c-card__actions--centered": centered }, className);
+    const actionsElementClassName = classnames("ds-c-card__actions-element", actionsElementClassNameProp);
 
     const childrenAltered = alterElement(children, {
         className: classnames(actionsElementClassName),

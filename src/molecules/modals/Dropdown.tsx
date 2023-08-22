@@ -102,13 +102,13 @@ export function Dropdown({
     transformOrigin = defaultTransformOrigin,
     ...otherProps
 }: DropdownProps) {
-    const dropdownClassName = classnames("thc-c-dropdown", className);
-    const modalClassName = classnames("thc-c-dropdown__modal", modalClassNameProp);
+    const dropdownClassName = classnames("ds-c-dropdown", className);
+    const modalClassName = classnames("ds-c-dropdown__modal", modalClassNameProp);
     const contentClassName = classnames(
-        "thc-o-box",
-        "thc-o-paper",
-        "thc-o-paper--shadow",
-        "thc-c-dropdown__content",
+        "ds-o-box",
+        "ds-o-paper",
+        "ds-o-paper--shadow",
+        "ds-c-dropdown__content",
         contentClassNameProp
     );
 

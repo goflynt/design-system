@@ -1,7 +1,7 @@
 // Libs
-import React from "react";
-import PropTypes from "prop-types";
 import classnames from "classnames";
+import PropTypes from "prop-types";
+import React from "react";
 
 export const PAGE_CONTENT_TYPES = {
     centered: "centered",
@@ -18,13 +18,13 @@ export function PageContent({
     type = PAGE_CONTENT_TYPES.default,
 }) {
     const rootClassName = classnames(
-        "thc-c-page-content",
+        "ds-c-page-content",
         {
-            "thc-c-page-content--centered": type === PAGE_CONTENT_TYPES.centered,
-            "thc-c-page-content--flex": type === PAGE_CONTENT_TYPES.flex,
-            "thc-c-page-content--full-height": fullHeight,
-            "thc-c-page-content--full-width": fullWidth,
-            "thc-c-page-content--with-panel": type === PAGE_CONTENT_TYPES.withPanel,
+            "ds-c-page-content--centered": type === PAGE_CONTENT_TYPES.centered,
+            "ds-c-page-content--flex": type === PAGE_CONTENT_TYPES.flex,
+            "ds-c-page-content--full-height": fullHeight,
+            "ds-c-page-content--full-width": fullWidth,
+            "ds-c-page-content--with-panel": type === PAGE_CONTENT_TYPES.withPanel,
         },
         className
     );
@@ -34,8 +34,8 @@ export function PageContent({
 
         return (
             <div className={rootClassName}>
-                <div className="thc-c-page-content--with-panel__panel thc-o-paper">{childrenArray[0]}</div>
-                <div className="thc-c-page-content--with-panel__detail">{childrenArray.slice(1)}</div>
+                <div className="ds-c-page-content--with-panel__panel ds-o-paper">{childrenArray[0]}</div>
+                <div className="ds-c-page-content--with-panel__detail">{childrenArray.slice(1)}</div>
             </div>
         );
     }
