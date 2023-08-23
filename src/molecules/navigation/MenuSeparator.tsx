@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 
 export interface MenuSeparatorProps {
     /**
@@ -9,7 +8,7 @@ export interface MenuSeparatorProps {
 }
 
 export function MenuSeparator({ className, ...otherProps }: MenuSeparatorProps) {
-    const separatorClassName = classnames("ds-c-menu-separator", className);
+    const separatorClassName = clsx("ds-c-menu-separator", className);
 
     return <li {...otherProps} className={separatorClassName} role="separator" />;
 }

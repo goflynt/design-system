@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 
 // Components
 import { Icon } from "../icons";
@@ -44,7 +43,7 @@ export function Step({
     const active = activeProp ?? index === activeStep;
     const completed = completedProp ?? activeStep > index;
 
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-step",
         {
             "ds-c-step--active": active,

@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 
 export interface LoaderProgressionProps {
     /**
@@ -26,7 +25,7 @@ export function LoaderProgression({
     hasWarning = false,
     percent = 0,
 }: LoaderProgressionProps) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-loader-progression",
         {
             "ds-c-loader-progression--error": hasError,

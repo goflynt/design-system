@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 
 // Components
 import { ControlLabel } from "./ControlLabel";
@@ -51,12 +50,12 @@ export function DoubleValueSwitch({
     value,
     onChange,
 }: DoubleValueSwitchProps) {
-    const rootClassName = classnames("ds-c-double-value-switch", className);
+    const rootClassName = clsx("ds-c-double-value-switch", className);
 
     return (
         <div className={rootClassName}>
             <ControlLabel
-                className={classnames("ds-u-text--bold", {
+                className={clsx("ds-u-text--bold", {
                     "ds-u-text--skyblue": value === leftValue,
                     "ds-u-text--secondary": value !== leftValue,
                 })}
@@ -64,7 +63,7 @@ export function DoubleValueSwitch({
                 labelPosition="left"
             >
                 <ControlLabel
-                    className={classnames("ds-u-text--bold", {
+                    className={clsx("ds-u-text--bold", {
                         "ds-u-text--skyblue": value === rightValue,
                         "ds-u-text--secondary": value !== rightValue,
                     })}

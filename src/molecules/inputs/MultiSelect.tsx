@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React, { useCallback, useMemo, useRef } from "react";
 
 // Utils
@@ -181,14 +180,14 @@ export function MultiSelect({
     value,
     ...otherProps
 }: MultiSelectProps) {
-    const multiClassName = classnames("ds-c-multi-select", className);
-    const chipClassName = classnames("ds-c-multi-select__chip", chipClassNameProp);
-    const chipContainerClassName = classnames("ds-c-multi-select__chip-container", chipContainerClassNameProp);
-    const dropdownClassName = classnames("ds-c-multi-select__dropdown", dropdownClassNameProp);
-    const inputClassName = classnames("ds-c-multi-select__input", inputClassNameProp);
-    const listClassName = classnames("ds-c-multi-select__list", listClassNameProp);
-    const listItemClassName = classnames("ds-c-multi-select__list-item", listItemClassNameProp);
-    const selectClassName = classnames("ds-c-multi-select__select", selectClassNameProp);
+    const multiClassName = clsx("ds-c-multi-select", className);
+    const chipClassName = clsx("ds-c-multi-select__chip", chipClassNameProp);
+    const chipContainerClassName = clsx("ds-c-multi-select__chip-container", chipContainerClassNameProp);
+    const dropdownClassName = clsx("ds-c-multi-select__dropdown", dropdownClassNameProp);
+    const inputClassName = clsx("ds-c-multi-select__input", inputClassNameProp);
+    const listClassName = clsx("ds-c-multi-select__list", listClassNameProp);
+    const listItemClassName = clsx("ds-c-multi-select__list-item", listItemClassNameProp);
+    const selectClassName = clsx("ds-c-multi-select__select", selectClassNameProp);
 
     const selectRef = useRef<HTMLInputElement>(null);
 

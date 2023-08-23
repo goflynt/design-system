@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 export interface BubbleValueContainerProps extends React.PropsWithChildren<unknown> {
@@ -10,7 +9,7 @@ export interface BubbleValueContainerProps extends React.PropsWithChildren<unkno
 }
 
 export function BubbleValueContainer({ children, className }: BubbleValueContainerProps) {
-    const rootClassName = classnames("ds-c-bubble-container", className);
+    const rootClassName = clsx("ds-c-bubble-container", className);
 
     return <div className={rootClassName}>{children}</div>;
 }

@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 import { Droppable } from "react-beautiful-dnd";
 
@@ -15,13 +14,7 @@ export interface DroppableDropZoneProps extends React.PropsWithChildren<unknown>
 }
 
 export function DroppableDropZone({ children, className, droppedItemId }: DroppableDropZoneProps) {
-    const rootClassName = classnames(
-        "ds-o-box",
-        "ds-o-flex",
-        "ds-o-flex--center",
-        "ds-c-droppable-drop-zone",
-        className
-    );
+    const rootClassName = clsx("ds-o-box", "ds-o-flex", "ds-o-flex--center", "ds-c-droppable-drop-zone", className);
 
     return (
         <Droppable droppableId={droppedItemId}>

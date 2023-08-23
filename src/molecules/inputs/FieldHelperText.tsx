@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -47,7 +46,7 @@ export function FieldHelperText({
     id,
     ...otherProps
 }: FieldHelperTextProps) {
-    const helperClassName = classnames(
+    const helperClassName = clsx(
         "ds-c-field-helper-text",
         {
             "ds-c-field-helper-text--error": hasError && !disabled,

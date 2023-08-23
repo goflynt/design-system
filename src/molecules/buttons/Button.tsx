@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -83,7 +82,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
 ) {
     const disabled = disabledProp || isLoading;
 
-    const buttonClassName = classnames(
+    const buttonClassName = clsx(
         {
             "ds-theme--color": !disabled && ["primary", "caution"].includes(type),
         },
@@ -96,7 +95,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
         },
         className
     );
-    const iconClassName = classnames("ds-c-button__icon", iconClassNameProp);
+    const iconClassName = clsx("ds-c-button__icon", iconClassNameProp);
 
     const wrappedChildren = wrapLabel(label ?? children);
 

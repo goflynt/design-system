@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -27,11 +26,11 @@ export function CardActions({
     actionsElementClassName: actionsElementClassNameProp,
     ...otherProps
 }: CardActionsProps) {
-    const actionsClassName = classnames("ds-c-card__actions", { "ds-c-card__actions--centered": centered }, className);
-    const actionsElementClassName = classnames("ds-c-card__actions-element", actionsElementClassNameProp);
+    const actionsClassName = clsx("ds-c-card__actions", { "ds-c-card__actions--centered": centered }, className);
+    const actionsElementClassName = clsx("ds-c-card__actions-element", actionsElementClassNameProp);
 
     const childrenAltered = alterElement(children, {
-        className: classnames(actionsElementClassName),
+        className: clsx(actionsElementClassName),
     });
 
     return (

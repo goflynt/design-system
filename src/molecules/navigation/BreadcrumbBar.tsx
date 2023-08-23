@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Components
@@ -13,7 +12,7 @@ export interface BreadcrumbBarProps extends React.PropsWithChildren<unknown> {
 }
 
 export function BreadcrumbBar({ children, className, ...otherProps }: BreadcrumbBarProps) {
-    const rootClassName = classnames("ds-c-breadcrumb-bar", className);
+    const rootClassName = clsx("ds-c-breadcrumb-bar", className);
     const childrenCount = React.Children.count(children);
 
     return (

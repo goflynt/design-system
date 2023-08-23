@@ -1,12 +1,11 @@
 // Libs
-import classnames from "classnames";
 import PropTypes from "prop-types";
 
 // Utils
 import { alterElement } from "../../core/utils";
 
 export function Layout({ children, className, header, menu }) {
-    const rootClassName = classnames("ds-c-layout", className);
+    const rootClassName = clsx("ds-c-layout", className);
 
     return (
         <div className={rootClassName}>

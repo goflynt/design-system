@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 
 // Utils
 import { formatNumber } from "../../core/formatters";
@@ -30,7 +29,7 @@ export interface BubbleValueProps {
 }
 
 export function BubbleValue({ className, label, precision, type = "primary", value, ...otherProps }: BubbleValueProps) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-bubble-value",
         {
             "ds-c-bubble-value--primary": type === "primary",

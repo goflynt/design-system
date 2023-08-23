@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import moment from "moment";
 import React, { useEffect, useRef, useState } from "react";
 import { DayPickerRangeController, DayPickerRangeControllerShape, FocusedInputShape } from "react-dates";
@@ -54,7 +53,7 @@ export function DateRangePicker({
     value: { startDate: startDateProp, endDate: endDateProp } = {},
     ...otherProps
 }: DateRangePickerProps) {
-    const rootClassName = classnames("ds-c-date-range-picker", className);
+    const rootClassName = clsx("ds-c-date-range-picker", className);
 
     const inputRef = useRef<HTMLInputElement>(null);
 

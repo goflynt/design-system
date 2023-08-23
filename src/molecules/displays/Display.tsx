@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -98,7 +97,7 @@ export function Display({
     valueClassName: valueClassNameProp,
     ...otherProps
 }: DisplayProps) {
-    const displayClassName = classnames(
+    const displayClassName = clsx(
         "ds-c-display",
         {
             "ds-o-actionable": !!onClick,
@@ -107,9 +106,9 @@ export function Display({
         },
         className
     );
-    const iconClassName = classnames("ds-c-display__icon ", iconClassNameProp);
-    const helperIconClassName = classnames("ds-c-display__helper-text", helperIconClassNameProp);
-    const valueClassName = classnames("ds-c-display__value", valueClassNameProp);
+    const iconClassName = clsx("ds-c-display__icon ", iconClassNameProp);
+    const helperIconClassName = clsx("ds-c-display__helper-text", helperIconClassNameProp);
+    const valueClassName = clsx("ds-c-display__value", valueClassNameProp);
 
     const handleOnClick = wrapPrevent(onClick);
     const handleKeyUp = wrapKeyUp(handleOnClick);

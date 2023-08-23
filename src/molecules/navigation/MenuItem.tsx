@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 import { Link, LinkProps, matchPath, useLocation } from "react-router-dom";
 
@@ -72,8 +71,8 @@ export function MenuItem({
     const matches = toList.map((to) => matchPath(location.pathname, to));
     const active = toList.length > 0 && matches.some(Boolean);
 
-    const itemClassName = classnames("ds-c-menu-item", { "ds-c-menu-item--active": active }, className);
-    const linkClassName = classnames("ds-c-menu-item__link", linkClassNameProp);
+    const itemClassName = clsx("ds-c-menu-item", { "ds-c-menu-item--active": active }, className);
+    const linkClassName = clsx("ds-c-menu-item__link", linkClassNameProp);
 
     let child;
     if (children) {
@@ -136,14 +135,14 @@ interface MenuItemIconLabelProps {
 }
 
 function MenuItemIconLabel({ active, className, icon, label, ...otherProps }: MenuItemIconLabelProps) {
-    const itemClassName = classnames(
+    const itemClassName = clsx(
         { "ds-theme--color": active },
         "ds-o-actionable",
         "ds-c-menu-item-icon-label",
         className
     );
-    const iconClassName = classnames("ds-c-menu-item-icon-label__icon");
-    const labelClassName = classnames("ds-c-menu-item-icon-label__label", "ds-u-text--subnormal");
+    const iconClassName = clsx("ds-c-menu-item-icon-label__icon");
+    const labelClassName = clsx("ds-c-menu-item-icon-label__label", "ds-u-text--subnormal");
 
     return (
         <div {...otherProps} className={itemClassName}>
@@ -189,14 +188,9 @@ function MenuItemIcon({
     tooltipProps,
     ...otherProps
 }: MenuItemIconProps) {
-    const itemClassName = classnames(
-        { "ds-theme--color": active },
-        "ds-o-actionable",
-        "ds-c-menu-item-icon",
-        className
-    );
-    const iconClassName = classnames("ds-c-menu-item-icon__icon");
-    const tooltipClassName = classnames("ds-c-menu-item-icon__tooltip", tooltipClassNameProp);
+    const itemClassName = clsx({ "ds-theme--color": active }, "ds-o-actionable", "ds-c-menu-item-icon", className);
+    const iconClassName = clsx("ds-c-menu-item-icon__icon");
+    const tooltipClassName = clsx("ds-c-menu-item-icon__tooltip", tooltipClassNameProp);
 
     return (
         <Tooltip {...tooltipProps} className={tooltipClassName} placement="right" tooltip={tooltip}>

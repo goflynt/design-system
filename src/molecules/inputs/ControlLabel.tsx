@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Util
@@ -61,7 +60,7 @@ export function ControlLabel({
     labelProps,
     ...otherProps
 }: ControlLabelProps) {
-    const controlLabelClassName = classnames(
+    const controlLabelClassName = clsx(
         "ds-c-control-label",
         {
             "ds-c-control-label--top": labelPosition === "top",
@@ -72,8 +71,8 @@ export function ControlLabel({
         },
         className
     );
-    const labelClassName = classnames("ds-c-control-label__label", labelClassNameProp);
-    const controlClassName = classnames("ds-c-control-label__control");
+    const labelClassName = clsx("ds-c-control-label__label", labelClassNameProp);
+    const controlClassName = clsx("ds-c-control-label__control");
 
     return (
         <label {...filterProps(otherProps)} className={controlLabelClassName} disabled={disabled === true} htmlFor={id}>

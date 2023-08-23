@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 
 // Utils
 import { wrapKeyUp, wrapPrevent } from "../../core/utils";
@@ -38,7 +37,7 @@ export function OpenCloseIcon({
     open = false,
     ...otherProps
 }: OpenCloseIconProps) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-o-actionable",
         "ds-c-open-close-icon",
         {

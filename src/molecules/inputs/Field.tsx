@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -137,7 +136,7 @@ export function FieldHoc<P>(
             helperText
         );
 
-        const fieldClassName = classnames(
+        const fieldClassName = clsx(
             "ds-c-field",
             {
                 "ds-c-field--warning": hasWarning,
@@ -145,9 +144,9 @@ export function FieldHoc<P>(
             },
             className
         );
-        const inputClassName = classnames("ds-c-field__input", inputClassNameProp);
-        const labelClassName = classnames("ds-c-field__label", labelClassNameProp);
-        const helperTextClassName = classnames("ds-c-field__helper-text", helperTextClassNameProp);
+        const inputClassName = clsx("ds-c-field__input", inputClassNameProp);
+        const labelClassName = clsx("ds-c-field__label", labelClassNameProp);
+        const helperTextClassName = clsx("ds-c-field__helper-text", helperTextClassNameProp);
 
         return (
             <div {...filterProps(fieldProps)} className={fieldClassName} disabled={disabled === true} ref={ref}>

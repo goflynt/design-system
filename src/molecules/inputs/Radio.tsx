@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -126,7 +125,7 @@ export function Radio({
     value,
     ...otherProps
 }: RadioProps) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-radio",
         {
             "ds-c-radio--error": hasError && !disabled,
@@ -135,10 +134,10 @@ export function Radio({
         className
     );
 
-    const inputClassName = classnames("ds-c-radio__input", inputClassNameProp);
-    const circleClassName = classnames("ds-c-radio__circle", circleClassNameProp);
-    const thumbClassName = classnames("ds-c-radio__thumb", thumbClassNameProp);
-    const labelClassName = classnames("ds-c-radio__label", labelClassNameProp);
+    const inputClassName = clsx("ds-c-radio__input", inputClassNameProp);
+    const circleClassName = clsx("ds-c-radio__circle", circleClassNameProp);
+    const thumbClassName = clsx("ds-c-radio__thumb", thumbClassNameProp);
+    const labelClassName = clsx("ds-c-radio__label", labelClassNameProp);
 
     return (
         <ControlLabel

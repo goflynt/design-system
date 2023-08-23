@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import scrollbarSize from "dom-helpers/scrollbarSize";
 import { useCallback, useMemo, useState } from "react";
 import { AutoSizer, Grid, ScrollSync } from "react-virtualized";
@@ -37,7 +36,7 @@ export interface TableVirtualizedProps {
  * Simple cell measurer exists: see https://github.com/bvaughn/react-virtualized/blob/master/source/CellMeasurer/CellMeasurer.example.js
  */
 export function TableVirtualized({ className, columns = [], data = defaultDataProp }: TableVirtualizedProps) {
-    const rootClassName = classnames("ds-o-paper", "ds-c-table", className);
+    const rootClassName = clsx("ds-o-paper", "ds-c-table", className);
 
     const rowCount = data.length;
     const columnCount = columns.length;

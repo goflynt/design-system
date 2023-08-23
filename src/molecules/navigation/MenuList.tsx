@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -13,8 +12,8 @@ export interface MenuListProps extends React.PropsWithChildren<unknown> {
 }
 
 export function MenuList({ children, className, ...otherProps }: MenuListProps) {
-    const listClassName = classnames("ds-c-menu-list", className);
-    const menuItemClassName = classnames("ds-c-menu-list__item");
+    const listClassName = clsx("ds-c-menu-list", className);
+    const menuItemClassName = clsx("ds-c-menu-list__item");
 
     return (
         <ul {...otherProps} className={listClassName}>

@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import { isEmpty } from "lodash";
 import React, { useCallback, useMemo, useRef } from "react";
 
@@ -168,11 +167,11 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProps>(function S
 ) {
     const { translate } = useTranslation(translationKey);
 
-    const selectClassName = classnames("ds-c-select", className);
-    const inputClassName = classnames("ds-c-select__input", inputClassNameProp);
-    const dropdownClassName = classnames("ds-c-select__dropdown", dropdownClassNameProp, dropdownProps?.className);
-    const listClassName = classnames("ds-c-select__list", listClassNameProp);
-    const listItemClassName = classnames("ds-c-select__list-item", listItemClassNameProp);
+    const selectClassName = clsx("ds-c-select", className);
+    const inputClassName = clsx("ds-c-select__input", inputClassNameProp);
+    const dropdownClassName = clsx("ds-c-select__dropdown", dropdownClassNameProp, dropdownProps?.className);
+    const listClassName = clsx("ds-c-select__list", listClassNameProp);
+    const listItemClassName = clsx("ds-c-select__list-item", listItemClassNameProp);
 
     const inputRef = useRef<HTMLInputElement>(null);
     const forkedRef = useForkRef(inputRef, ref);

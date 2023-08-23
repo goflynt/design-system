@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 import { useHover } from "../../core/hooks";
@@ -39,7 +38,7 @@ export const Cell = React.memo(function Cell({
 }: CellProps) {
     const { hover, ...hoverEvents } = useHover(disabled, onHover);
 
-    const rootClassName = classnames("ds-c-cell", { "ds-c-cell--hover": hover || hoverProp }, className);
+    const rootClassName = clsx("ds-c-cell", { "ds-c-cell--hover": hover || hoverProp }, className);
 
     let child = children;
     if (formatter) {

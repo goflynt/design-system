@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -24,7 +23,7 @@ export function InputAdornment({ children, className, onClick, ...otherProps }: 
         return null;
     }
 
-    const rootClassName = classnames("ds-c-input-adornment", { "ds-o-actionable": Boolean(onClick) }, className);
+    const rootClassName = clsx("ds-c-input-adornment", { "ds-o-actionable": Boolean(onClick) }, className);
 
     let child;
 

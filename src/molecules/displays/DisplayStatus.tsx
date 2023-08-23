@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 
 // Components
 import { DESIGN_SYSTEM_COMMON_TK, DESIGN_SYSTEM_DISPLAY_TK, StatusEnum, useTranslation } from "../../core";
@@ -51,7 +50,7 @@ export function DisplayStatus({
     const { translate: translateDisplay } = useTranslation(translationKey ?? DESIGN_SYSTEM_DISPLAY_TK);
     const { translate: translateCommon } = useTranslation(translationKey ?? DESIGN_SYSTEM_COMMON_TK);
 
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-display-status",
         {
             "ds-c-display-status--draft": status === StatusEnum.Draft,
@@ -63,7 +62,7 @@ export function DisplayStatus({
         className
     );
 
-    const iconClassName = classnames("ds-c-display-status__icon", iconClassNameProp);
+    const iconClassName = clsx("ds-c-display-status__icon", iconClassNameProp);
 
     if (!DISPLAY_STATUS_ICONS[status]) {
         return <span className="ds-u-status--error">{translateDisplay("status.unknown-status")}</span>;

@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -115,7 +114,7 @@ export function Slider({
     value,
     ...otherProps
 }: SliderProps) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-slider",
         {
             "ds-c-slider--error": !disabled && hasError,
@@ -123,8 +122,8 @@ export function Slider({
         },
         className
     );
-    const inputClassName = classnames("ds-c-slider__input", inputClassNameProp);
-    const labelClassName = classnames("ds-c-slider__label ds-u-text--bold", {
+    const inputClassName = clsx("ds-c-slider__input", inputClassNameProp);
+    const labelClassName = clsx("ds-c-slider__label ds-u-text--bold", {
         "ds-u-status--error": !disabled && hasError,
         "ds-u-status--success": !disabled && hasSuccess,
     });

@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 export interface ListItemActionsProps extends React.PropsWithChildren<unknown> {
@@ -10,7 +9,7 @@ export interface ListItemActionsProps extends React.PropsWithChildren<unknown> {
 }
 
 export function ListItemActions({ children, className }: ListItemActionsProps) {
-    const rootClassName = classnames("ds-c-list-item-actions", className);
+    const rootClassName = clsx("ds-c-list-item-actions", className);
 
     return <div className={rootClassName}>{children}</div>;
 }

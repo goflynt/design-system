@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React, { useCallback, useRef } from "react";
 
 // Utils
@@ -87,7 +86,7 @@ export function CheckboxGroup({
     withFormik = false,
     ...otherProps
 }: CheckboxGroupProps) {
-    const rootClassName = classnames("ds-c-checkbox-group", className);
+    const rootClassName = clsx("ds-c-checkbox-group", className);
 
     const { t } = useTranslation(translationKey);
 

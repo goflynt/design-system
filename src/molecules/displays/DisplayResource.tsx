@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -74,17 +73,13 @@ export const DisplayResource = React.forwardRef<HTMLDivElement, DisplayResourceP
     },
     ref
 ) {
-    const rootClassName = classnames(
-        "ds-c-display-resource",
-        { "ds-c-display-resource--full-width": fullWidth },
-        className
-    );
+    const rootClassName = clsx("ds-c-display-resource", { "ds-c-display-resource--full-width": fullWidth }, className);
 
-    const containerClassName = classnames("ds-c-display-resource__container", {
+    const containerClassName = clsx("ds-c-display-resource__container", {
         "ds-c-display-resource__container--full-width": fullWidth,
     });
 
-    const labelClassName = classnames(
+    const labelClassName = clsx(
         "ds-c-display-resource__label",
         {
             "ds-c-display-resource__label--full-width": fullWidth,
@@ -92,11 +87,11 @@ export const DisplayResource = React.forwardRef<HTMLDivElement, DisplayResourceP
         labelClassNameProp
     );
 
-    const helperClassName = classnames("ds-c-display-resource__helper", {
+    const helperClassName = clsx("ds-c-display-resource__helper", {
         [`ds-u-status--${status}`]: !disabled && status,
     });
 
-    const iconClassName = classnames("ds-c-display-resource__icon", {
+    const iconClassName = clsx("ds-c-display-resource__icon", {
         [`ds-u-status--${status}`]: !disabled && status,
     });
 

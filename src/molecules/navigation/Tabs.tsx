@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import { debounce, isNil } from "lodash";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 
@@ -50,8 +49,8 @@ export function Tabs({
 
     const valueToIndex: Record<number | string, number> = {};
 
-    const rootClassName = classnames("ds-o-paper ds-c-tabs", className);
-    const tabIndicatorClassName = classnames("ds-c-tabs__indicator", tabIndicatorClassNameProp);
+    const rootClassName = clsx("ds-o-paper ds-c-tabs", className);
+    const tabIndicatorClassName = clsx("ds-c-tabs__indicator", tabIndicatorClassNameProp);
 
     const getTabsMeta = useCallback(() => {
         const tabsNode = tabsRef.current;

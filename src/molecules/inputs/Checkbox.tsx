@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React, { useEffect, useRef } from "react";
 
 // Utils
@@ -131,7 +130,7 @@ export function Checkbox({
     value,
     ...otherProps
 }: CheckboxProps) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-checkbox",
         {
             "ds-c-checkbox--error": hasError && !disabled,
@@ -140,9 +139,9 @@ export function Checkbox({
         },
         className
     );
-    const inputClassName = classnames("ds-c-checkbox__input", inputClassNameProp);
-    const boxClassName = classnames("ds-c-checkbox__box", boxClassNameProp);
-    const iconClassName = classnames("ds-c-checkbox__icon", iconClassNameProp);
+    const inputClassName = clsx("ds-c-checkbox__input", inputClassNameProp);
+    const boxClassName = clsx("ds-c-checkbox__box", boxClassNameProp);
+    const iconClassName = clsx("ds-c-checkbox__icon", iconClassNameProp);
 
     const inputRef = useRef<HTMLInputElement>(null);
     useEffect(() => {

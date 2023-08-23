@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 export interface FormActionsProps extends React.PropsWithChildren<unknown> {
@@ -10,7 +9,7 @@ export interface FormActionsProps extends React.PropsWithChildren<unknown> {
 }
 
 export function FormActions({ children, className }: FormActionsProps) {
-    const rootClassName = classnames("ds-c-form-actions", className);
+    const rootClassName = clsx("ds-c-form-actions", className);
 
     return <div className={rootClassName}>{children}</div>;
 }

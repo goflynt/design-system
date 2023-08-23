@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -17,7 +16,7 @@ export interface BubblePercentageProps extends React.PropsWithChildren<unknown> 
 }
 
 export function BubblePercentage({ className, percentage = 0, ...otherProps }: BubblePercentageProps) {
-    const rootClassName = classnames("ds-c-bubble-percentage ds-u-text--subtitle-bold", className);
+    const rootClassName = clsx("ds-c-bubble-percentage ds-u-text--subtitle-bold", className);
 
     return (
         <div {...otherProps} className={rootClassName}>

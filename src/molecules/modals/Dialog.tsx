@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React, { useMemo } from "react";
 
 // Components
@@ -82,10 +81,10 @@ export function Dialog({
 }: DialogProps) {
     const { translate } = useTranslation(translationKey ?? DESIGN_SYSTEM_COMMON_TK);
 
-    const dialogClassName = classnames("ds-c-dialog", className);
-    const modalClassName = classnames("ds-c-dialog__modal", modalClassNameProp);
-    const cardClassName = classnames("ds-c-dialog__card", cardClassNameProp);
-    const cardContentClassName = classnames("ds-c-dialog__card-content", cardContentClassNameProp);
+    const dialogClassName = clsx("ds-c-dialog", className);
+    const modalClassName = clsx("ds-c-dialog__modal", modalClassNameProp);
+    const cardClassName = clsx("ds-c-dialog__card", cardClassNameProp);
+    const cardContentClassName = clsx("ds-c-dialog__card-content", cardContentClassNameProp);
 
     const actions = useMemo(
         () =>

@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 export type CardContainerOrientation = "horizontal" | "vertical";
@@ -39,7 +38,7 @@ export const CardContainer = React.forwardRef<HTMLDivElement, CardContainerProps
     },
     ref
 ) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-card-container",
         {
             "ds-c-card-container--condensed": condensed,

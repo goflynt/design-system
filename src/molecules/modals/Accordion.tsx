@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -51,7 +50,7 @@ export function Accordion({
     title,
     ...otherProps
 }: AccordionProps) {
-    const rootClassName = classnames("ds-c-accordion", className);
+    const rootClassName = clsx("ds-c-accordion", className);
 
     const [resizeListener, sizes] = useResizeAware();
 

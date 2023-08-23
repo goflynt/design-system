@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -32,7 +31,7 @@ export function DisplayContainer({
     displayType,
     ...otherProps
 }: DisplayContainerProps) {
-    const containerClassName = classnames(
+    const containerClassName = clsx(
         "ds-c-display-container",
         {
             "ds-c-display-container--horizontal": orientation === "horizontal",

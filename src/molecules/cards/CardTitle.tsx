@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -61,9 +60,9 @@ export function CardTitle({
     subtitle,
     ...otherProps
 }: CardTitleProps) {
-    const rootClassName = classnames("ds-c-card__title", className);
-    const helperIconClassName = classnames("ds-c-card__title-helper", helperIconClassNameProp);
-    const titleClassName = classnames("ds-u-text--title", titleClassNameProp);
+    const rootClassName = clsx("ds-c-card__title", className);
+    const helperIconClassName = clsx("ds-c-card__title-helper", helperIconClassNameProp);
+    const titleClassName = clsx("ds-u-text--title", titleClassNameProp);
 
     const wrappedChild = alterElement(title ?? children, { className: titleClassName });
 

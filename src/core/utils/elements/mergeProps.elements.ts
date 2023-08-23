@@ -1,5 +1,5 @@
 // Libs
-import classnames, { Argument } from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 /**
@@ -20,6 +20,6 @@ export function mergeProps(
     return React.cloneElement(element, {
         ...otherPropsA,
         ...otherPropsB,
-        className: classnames(classNameA, classNameB as Argument),
+        className: clsx(classNameA, classNameB as clsx.ClassValue),
     });
 }

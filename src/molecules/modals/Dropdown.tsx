@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import { debounce } from "lodash";
 import { useCallback, useEffect, useRef } from "react";
 
@@ -102,9 +101,9 @@ export function Dropdown({
     transformOrigin = defaultTransformOrigin,
     ...otherProps
 }: DropdownProps) {
-    const dropdownClassName = classnames("ds-c-dropdown", className);
-    const modalClassName = classnames("ds-c-dropdown__modal", modalClassNameProp);
-    const contentClassName = classnames(
+    const dropdownClassName = clsx("ds-c-dropdown", className);
+    const modalClassName = clsx("ds-c-dropdown__modal", modalClassNameProp);
+    const contentClassName = clsx(
         "ds-o-box",
         "ds-o-paper",
         "ds-o-paper--shadow",

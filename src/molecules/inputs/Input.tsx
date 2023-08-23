@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React, { useCallback, useMemo, useRef } from "react";
 
 // Utils
@@ -26,7 +25,7 @@ function _adornmentWrapper(adornmentClassName: string, adornmentProps = {}) {
         if (isReactElement(component) && component.type === InputAdornment) {
             return React.cloneElement(component, {
                 ...adornmentProps,
-                className: classnames(adornmentClassName, component.props.className),
+                className: clsx(adornmentClassName, component.props.className),
             });
         }
 
@@ -256,8 +255,8 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Inp
         [inputRef, onClick, disabled]
     );
 
-    const rootClassName = classnames("ds-c-input", className);
-    const containerClassName = classnames(
+    const rootClassName = clsx("ds-c-input", className);
+    const containerClassName = clsx(
         "ds-c-input__container",
         {
             "ds-c-input--full-width": fullWidth,
@@ -266,8 +265,8 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Inp
         },
         containerClassNameProp
     );
-    const inputClassName = classnames("ds-c-input__input", inputClassNameProp);
-    const adornmentClassName = classnames("ds-c-input__adornment", adornmentClassNameProp);
+    const inputClassName = clsx("ds-c-input__input", inputClassNameProp);
+    const adornmentClassName = clsx("ds-c-input__adornment", adornmentClassNameProp);
 
     let inputProps = inputPropsProp ?? {};
     let InputComponent = InputComponentProp;

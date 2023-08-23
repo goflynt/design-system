@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 export type FieldContainerOrientation = "horizontal" | "vertical" | "centered";
@@ -16,7 +15,7 @@ export interface FieldContainerProps extends React.PropsWithChildren<unknown> {
 }
 
 export function FieldContainer({ children, className, orientation = "vertical" }: FieldContainerProps) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-field-container",
         {
             "ds-c-field-container--horizontal": ["horizontal", "centered"].includes(orientation),

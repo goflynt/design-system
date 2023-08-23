@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import { isEmpty } from "lodash";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
@@ -170,16 +169,12 @@ export const Autocomplete = React.forwardRef<HTMLInputElement, AutocompleteProps
 ) {
     const { t } = useTranslation(translationKey);
 
-    const rootClassName = classnames("ds-c-autocomplete", className);
+    const rootClassName = clsx("ds-c-autocomplete", className);
 
-    const inputClassName = classnames("ds-c-autocomplete__input", inputClassNameProp);
-    const dropdownClassName = classnames(
-        "ds-c-autocomplete__dropdown",
-        dropdownClassNameProp,
-        dropdownProps?.className
-    );
-    const listClassName = classnames("ds-c-autocomplete__list", listClassNameProp);
-    const listItemClassName = classnames("ds-c-autocomplete__list-item", listItemClassNameProp);
+    const inputClassName = clsx("ds-c-autocomplete__input", inputClassNameProp);
+    const dropdownClassName = clsx("ds-c-autocomplete__dropdown", dropdownClassNameProp, dropdownProps?.className);
+    const listClassName = clsx("ds-c-autocomplete__list", listClassNameProp);
+    const listItemClassName = clsx("ds-c-autocomplete__list-item", listItemClassNameProp);
 
     const inputRef = useRef(null);
     const forkedRef = useForkRef(inputRef, ref);

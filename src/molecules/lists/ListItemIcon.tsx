@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Components
@@ -47,7 +46,7 @@ export function ListItemIcon({
     iconSize = "m",
     ...otherProps
 }: ListItemIconProps) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-list-item-icon",
         {
             "ds-c-list-item-icon--hover": hover,
@@ -55,7 +54,7 @@ export function ListItemIcon({
         },
         className
     );
-    const iconClassName = classnames("ds-c-list-item-icon__icon", iconClassNameProp);
+    const iconClassName = clsx("ds-c-list-item-icon__icon", iconClassNameProp);
 
     return (
         <div {...otherProps} className={rootClassName}>

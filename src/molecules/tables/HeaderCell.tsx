@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -48,7 +47,7 @@ export const HeaderCell = React.memo(function HeaderCell({
 }: HeaderCellProps) {
     const { hover, ...hoverEvents } = useHover(disabled);
 
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         { "ds-theme--color": hover },
         "ds-o-actionable",
         "ds-c-header-cell",

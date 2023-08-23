@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React, { useEffect, useRef } from "react";
 import { Transition } from "react-transition-group";
 
@@ -72,7 +71,7 @@ export const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(function
     },
     ref
 ) {
-    const rootClassName = classnames("ds-c-collapse", className);
+    const rootClassName = clsx("ds-c-collapse", className);
 
     const collapsedSize = typeof collapsedSizeProp === "number" ? `${collapsedSizeProp}px` : collapsedSizeProp;
 
@@ -199,7 +198,7 @@ export const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(function
                 <div
                     {...otherProps}
                     {...childProps}
-                    className={classnames(
+                    className={clsx(
                         rootClassName,
                         {
                             "ds-c-collapse--entered": state === "entered",

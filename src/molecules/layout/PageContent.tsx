@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -17,7 +16,7 @@ export function PageContent({
     fullWidth = false,
     type = PAGE_CONTENT_TYPES.default,
 }) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-page-content",
         {
             "ds-c-page-content--centered": type === PAGE_CONTENT_TYPES.centered,

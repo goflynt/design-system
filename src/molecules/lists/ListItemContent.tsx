@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -17,7 +16,7 @@ export interface ListItemContentProps extends React.PropsWithChildren<unknown> {
 }
 
 export function ListItemContent({ children, className, onClick, ...otherProps }: ListItemContentProps) {
-    const rootClassName = classnames("ds-c-list-item-content", className);
+    const rootClassName = clsx("ds-c-list-item-content", className);
 
     return (
         <div className={rootClassName} onClick={onClick} {...filterProps(otherProps)}>

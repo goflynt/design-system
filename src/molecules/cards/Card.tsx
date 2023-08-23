@@ -1,5 +1,4 @@
 // Libs
-import classnames from "classnames";
 import React from "react";
 
 // Utils
@@ -50,7 +49,7 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(function Card(
     },
     ref
 ) {
-    const cardClassName = classnames(
+    const cardClassName = clsx(
         "ds-o-box",
         "ds-o-paper",
         {
