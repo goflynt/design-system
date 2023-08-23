@@ -8,7 +8,7 @@ import { useForkRef } from "../../core/hooks";
 import { filterProps, patchFormEventValue } from "../../core/utils";
 
 // Components
-import { useTranslation } from "../../core";
+import { DESIGN_SYSTEM_INPUTS_TK, useTranslation } from "../../core";
 import { Icons } from "../icons";
 import { List, ListItem, ListItemProps, ListItemText, ListProps } from "../lists";
 import { Dropdown, DropdownProps } from "../modals";
@@ -23,8 +23,6 @@ interface AutocompleteOptionState {
 }
 
 const DEFAULT_OPTIONS_STATE: AutocompleteOptionState = { options: [], totalCount: 0 };
-
-export const AUTOCOMPLETE_TRANSLATION_KEY = "thc.inputs.autocomplete";
 
 export interface AutocompleteProps {
     /**
@@ -154,9 +152,9 @@ export const Autocomplete = React.forwardRef<HTMLInputElement, AutocompleteProps
         listItemClassName: listItemClassNameProp,
         listItemProps,
         listProps,
-        moreResultLabel = "more-result",
+        moreResultLabel = "autocomplete.more-result",
         name,
-        noOptionsLabel = "no-option",
+        noOptionsLabel = "autocomplete.no-option",
         placeholder,
         onChange,
         onClick,
@@ -164,13 +162,13 @@ export const Autocomplete = React.forwardRef<HTMLInputElement, AutocompleteProps
         onFocus,
         querySearcher,
         required = false,
-        translationKey = AUTOCOMPLETE_TRANSLATION_KEY,
+        translationKey = DESIGN_SYSTEM_INPUTS_TK,
         value: valueProp,
         ...otherProps
     },
     ref
 ) {
-    const { translate } = useTranslation(translationKey);
+    const { t } = useTranslation(translationKey);
 
     const rootClassName = classnames("ds-c-autocomplete", className);
 
@@ -311,10 +309,10 @@ export const Autocomplete = React.forwardRef<HTMLInputElement, AutocompleteProps
                     ))}
                     {(optionsState.options?.length ?? 0) < (optionsState.totalCount ?? 0) && (
                         <ListItem className="ds-u-text--secondary" condensed>
-                            {translate(moreResultLabel)}
+                            {t(moreResultLabel)}
                         </ListItem>
                     )}
-                    {!optionsState.options?.length && <ListItem condensed>{translate(noOptionsLabel)}</ListItem>}
+                    {!optionsState.options?.length && <ListItem condensed>{t(noOptionsLabel)}</ListItem>}
                 </List>
             </Dropdown>
         </div>

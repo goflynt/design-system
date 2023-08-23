@@ -3,7 +3,7 @@ import classnames from "classnames";
 import React, { useMemo } from "react";
 
 // Utils
-import { THC_DESIGN_SYSTEM_COMMON_TRANSLATION_KEY, useTranslation } from "../../core";
+import { DESIGN_SYSTEM_COMMON_TK, useTranslation } from "../../core";
 
 // Components
 import { isReactElement } from "../../core/utils";
@@ -77,7 +77,7 @@ export function Stepper({
     onStepChange,
     onValidate,
     previousLabel = "actions.previous",
-    translationKey = THC_DESIGN_SYSTEM_COMMON_TRANSLATION_KEY,
+    translationKey = DESIGN_SYSTEM_COMMON_TK,
     validateButton,
     validateLabel = "actions.validate",
     ...otherProps

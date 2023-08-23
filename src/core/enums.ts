@@ -5,10 +5,3 @@ export enum StatusEnum {
     Done = "done",
     Failed = "failed",
 }
-
-export const ACTION_TYPE = {
-    CREATED: "created",
-    DELETED: "deleted",
-    UPLOADED: "uploaded",
-    RAN: "ran",
-};

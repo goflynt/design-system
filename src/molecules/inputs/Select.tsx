@@ -8,7 +8,7 @@ import { useFocus, useForkRef } from "../../core/hooks";
 import { filterProps, patchFormEventValue } from "../../core/utils";
 
 // Components
-import { useTranslation } from "../../core";
+import { DESIGN_SYSTEM_INPUTS_TK, useTranslation } from "../../core";
 import { Icons } from "../icons";
 import { List, ListItem, ListItemProps, ListItemText, ListProps } from "../lists";
 import { Dropdown, DropdownProps } from "../modals";
@@ -16,8 +16,6 @@ import { FieldHoc } from "./Field";
 import { Input, InputProps } from "./Input";
 import { InputAdornment } from "./InputAdornment";
 import { FieldOption } from "./_utils";
-
-export const SELECT_TRANSLATION_KEY = "thc.inputs.select";
 
 export interface SelectProps {
     /**
@@ -154,7 +152,7 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProps>(function S
         listItemProps,
         listProps,
         name,
-        noOptionsLabel = "no-option",
+        noOptionsLabel = "select.no-option",
         placeholder,
         onChange,
         onClick,
@@ -162,7 +160,7 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProps>(function S
         onFocus,
         options: optionsProp,
         required = false,
-        translationKey = SELECT_TRANSLATION_KEY,
+        translationKey = DESIGN_SYSTEM_INPUTS_TK,
         value: valueProp,
         ...otherProps
     },
