@@ -3,15 +3,13 @@ import classnames from "classnames";
 import React, { useCallback, useRef } from "react";
 
 // Utils
-import { useTranslation } from "../../core";
+import { DESIGN_SYSTEM_INPUTS_TK, useTranslation } from "../../core";
 import { filterProps, patchFormEventValue } from "../../core/utils";
 
 // Components
 import { Checkbox, CheckboxProps } from "./Checkbox";
 import { FieldHoc } from "./Field";
 import { FieldOption } from "./_utils";
-
-export const CHECKBOX_GROUP_TRANSLATION_KEY = "thc.inputs.checkbox-group";
 
 export interface CheckboxGroupProps {
     /**
@@ -82,16 +80,16 @@ export function CheckboxGroup({
     name,
     onChange,
     options = [],
-    selectAllLabel = "select-all",
+    selectAllLabel = "checkbox-group.select-all",
     selectAllProps,
-    translationKey = CHECKBOX_GROUP_TRANSLATION_KEY,
+    translationKey = DESIGN_SYSTEM_INPUTS_TK,
     value = [],
     withFormik = false,
     ...otherProps
 }: CheckboxGroupProps) {
     const rootClassName = classnames("ds-c-checkbox-group", className);
 
-    const { translate } = useTranslation(translationKey);
+    const { t } = useTranslation(translationKey);
 
     const selectAllChecked = value.length > 0 && value.length === options.length;
     const selectAllIndeterminate = value.length > 0 && value.length < options.length;
@@ -138,7 +136,7 @@ export function CheckboxGroup({
                         hasError={hasError}
                         id={`${id}-select-all`}
                         indeterminate={selectAllIndeterminate}
-                        label={translate(selectAllLabel)}
+                        label={t(selectAllLabel)}
                         name={name}
                         onChange={handleSelectAllChange}
                         value={undefined}

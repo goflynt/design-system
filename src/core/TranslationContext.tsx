@@ -2,8 +2,6 @@
 import React, { useContext, useMemo } from "react";
 import { capitalizeFirst } from "./utils/strings";
 
-export const THC_DESIGN_SYSTEM_COMMON_TRANSLATION_KEY = "thc.design-system.common";
-
 export type TFunction = (key: string, args?: any) => string;
 
 export interface TranslationContextValue {

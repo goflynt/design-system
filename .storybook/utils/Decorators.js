@@ -2,11 +2,11 @@
 import React from "react";
 import { MemoryRouter, useLocation } from "react-router-dom";
 
-import { ThemeContainer, SepiaThemeContainer } from "./ThemeContainer";
+import { SepiaThemeContainer, ThemeContainer } from "./ThemeContainer";
 
-import { TranslationProvider, THC_DESIGN_SYSTEM_COMMON_TRANSLATION_KEY } from "../../src/core/TranslationContext";
-import { designSystemTranslations } from "../../src/translations";
+import { DESIGN_SYSTEM_COMMON_TK, TranslationProvider } from "../../src/core";
 import { ToastProvider } from "../../src/molecules/modals/ToastProvider";
+import { designSystemTranslations } from "../../src/translations";
 
 function decoratorBuilder(ThemeContainerComponent) {
     return function ThemeDecorator(Story, { globals: { theme } }) {
@@ -61,7 +61,7 @@ export function TranslationDecorator(Story) {
         <TranslationProvider
             translationFn={simpleTranslate}
             globals={{
-                DesignSystem: THC_DESIGN_SYSTEM_COMMON_TRANSLATION_KEY,
+                DesignSystem: DESIGN_SYSTEM_COMMON_TK,
             }}
         >
             <Story />

@@ -3,7 +3,7 @@ import classnames from "classnames";
 import React, { useMemo } from "react";
 
 // Components
-import { THC_DESIGN_SYSTEM_COMMON_TRANSLATION_KEY, useTranslation } from "../../core";
+import { DESIGN_SYSTEM_COMMON_TK, useTranslation } from "../../core";
 import { Button } from "../buttons";
 import { Card, CardActions, CardContent, CardProps, CardTitle } from "../cards";
 import { Modal, ModalProps } from "./Modal";
@@ -80,7 +80,7 @@ export function Dialog({
     translationKey,
     ...otherProps
 }: DialogProps) {
-    const { translate } = useTranslation(translationKey ?? THC_DESIGN_SYSTEM_COMMON_TRANSLATION_KEY);
+    const { translate } = useTranslation(translationKey ?? DESIGN_SYSTEM_COMMON_TK);
 
     const dialogClassName = classnames("ds-c-dialog", className);
     const modalClassName = classnames("ds-c-dialog__modal", modalClassNameProp);

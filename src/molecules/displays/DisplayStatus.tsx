@@ -2,10 +2,8 @@
 import classnames from "classnames";
 
 // Components
-import { StatusEnum, THC_DESIGN_SYSTEM_COMMON_TRANSLATION_KEY, useTranslation } from "../../core";
+import { DESIGN_SYSTEM_COMMON_TK, DESIGN_SYSTEM_DISPLAY_TK, StatusEnum, useTranslation } from "../../core";
 import { IconWrapper, IconWrapperProps, Icons } from "../icons";
-
-export const DISPLAY_STATUS_TRANSLATION_KEY = "thc.displays.display-status";
 
 export const DISPLAY_STATUS_ICONS: Record<StatusEnum, Icons> = {
     [StatusEnum.Draft]: "clipboard",
@@ -50,8 +48,8 @@ export function DisplayStatus({
     translationKey,
     ...otherProps
 }: DisplayStatusProps) {
-    const { translate: translateDisplay } = useTranslation(translationKey ?? DISPLAY_STATUS_TRANSLATION_KEY);
-    const { translate: translateCommon } = useTranslation(translationKey ?? THC_DESIGN_SYSTEM_COMMON_TRANSLATION_KEY);
+    const { translate: translateDisplay } = useTranslation(translationKey ?? DESIGN_SYSTEM_DISPLAY_TK);
+    const { translate: translateCommon } = useTranslation(translationKey ?? DESIGN_SYSTEM_COMMON_TK);
 
     const rootClassName = classnames(
         "ds-c-display-status",
@@ -68,7 +66,7 @@ export function DisplayStatus({
     const iconClassName = classnames("ds-c-display-status__icon", iconClassNameProp);
 
     if (!DISPLAY_STATUS_ICONS[status]) {
-        return <span className="ds-u-status--error">{translateDisplay("unknown-status")}</span>;
+        return <span className="ds-u-status--error">{translateDisplay("status.unknown-status")}</span>;
     }
 
     return (
