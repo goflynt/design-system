@@ -143,7 +143,7 @@ export function Display({
                 <div className="ds-c-display__label-container">
                     {alterElement(wrapLabel(label), { className: "ds-c-display__label ds-u-text--label" })}
                     {helperText && (
-                        <Tooltip tooltip={helperText} placement={TOOLTIP_PLACEMENT.TOP}>
+                        <Tooltip tooltip={helperText} placement="top">
                             <Icon size="s" {...helperIconProps} className={helperIconClassName}>
                                 {helperIcon}
                             </Icon>

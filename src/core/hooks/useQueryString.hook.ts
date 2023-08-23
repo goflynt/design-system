@@ -6,7 +6,7 @@ import { useHistory, useLocation } from "react-router-dom";
 import { filterEntriesKeys, getQueryStringValue, objectify, removeUndefinedKeys, setQueryStringValue } from "../utils";
 
 export type QsKey = string | string[];
-export type QsKeyValue = string | number | Record<string, number | string>;
+export type QsKeyValue<T extends QsKey> = T extends string ? string : Record<string, string>;
 
 /**
  * The hook has two signatures:
@@ -17,8 +17,8 @@ export type QsKeyValue = string | number | Record<string, number | string>;
  * The setValue function accepts the same type as initialValueProp
  *
  */
-export function useQueryString<T = QsKeyValue>(
-    qsKey: QsKey,
+export function useQueryString<P extends QsKey, T = QsKeyValue<P>>(
+    qsKey: P,
     initialValueProp: T | undefined = undefined,
     { parseOptions, stringifyOptions }: { parseOptions?: any; stringifyOptions?: any } = {}
 ): [T, (t: T) => void] {
@@ -27,7 +27,7 @@ export function useQueryString<T = QsKeyValue>(
 
     const simpleMode = typeof qsKey === "string";
 
-    const keys = useMemo(() => (simpleMode ? [qsKey] : qsKey), [simpleMode, qsKey]);
+    const keys = useMemo(() => (simpleMode ? [qsKey] : qsKey), [simpleMode, qsKey]) as string[];
 
     // Remove non considered params from query string before computing currentQsValues
     // Because useMemo compare strings by values -> to not trigger if other qs param change
@@ -56,7 +56,7 @@ export function useQueryString<T = QsKeyValue>(
 
             const newQsValue = Object.entries(newValues).reduce(
                 (qsString, [key, val]) =>
-                    setQueryStringValue(key, val as string | number, qsString, { parseOptions, stringifyOptions }),
+                    setQueryStringValue(key, val as string, qsString, { parseOptions, stringifyOptions }),
                 location.search
             );
 
@@ -89,5 +89,5 @@ export function useQueryString<T = QsKeyValue>(
         currentQsValuesRef.current = currentQsValues;
     }, [currentQsValues, values]);
 
-    return [simpleMode ? values[qsKey] : values, onSetValue];
+    return [(simpleMode ? values[qsKey] : values) as T, onSetValue];
 }

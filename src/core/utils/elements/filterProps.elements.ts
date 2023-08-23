@@ -13,7 +13,7 @@ const allReactEvents = compact(Object.values(reactEvents)).flat();
  * @param {object} props The initial props
  * @returns The filtered props
  */
-export function filterProps(props: Record<string, unknown>) {
+export function filterProps(props?: any) {
     if (typeof props === "undefined") {
         return undefined;
     }

@@ -8,7 +8,7 @@
 export function patchFormEventValue<E extends React.SyntheticEvent>(
     originalEvent: E,
     newTarget: HTMLInputElement,
-    newValue: number | string | undefined
+    newValue: any
 ): E {
     const newEvent = {
         ...originalEvent,

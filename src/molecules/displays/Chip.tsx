@@ -96,9 +96,9 @@ export function Chip({
     );
     const iconClassName = classnames("ds-c-chip__icon", iconClassNameProp);
 
-    let color = disabled || type === "outlined" ? undefined : colorProp;
+    let color = (disabled || type === "outlined" ? undefined : colorProp) ?? undefined;
     if (color && color.startsWith("--thc")) {
-        color = getCSSVariable(colorProp);
+        color = getCSSVariable(color);
     }
 
     const child = wrapLabel(label ?? children);
@@ -107,7 +107,7 @@ export function Chip({
 
     return (
         <div className={chipClassName} disabled={disabled === true} style={{ backgroundColor: color }} {...otherProps}>
-            <Tooltip disabled={!helperText} tooltip={helperText} {...helperProps} placement={TOOLTIP_PLACEMENT.TOP}>
+            <Tooltip disabled={!helperText} tooltip={helperText} {...helperProps} placement="top">
                 <IconWrapper
                     {...iconProps}
                     className={iconClassName}

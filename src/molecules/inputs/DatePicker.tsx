@@ -61,9 +61,13 @@ export function DatePicker({
 
     const handleChange = (date: any) => {
         if (onChange) {
-            const newEvent = patchFormEventValue({}, inputRef.current, date.toISOString());
+            const newEvent = patchFormEventValue(
+                {} as React.SyntheticEvent<HTMLInputElement>,
+                inputRef.current!,
+                date.toISOString()
+            );
 
-            onChange(newEvent);
+            onChange(newEvent as React.ChangeEvent<HTMLInputElement>);
             setOpen(false);
             inputRef.current?.focus();
         }

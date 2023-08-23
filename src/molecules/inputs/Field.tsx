@@ -99,7 +99,7 @@ export function Field(props: FieldProps) {
     return <div {...props}>{null}</div>;
 }
 
-export function FieldHoc<P>(
+export function FieldHoc<P = any>(
     InputComponent: React.FunctionComponent<P>,
     baseName: string
 ): React.ForwardRefExoticComponent<React.PropsWithoutRef<P & FieldProps> & React.RefAttributes<HTMLDivElement>> {

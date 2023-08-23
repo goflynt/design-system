@@ -4,13 +4,11 @@
  * @param {bool} disabled If is disabled
  * @returns Wrapped handler
  */
-export function wrapPrevent<
-    T extends Element,
-    E extends Event,
-    SE extends React.SyntheticEvent<T, E>,
-    F extends React.EventHandler<SE>
->(handlerFn?: F, disabled = false): F {
-    return function genericPreventHandler(event: SE, ...args): void {
+export function wrapPrevent<E extends React.SyntheticEvent<any>, P extends any[]>(
+    handlerFn?: (event: E, ...args: P) => void,
+    disabled = false
+): (event: E, ...args: P) => void {
+    return function genericPreventHandler(event: E, ...args: P): void {
         if (event.defaultPrevented) {
             return;
         }

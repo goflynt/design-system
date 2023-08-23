@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import { removeUndefinedKeys } from "../utils";
 
 // Hooks
-import { useQueryString } from "./useQueryString.hook";
+import { QsKey, QsKeyValue, useQueryString } from "./useQueryString.hook";
 
 /**
  * Hook to help handle modal lifecycle (see useQueryString for qsKey a initialValue usage)
@@ -14,7 +14,11 @@ import { useQueryString } from "./useQueryString.hook";
  * @param {string|object} initialValue Initial values for query parameters
  * @returns {[value, onSetValue]}
  */
-export function useModalHandler(qsKey: string, closeCallback: () => void, initialValue: string) {
+export function useModalHandler<P extends QsKey, T = QsKeyValue<P>>(
+    qsKey: P,
+    closeCallback: () => void,
+    initialValue: T
+) {
     const [value, onSetValue] = useQueryString(qsKey, initialValue);
 
     const closeCallbackRef = useRef<() => void>();

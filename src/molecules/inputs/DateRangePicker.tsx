@@ -94,12 +94,12 @@ export function DateRangePicker({
             if (focusedInput === "startDate") {
                 setDatesState({ startDate: startDateChange, endDate: null });
             } else {
-                const newEvent = patchFormEventValue({}, inputRef.current, {
+                const newEvent = patchFormEventValue({} as React.SyntheticEvent<HTMLInputElement>, inputRef.current!, {
                     startDate: startDateChange?.toISOString(),
                     endDate: endDateChange?.toISOString(),
                 });
 
-                onChange(newEvent);
+                onChange(newEvent as React.ChangeEvent<HTMLInputElement>);
                 setOpen(false);
                 inputRef.current?.focus();
             }
