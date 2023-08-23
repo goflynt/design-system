@@ -5,7 +5,7 @@ import React from "react";
 // Utils
 import { filterProps } from "../../core/utils";
 
-export interface ListItemContentProps extends React.PropsWithChildren<{}> {
+export interface ListItemContentProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

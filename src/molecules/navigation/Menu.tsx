@@ -2,7 +2,7 @@
 import classnames from "classnames";
 import React from "react";
 
-export interface MenuProps extends React.PropsWithChildren<{}> {
+export interface MenuProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for menu
      */

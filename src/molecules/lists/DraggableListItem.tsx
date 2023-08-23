@@ -14,7 +14,7 @@ export interface DraggableItem {
     id: string;
 }
 
-export interface DraggableListItemProps extends React.PropsWithChildren<{}> {
+export interface DraggableListItemProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

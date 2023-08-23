@@ -13,9 +13,9 @@ import { useFocus } from "./useFocus.hook";
  */
 export function useFocusAndBlur(
     disabled = false,
-    onFocus: (focus: React.FocusEvent<any>) => void,
-    onBlur: (focus: React.FocusEvent<any>) => void
-) {
+    onFocus?: (focus: React.FocusEvent<any>) => void,
+    onBlur?: (focus: React.FocusEvent<any>) => void
+): ReturnType<typeof useFocus> & { _handleBlur: (event: React.FocusEvent<any>) => void } {
     const { focus, setFocus, _handleFocus } = useFocus(disabled, onFocus);
 
     const _handleBlur = useCallback(

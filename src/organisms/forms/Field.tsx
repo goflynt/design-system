@@ -73,7 +73,7 @@ export type FieldPropMapping<T extends FieldTypes> = BaseFieldProps & T extends 
     ? SwitchProps
     : T extends "date"
     ? DatePickerProps
-    : {};
+    : unknown;
 
 function resolveFieldType({
     fieldType,

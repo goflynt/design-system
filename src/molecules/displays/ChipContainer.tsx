@@ -2,7 +2,7 @@
 import classnames from "classnames";
 import React from "react";
 
-export interface ChipContainerProps extends React.PropsWithChildren<{}> {
+export interface ChipContainerProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for container
      */

@@ -5,7 +5,7 @@ import React from "react";
 // Utils
 import { wrapKeyUp, wrapPrevent } from "../../core/utils";
 
-export interface CardProps extends React.PropsWithChildren<{}> {
+export interface CardProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for card
      */

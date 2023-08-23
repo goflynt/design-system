@@ -7,7 +7,7 @@ import { Transition } from "react-transition-group";
 import { useForkRef } from "../../core/hooks";
 import { DURATION, getAutoHeightDuration } from "./_utils";
 
-export interface CollapseProps extends React.PropsWithChildren<{}> {
+export interface CollapseProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

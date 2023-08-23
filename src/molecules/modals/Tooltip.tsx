@@ -24,7 +24,7 @@ export type TooltipPlacement =
     | "left-start"
     | "left-end";
 
-export interface TooltipProps extends React.PropsWithChildren<{}> {
+export interface TooltipProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for arrow
      */

@@ -14,7 +14,7 @@ import { IconWrapper, OpenCloseIcon } from "../icons";
 const cardSpacing = convertPxToNumber(getCSSVariable("--ds-card-spacing"));
 const cardSpacingCondensed = convertPxToNumber(getCSSVariable("--ds-card-spacing--condensed"));
 
-export interface AccordionProps extends React.PropsWithChildren<{}> {
+export interface AccordionProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

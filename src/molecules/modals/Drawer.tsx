@@ -1,6 +1,6 @@
 // Libs
 import classnames from "classnames";
-import React, { PropsWithChildren } from "react";
+import React from "react";
 
 // Utils
 import { useIsMounted } from "../../core/hooks";
@@ -23,7 +23,7 @@ const OPPOSITE_DIRECTIONS: Record<DrawerAnchor, SlideDirection> = {
     bottom: "up",
 };
 
-export interface DrawerProps extends PropsWithChildren<{}> {
+export interface DrawerProps extends React.PropsWithChildren<unknown> {
     /**
      * Anchor position to the window
      */
@@ -112,7 +112,7 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(function Dra
     );
 
     const slidingDrawer = (
-        <Slide {...sliderProps} appear={isMounted.current} direction={OPPOSITE_DIRECTIONS[anchor]} in={open}>
+        <Slide {...sliderProps} appear={isMounted} direction={OPPOSITE_DIRECTIONS[anchor]} in={open}>
             {drawer}
         </Slide>
     );

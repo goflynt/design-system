@@ -10,7 +10,7 @@ import { isReactElement } from "../../core/utils";
 import { Button } from "../buttons";
 import { StepContext } from "./StepContext";
 
-export interface StepperProps extends React.PropsWithChildren<{}> {
+export interface StepperProps extends React.PropsWithChildren<unknown> {
     /**
      * Current active step
      */

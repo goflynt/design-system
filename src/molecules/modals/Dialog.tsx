@@ -8,7 +8,7 @@ import { Button } from "../buttons";
 import { Card, CardActions, CardContent, CardProps, CardTitle } from "../cards";
 import { Modal, ModalProps } from "./Modal";
 
-export interface DialogProps extends React.PropsWithChildren<{}> {
+export interface DialogProps extends React.PropsWithChildren<unknown> {
     /**
      * Actions of Dialog
      */

@@ -7,7 +7,14 @@ import { useCallback, useState } from "react";
  * @param {func} onFocus Focus handler
  * @returns { focus, setFocus, _handleFocus }
  */
-export function useFocus(disabled = false, onFocus: (focus: React.FocusEvent<any>) => void) {
+export function useFocus(
+    disabled = false,
+    onFocus?: (focus: React.FocusEvent<any>) => void
+): {
+    focus: boolean;
+    setFocus: (focus: boolean) => void;
+    _handleFocus: (event: React.FocusEvent<any>) => void;
+} {
     const [focus, setFocus] = useState(false);
 
     const _handleFocus = useCallback(

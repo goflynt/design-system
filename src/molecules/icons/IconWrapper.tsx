@@ -10,7 +10,7 @@ import { Icon, IconProps, IconSize, Icons } from "./Icon";
 
 export type IconPosition = "top" | "right" | "bottom" | "left";
 
-export interface IconWrapperProps extends React.PropsWithChildren<{}> {
+export interface IconWrapperProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

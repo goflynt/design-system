@@ -5,7 +5,7 @@ import React from "react";
 // Utils
 import { alterElement } from "../../core/utils";
 
-export interface MenuListProps extends React.PropsWithChildren<{}> {
+export interface MenuListProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for list
      */

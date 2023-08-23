@@ -10,7 +10,7 @@ import { DivProps, alterElement, getCSSVariable } from "../../core/utils";
 import { Slide, SlideProps } from "../animations";
 import { Modal, ModalProps } from "./Modal";
 
-export interface BannerProps extends React.PropsWithChildren<{}> {
+export interface BannerProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

@@ -6,7 +6,7 @@ import React from "react";
 import { Form as FormikForm, FormikProvider, useFormik } from "formik";
 import { FieldContainer } from "./FieldContainer";
 
-export interface FormProps extends React.PropsWithChildren<{}> {
+export interface FormProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for form
      */

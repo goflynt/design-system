@@ -2,7 +2,7 @@
 import classnames from "classnames";
 import React from "react";
 
-export interface CardSeparatorProps extends React.PropsWithChildren<{}> {
+export interface CardSeparatorProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

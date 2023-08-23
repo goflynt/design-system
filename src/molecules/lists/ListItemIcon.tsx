@@ -5,7 +5,7 @@ import React from "react";
 // Components
 import { Icon, IconProps, Icons, IconSize } from "../icons";
 
-export interface ListItemIconProps extends React.PropsWithChildren<{}> {
+export interface ListItemIconProps extends React.PropsWithChildren<unknown> {
     /**
      * If is with accent color
      */

@@ -5,7 +5,7 @@ import classnames from "classnames";
 import { Icon } from "../icons";
 import { Button, ButtonProps } from "./Button";
 
-export interface ButtonAngleProps extends ButtonProps {}
+export type ButtonAngleProps = ButtonProps;
 
 export function ButtonAngle({ children, className, icon, iconSize = "m", ...otherProps }: ButtonAngleProps) {
     const buttonClassName = classnames("ds-c-button-angle", className);

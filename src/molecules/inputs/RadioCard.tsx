@@ -73,7 +73,15 @@ export const RadioCard = React.forwardRef<HTMLDivElement, RadioCardProps>(functi
     );
 
     return (
-        <Card className={rootClassName} disabled={disabled} onClick={() => {}} outlined ref={ref}>
+        <Card
+            className={rootClassName}
+            disabled={disabled}
+            onClick={() => {
+                /* RAF */
+            }}
+            outlined
+            ref={ref}
+        >
             <CardHeader>
                 <CardContent className="ds-o-flex-item--1">{child}</CardContent>
                 <CardContent>

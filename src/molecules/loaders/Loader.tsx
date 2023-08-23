@@ -26,7 +26,7 @@ export function isLoadingError(meta: LoadingMeta) {
     return meta.error;
 }
 
-export interface LoaderProps extends React.PropsWithChildren<{}> {
+export interface LoaderProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional string to display
      */

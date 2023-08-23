@@ -5,7 +5,7 @@ import React from "react";
 // Utils
 import { filterProps, wrapLabel } from "../../core/utils";
 
-export interface FieldHelperTextProps extends React.PropsWithChildren<{}> {
+export interface FieldHelperTextProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for the HelperText
      */

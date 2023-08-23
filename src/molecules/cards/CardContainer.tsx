@@ -4,7 +4,7 @@ import React from "react";
 
 export type CardContainerOrientation = "horizontal" | "vertical";
 
-export interface CardContainerProps extends React.PropsWithChildren<{}> {
+export interface CardContainerProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

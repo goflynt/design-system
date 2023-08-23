@@ -9,7 +9,7 @@ import { wrapLabel } from "../../core/utils";
 import { Button } from "../buttons";
 import { IconPosition, IconSize, IconWrapper, IconWrapperProps, Icons } from "../icons";
 
-export interface TabProps extends React.PropsWithChildren<{}> {
+export interface TabProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

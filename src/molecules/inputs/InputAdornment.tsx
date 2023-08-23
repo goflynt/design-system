@@ -8,7 +8,7 @@ import { alterElement, filterProps } from "../../core/utils";
 // Components
 import { Icon, hasIcon } from "../icons";
 
-export interface InputAdornmentProps extends React.PropsWithChildren<{}> {
+export interface InputAdornmentProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for the Adornment
      */

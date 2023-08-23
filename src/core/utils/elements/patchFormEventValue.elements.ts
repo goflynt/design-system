@@ -5,7 +5,11 @@
  * @param {any} newValue New value
  * @returns
  */
-export function patchFormEventValue(originalEvent: React.SyntheticEvent, newTarget: HTMLInputElement, newValue: any) {
+export function patchFormEventValue<E extends React.SyntheticEvent>(
+    originalEvent: E,
+    newTarget: HTMLInputElement,
+    newValue: number | string | undefined
+): E {
     const newEvent = {
         ...originalEvent,
         originalTarget: originalEvent.target,

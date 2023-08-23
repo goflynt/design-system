@@ -40,7 +40,7 @@ const defaultTransformOrigin: AnchorOrigin = {
     horizontal: "left",
 };
 
-export interface DropdownProps extends React.PropsWithChildren<{}> {
+export interface DropdownProps extends React.PropsWithChildren<unknown> {
     /**
      * Anchoring element
      */

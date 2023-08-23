@@ -2,7 +2,7 @@
 import classnames from "classnames";
 import React from "react";
 
-export interface FormActionsProps extends React.PropsWithChildren<{}> {
+export interface FormActionsProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

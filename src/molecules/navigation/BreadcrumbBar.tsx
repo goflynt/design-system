@@ -5,7 +5,7 @@ import React from "react";
 // Components
 import { Icon } from "../icons";
 
-export interface BreadcrumbBarProps extends React.PropsWithChildren<{}> {
+export interface BreadcrumbBarProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

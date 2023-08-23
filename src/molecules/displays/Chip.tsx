@@ -11,7 +11,7 @@ import { Tooltip, TooltipProps } from "../modals";
 
 export type ChipTypes = "colored" | "outlined" | "action";
 
-export interface ChipProps extends React.PropsWithChildren<{}> {
+export interface ChipProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for the chip
      */

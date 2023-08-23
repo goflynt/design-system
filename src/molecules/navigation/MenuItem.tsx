@@ -10,7 +10,7 @@ import { arrayify, isReactElement, wrapKeyUp, wrapPrevent } from "../../core/uti
 import { Icon, Icons } from "../icons";
 import { Tooltip, TooltipProps } from "../modals";
 
-export interface MenuItemProps extends React.PropsWithChildren<{}> {
+export interface MenuItemProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for menu item
      */

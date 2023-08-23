@@ -5,7 +5,7 @@ import React from "react";
 // Utils
 import { wrapLabel } from "../../core/utils";
 
-export interface CardContentProps extends React.PropsWithChildren<{}> {
+export interface CardContentProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for content
      */

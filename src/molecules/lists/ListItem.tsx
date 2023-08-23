@@ -8,7 +8,7 @@ import { wrapKeyUp, wrapPrevent } from "../../core/utils";
 // Components
 import { ListItemText } from "./ListItemText";
 
-export interface ListItemProps extends React.PropsWithChildren<{}> {
+export interface ListItemProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */
@@ -76,7 +76,6 @@ export const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>(function 
 
     return (
         <li {...otherProps} className={itemClassName} disabled={disabled === true} ref={ref}>
-            {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
             <div
                 className={itemContainerClassName}
                 disabled={disabled === true}

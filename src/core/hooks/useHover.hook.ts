@@ -5,7 +5,7 @@ import { useCallback, useState } from "react";
  * Helper to handle hover state in JS.
  * @param {bool} disabled If is disabled
  * @param {func} onHover Hover handler
- * @returns { hover, onMouseEnter, onMouseLeave }
+ * @returns { hover, onMouseEnter, onMouseLeave }
  */
 export function useHover(
     disabled = false,

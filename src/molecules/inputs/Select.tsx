@@ -180,11 +180,15 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProps>(function S
     const { focus: open, setFocus: setOpen, _handleFocus } = useFocus(disabled, onFocus);
 
     const _handleChange = useCallback(
-        (event, value) => {
+        (event: React.MouseEvent<HTMLDivElement>, value: string | number | undefined) => {
             if (onChange) {
-                const newEvent = patchFormEventValue(event, inputRef.current, value);
+                const newEvent = patchFormEventValue(
+                    event,
+                    inputRef.current ?? (event.target as HTMLInputElement),
+                    value
+                );
 
-                onChange(newEvent);
+                onChange(newEvent as unknown as React.ChangeEvent<HTMLInputElement>);
             }
 
             setOpen(false);
@@ -209,7 +213,9 @@ export const Select = React.forwardRef<HTMLInputElement, SelectProps>(function S
 
     const endAdornment = useMemo(
         () => [
-            <InputAdornment className="ds-c-select__icon">{open ? iconFocus : icon}</InputAdornment>,
+            <InputAdornment className="ds-c-select__icon" key="focus">
+                {open ? iconFocus : icon}
+            </InputAdornment>,
             ...(inputProps && Array.isArray(inputProps.endAdornment)
                 ? inputProps.endAdornment
                 : [inputProps?.endAdornment].filter(Boolean)),

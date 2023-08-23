@@ -245,7 +245,11 @@ export const Autocomplete = React.forwardRef<HTMLInputElement, AutocompleteProps
 
     const endAdornment = useMemo(
         () => [
-            <InputAdornment className="ds-c-select__icon" onClick={valueProp ? handleClearAutocomplete : undefined}>
+            <InputAdornment
+                className="ds-c-select__icon"
+                onClick={valueProp ? handleClearAutocomplete : undefined}
+                key="autocomplete-action"
+            >
                 {valueProp ? iconClear : icon}
             </InputAdornment>,
             ...(inputProps && Array.isArray(inputProps.endAdornment)

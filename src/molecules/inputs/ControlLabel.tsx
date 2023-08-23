@@ -7,7 +7,7 @@ import { DivProps, alterElement, filterProps } from "../../core/utils";
 
 export type ControlLabelPosition = "top" | "right" | "bottom" | "left";
 
-export interface ControlLabelProps extends React.PropsWithChildren<{}> {
+export interface ControlLabelProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for control label
      */

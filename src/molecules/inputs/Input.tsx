@@ -4,7 +4,15 @@ import React, { useCallback, useMemo, useRef } from "react";
 
 // Utils
 import { useFocusAndBlur, useForkRef } from "../../core/hooks";
-import { arrayify, filterProps, isReactElement, patchFormEventValue, wrapKeyUp, wrapPrevent } from "../../core/utils";
+import {
+    DivProps,
+    arrayify,
+    filterProps,
+    isReactElement,
+    patchFormEventValue,
+    wrapKeyUp,
+    wrapPrevent,
+} from "../../core/utils";
 
 // Components
 import { Icon } from "../icons";
@@ -306,7 +314,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Inp
         };
 
         return [
-            <div className="ds-c-input__number-buttons">
+            <div className="ds-c-input__number-buttons" key="number-actions">
                 <Icon className="ds-o-actionable" onClick={handleIncrementClick} role="button" size="xs" tabIndex={-1}>
                     angle-up
                 </Icon>

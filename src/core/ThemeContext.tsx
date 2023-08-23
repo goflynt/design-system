@@ -20,7 +20,7 @@ export function useTheme() {
     return useContext(ThemeContext);
 }
 
-export interface ThemeProviderProps extends React.PropsWithChildren<{}> {
+export interface ThemeProviderProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for Theme
      */

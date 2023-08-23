@@ -4,7 +4,7 @@ import React from "react";
 
 export type FieldContainerOrientation = "horizontal" | "vertical" | "centered";
 
-export interface FieldContainerProps extends React.PropsWithChildren<{}> {
+export interface FieldContainerProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

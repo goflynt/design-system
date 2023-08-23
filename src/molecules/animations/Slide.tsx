@@ -70,7 +70,7 @@ const defaultTimeout: SlideProps["timeout"] = {
     exit: DURATION.leavingScreen,
 };
 
-export interface SlideProps extends React.PropsWithChildren<{}> {
+export interface SlideProps extends React.PropsWithChildren<unknown> {
     /**
      * If element should appear with animation
      */
@@ -259,7 +259,9 @@ export const Slide = React.forwardRef<HTMLDivElement, SlideProps>(function Slide
         }
     }, [open, direction]);
 
-    const addEndListener = (next: TimerHandler) => {};
+    const addEndListener = (_next: TimerHandler) => {
+        // RAF
+    };
 
     return (
         <Transition

@@ -1,6 +1,6 @@
 // Libs
 
-export interface TabPanelProps extends React.PropsWithChildren<{}> {
+export interface TabPanelProps extends React.PropsWithChildren<unknown> {
     /**
      * Current currentValue
      */

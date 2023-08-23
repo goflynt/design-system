@@ -10,7 +10,7 @@ import { DisplayType } from "./Display";
 
 export type DisplayContainerOrientation = "horizontal" | "vertical";
 
-export interface DisplayContainerProps extends React.PropsWithChildren<{}> {
+export interface DisplayContainerProps extends React.PropsWithChildren<unknown> {
     /**
      * Display for nested displays
      */

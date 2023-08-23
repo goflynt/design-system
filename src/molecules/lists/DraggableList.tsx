@@ -10,15 +10,11 @@ import {
 } from "react-beautiful-dnd";
 
 // Components
+import { DraggableItem } from "./DraggableListItem";
 import { DroppableList } from "./DroppableList";
 import { ListItemProps } from "./ListItem";
-import { DraggableItem } from "./DraggableListItem";
 
-export interface DraggableListProps extends React.PropsWithChildren<{}> {
-    /**
-     * Additional className
-     */
-    className?: string;
+export interface DraggableListProps extends React.PropsWithChildren<unknown> {
     /**
      * If has dragHandle
      */
@@ -61,7 +57,6 @@ export interface DraggableListProps extends React.PropsWithChildren<{}> {
 
 export function DraggableList({
     children,
-    className,
     items,
     onDragEnd,
     onDragStart,

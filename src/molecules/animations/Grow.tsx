@@ -23,7 +23,7 @@ const STYLES: PartialRecord<TransitionStatus, React.CSSProperties> = {
     },
 };
 
-export interface GrowProps extends React.PropsWithChildren<{}> {
+export interface GrowProps extends React.PropsWithChildren<unknown> {
     /**
      * If element should appear with animation
      */

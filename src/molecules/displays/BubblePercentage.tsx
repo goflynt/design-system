@@ -5,7 +5,7 @@ import React from "react";
 // Utils
 import { formatNumber } from "../../core/formatters";
 
-export interface BubblePercentageProps extends React.PropsWithChildren<{}> {
+export interface BubblePercentageProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

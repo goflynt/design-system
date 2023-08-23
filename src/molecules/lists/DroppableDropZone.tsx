@@ -3,7 +3,7 @@ import classnames from "classnames";
 import React from "react";
 import { Droppable } from "react-beautiful-dnd";
 
-export interface DroppableDropZoneProps extends React.PropsWithChildren<{}> {
+export interface DroppableDropZoneProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

@@ -11,7 +11,7 @@ import { LoaderIcon } from "../loaders";
 
 export type ButtonTypes = "primary" | "secondary" | "caution";
 
-export interface ButtonProps extends React.PropsWithChildren<{}> {
+export interface ButtonProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for the button
      */
@@ -114,6 +114,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
             {...otherProps}
         >
             <IconWrapper
+                {...iconProps}
                 className={iconClassName}
                 icon={isLoading ? <LoaderIcon /> : icon}
                 position={iconPosition}

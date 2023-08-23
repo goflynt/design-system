@@ -8,7 +8,7 @@ import { DraggableItem, DraggableListItem } from "./DraggableListItem";
 import { List } from "./List";
 import { ListItem, ListItemProps } from "./ListItem";
 
-export interface DroppableListProps extends React.PropsWithChildren<{}> {
+export interface DroppableListProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

@@ -16,7 +16,7 @@ const DISPLAY_TYPES_ICON_POSITION_MAPPER: Record<DisplayType, IconPosition> = {
     column: "left",
 };
 
-export interface DisplayProps extends React.PropsWithChildren<{}> {
+export interface DisplayProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className for display
      */
@@ -131,7 +131,6 @@ export function Display({
 
     return (
         /* The <div> element has a child <role> attribute that allows keyboard interaction */
-        /* eslint-disable-next-line jsx-a11y/no-static-element-interactions */
         <div
             {...otherProps}
             className={displayClassName}

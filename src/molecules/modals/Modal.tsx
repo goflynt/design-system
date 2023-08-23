@@ -10,10 +10,10 @@ import { Overlay } from "./Overlay";
 import { Portal } from "./Portal";
 
 function getHasTransition(children: React.ReactNode): boolean {
-    return isReactElement(children) ? children.props.hasOwnProperty("in") : false;
+    return isReactElement(children) ? Object.prototype.hasOwnProperty.call(children.props, "in") : false;
 }
 
-export interface ModalProps extends React.PropsWithChildren<{}> {
+export interface ModalProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className to modal
      */

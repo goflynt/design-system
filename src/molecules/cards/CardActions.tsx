@@ -5,7 +5,7 @@ import React from "react";
 // Utils
 import { alterElement } from "../../core/utils";
 
-export interface CardActionsProps extends React.PropsWithChildren<{}> {
+export interface CardActionsProps extends React.PropsWithChildren<unknown> {
     /**
      * If actions are centered
      */

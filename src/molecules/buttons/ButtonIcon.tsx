@@ -6,7 +6,7 @@ import React from "react";
 import { Icon } from "../icons";
 import { Button, ButtonProps } from "./Button";
 
-export interface ButtonIconProps extends ButtonProps {}
+export type ButtonIconProps = ButtonProps;
 
 export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(function ButtonICon(
     { className, icon, children, iconSize = "m", iconProps, ...otherProps },

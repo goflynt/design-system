@@ -1,4 +1,6 @@
-export function getOffsetTop(rect, vertical) {
+import { HorizontalTransform, VerticalTransform } from "./Dropdown";
+
+export function getOffsetTop(rect: { height: number }, vertical: VerticalTransform): number {
     if (vertical === "center") {
         return rect.height / 2;
     }
@@ -12,7 +14,7 @@ export function getOffsetTop(rect, vertical) {
     return 0;
 }
 
-export function getOffsetLeft(rect, horizontal) {
+export function getOffsetLeft(rect: { width: number }, horizontal: HorizontalTransform): number {
     if (horizontal === "center") {
         return rect.width / 2;
     }
@@ -26,6 +28,11 @@ export function getOffsetLeft(rect, horizontal) {
     return 0;
 }
 
-export function getTransformOriginValue(transformOrigin) {
-    return [transformOrigin.horizontal, transformOrigin.vertical].map((n) => (typeof n === "number" ? `${n}px` : n)).join(" ");
+export function getTransformOriginValue(transformOrigin: {
+    horizontal: number | string;
+    vertical: number | string;
+}): string {
+    return [transformOrigin.horizontal, transformOrigin.vertical]
+        .map((n) => (typeof n === "number" ? `${n}px` : n))
+        .join(" ");
 }

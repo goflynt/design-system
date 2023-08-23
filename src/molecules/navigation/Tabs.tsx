@@ -10,7 +10,7 @@ import { useIsMounted } from "../../core/hooks";
 import { TabProps } from "./Tab";
 import { TabIndicator, TabIndicatorProps } from "./TabIndicator";
 
-export interface TabsProps extends React.PropsWithChildren<{}> {
+export interface TabsProps extends React.PropsWithChildren<unknown> {
     /**
      * Additional className
      */

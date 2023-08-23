@@ -4,7 +4,7 @@ import classnames from "classnames";
 // Components
 import { Chip, ChipProps } from "./Chip";
 
-export interface ChipActionProps extends Omit<ChipProps, "color" | "type"> {}
+export type ChipActionProps = Omit<ChipProps, "color" | "type">;
 
 export function ChipAction({ className, icon = "close", iconSize = "m", ...otherProps }: ChipActionProps) {
     const chipClassName = classnames("ds-c-chip--action", className);
