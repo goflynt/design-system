@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Utils
@@ -83,7 +83,7 @@ export function Chip({
     type = "colored",
     ...otherProps
 }: ChipProps) {
-    const chipClassName = classnames(
+    const chipClassName = clsx(
         {
             "ds-theme--color": !disabled && type === "colored",
         },
@@ -94,7 +94,7 @@ export function Chip({
         },
         className
     );
-    const iconClassName = classnames("ds-c-chip__icon", iconClassNameProp);
+    const iconClassName = clsx("ds-c-chip__icon", iconClassNameProp);
 
     let color = (disabled || type === "outlined" ? undefined : colorProp) ?? undefined;
     if (color && color.startsWith("--thc")) {

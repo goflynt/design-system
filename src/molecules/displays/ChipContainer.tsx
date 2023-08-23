@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 export interface ChipContainerProps extends React.PropsWithChildren<unknown> {
@@ -14,7 +14,7 @@ export interface ChipContainerProps extends React.PropsWithChildren<unknown> {
 }
 
 export function ChipContainer({ children, className, condensed = false, ...otherProps }: ChipContainerProps) {
-    const containerClassName = classnames(
+    const containerClassName = clsx(
         "ds-c-chip-container",
         { "ds-c-chip-container__condensed": condensed },
         className

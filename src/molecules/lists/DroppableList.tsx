@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 import { Droppable } from "react-beautiful-dnd";
 
@@ -45,7 +45,7 @@ export function DroppableList({
     ListItemComponent = ListItem,
     ...otherProps
 }: DroppableListProps) {
-    const rootClassName = classnames("ds-c-droppable-list", className);
+    const rootClassName = clsx("ds-c-droppable-list", className);
 
     return (
         <Droppable droppableId="simple-droppable-list">
@@ -53,7 +53,7 @@ export function DroppableList({
                 <ListComponent
                     {...otherProps}
                     {...provided.droppableProps}
-                    className={classnames(rootClassName, {
+                    className={clsx(rootClassName, {
                         "ds-c-droppable-list--dragging": snapshot.isDraggingOver,
                     })}
                     ref={provided.innerRef}

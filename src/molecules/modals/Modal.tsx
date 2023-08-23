@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React, { useCallback, useState } from "react";
 
 // Utils
@@ -63,13 +63,13 @@ export function Modal({
     const [exited, setExited] = useState(true);
     const hasTransition = getHasTransition(children);
 
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-modal",
         // { "ds-c-modal--hidden": !open && (!hasTransition || exited) },
         className
     );
-    const overlayClassName = classnames("ds-c-modal__overlay", overlayClassNameProp);
-    const contentClassName = classnames(
+    const overlayClassName = clsx("ds-c-modal__overlay", overlayClassNameProp);
+    const contentClassName = clsx(
         "ds-c-modal__content",
         isReactElement(children) ? children.props.className : undefined
     );

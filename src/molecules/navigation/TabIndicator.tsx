@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import { DivProps } from "../../core/utils";
 
 export interface TabIndicatorProps extends DivProps {
@@ -10,7 +10,7 @@ export interface TabIndicatorProps extends DivProps {
 }
 
 export function TabIndicator({ className, ...otherProps }: TabIndicatorProps) {
-    const rootClassName = classnames("ds-c-tab-indicator", className);
+    const rootClassName = clsx("ds-c-tab-indicator", className);
 
     return <span {...otherProps} className={rootClassName} />;
 }

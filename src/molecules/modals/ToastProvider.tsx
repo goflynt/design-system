@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import PropTypes from "prop-types";
 import { useCallback } from "react";
 import { ToastContainer as ToastifyContainer, toast as toastifyToast } from "react-toastify";
@@ -28,8 +28,8 @@ export function ToastProvider({
     position = "bottom-left",
     toastClassName: toastClassNameProp,
 }) {
-    const rootClassName = classnames("ds-c-toast-container", className);
-    const toastClassName = classnames("ds-theme--color ds-c-toast", toastClassNameProp);
+    const rootClassName = clsx("ds-c-toast-container", className);
+    const toastClassName = clsx("ds-theme--color ds-c-toast", toastClassNameProp);
 
     const { theme } = useTheme();
 

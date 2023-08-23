@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Utils
@@ -53,7 +53,7 @@ export const ListItem = React.forwardRef<HTMLLIElement, ListItemProps>(function 
     },
     ref
 ) {
-    const itemClassName = classnames(
+    const itemClassName = clsx(
         {
             "ds-o-actionable": !!onClick,
         },

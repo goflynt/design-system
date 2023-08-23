@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 export interface CardSeparatorProps extends React.PropsWithChildren<unknown> {
@@ -14,7 +14,7 @@ export interface CardSeparatorProps extends React.PropsWithChildren<unknown> {
 }
 
 export function CardSeparator({ className, fullWidth = false, ...otherProps }: CardSeparatorProps) {
-    const separatorClassName = classnames(
+    const separatorClassName = clsx(
         "ds-c-card__separator",
         { "ds-c-card__separator--full-width": fullWidth },
         className

@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Utils
@@ -42,7 +42,7 @@ export function FieldLabel({
     required = false,
     ...otherProps
 }: FieldLabelProps) {
-    const labelClassName = classnames(
+    const labelClassName = clsx(
         "ds-c-field-label",
         {
             "ds-c-field-label--error": hasError && !disabled,

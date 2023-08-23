@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Components
@@ -38,7 +38,7 @@ export function Form({
     noValidate = true,
     ...otherProps
 }: FormProps) {
-    const formClassName = classnames("ds-c-form", className);
+    const formClassName = clsx("ds-c-form", className);
 
     let child = children;
     if (!noFieldContainer) {

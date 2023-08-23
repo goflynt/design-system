@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import { Link, useRouteMatch } from "react-router-dom";
 
 // Components
@@ -54,13 +54,13 @@ export function Breadcrumb({
     const to = toProp?.includes("?") ? toProp.slice(0, toProp.indexOf("?")) : toProp;
     const active = activeProp ?? useRouteMatch({ path: to, exact: true });
 
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         { "ds-o-actionable": !active },
         "ds-c-breadcrumb",
         { "ds-c-breadcrumb--active": active },
         className
     );
-    const iconClassName = classnames("ds-c-breadcrumb__icon", iconClassNameProp);
+    const iconClassName = clsx("ds-c-breadcrumb__icon", iconClassNameProp);
 
     const ContainerComponent = !to || active ? "div" : Link;
 

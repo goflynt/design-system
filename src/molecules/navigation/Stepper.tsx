@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React, { useMemo } from "react";
 
 // Utils
@@ -82,7 +82,7 @@ export function Stepper({
     validateLabel = "actions.validate",
     ...otherProps
 }: StepperProps) {
-    const rootClassName = classnames("ds-c-stepper", className);
+    const rootClassName = clsx("ds-c-stepper", className);
     const { translate } = useTranslation(translationKey);
 
     const childrenArray = React.Children.toArray(children);

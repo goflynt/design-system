@@ -20,6 +20,6 @@ export function mergeProps(
     return React.cloneElement(element, {
         ...otherPropsA,
         ...otherPropsB,
-        className: classnames(classNameA, classNameB as Argument),
+        className: clsx(classNameA, classNameB as Argument),
     });
 }

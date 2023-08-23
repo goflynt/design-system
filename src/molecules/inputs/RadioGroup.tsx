@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Utils
@@ -79,7 +79,7 @@ export function RadioGroup({
     value,
     ...otherProps
 }: RadioGroupProps) {
-    const rootClassName = classnames("ds-c-radio-group", className);
+    const rootClassName = clsx("ds-c-radio-group", className);
 
     const type = typeProp ?? "radio";
     const RadioComponent = RadioComponentProp ?? RADIO_GROUP_TYPE_MAPPER[type];

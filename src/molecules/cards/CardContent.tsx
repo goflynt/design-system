@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Utils
@@ -13,7 +13,7 @@ export interface CardContentProps extends React.PropsWithChildren<unknown> {
 }
 
 export function CardContent({ children, className, ...otherProps }: CardContentProps) {
-    const contentClassName = classnames("ds-c-card__content", className);
+    const contentClassName = clsx("ds-c-card__content", className);
 
     const wrappedChild = wrapLabel(children);
 

@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 
 // Icons
 import { Icon, IconProps } from "../icons";
@@ -29,14 +29,14 @@ export function LoaderSpinner({
     iconProps,
     isLoading = false,
 }: LoaderSpinnerProps) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-loader-spinner",
         {
             "ds-c-loader-spinner--loading": isLoading,
         },
         className
     );
-    const iconClassName = classnames("ds-c-loader-spinner__icon", iconClassNameProp);
+    const iconClassName = clsx("ds-c-loader-spinner__icon", iconClassNameProp);
 
     return (
         <div className={rootClassName}>

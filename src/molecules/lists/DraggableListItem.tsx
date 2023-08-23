@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import { Draggable } from "react-beautiful-dnd";
 
 // Utils
@@ -46,7 +46,7 @@ export function DraggableListItem({
     ListItemComponent = ListItem,
     ...listItemProps
 }: DraggableListItemProps) {
-    const rootClassName = classnames("ds-c-draggable-list-item", className);
+    const rootClassName = clsx("ds-c-draggable-list-item", className);
 
     return (
         <Draggable key={item.id} draggableId={item.id} index={index}>
@@ -55,7 +55,7 @@ export function DraggableListItem({
                     {...provided.draggableProps}
                     {...listItemProps}
                     {...(hasDragHandle ? {} : provided.dragHandleProps)}
-                    className={classnames(rootClassName, {
+                    className={clsx(rootClassName, {
                         "ds-c-draggable-list-item--dragging": snapshot.isDragging,
                         "ds-c-draggable-list-item--drag-handle": hasDragHandle,
                     })}

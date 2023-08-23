@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 
 export interface LoaderIconProps {
     /**
@@ -9,7 +9,7 @@ export interface LoaderIconProps {
 }
 
 export function LoaderIcon({ className }: LoaderIconProps) {
-    const rootClassName = classnames("ds-c-loader-icon", className);
+    const rootClassName = clsx("ds-c-loader-icon", className);
 
     return (
         <div className={rootClassName}>

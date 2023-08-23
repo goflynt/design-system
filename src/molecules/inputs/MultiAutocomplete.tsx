@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 
 // Utils
@@ -190,14 +190,14 @@ export function MultiAutocomplete({
     value,
     ...otherProps
 }: MultiAutocompleteProps) {
-    const multiClassName = classnames("ds-c-multi-autocomplete", className);
-    const chipClassName = classnames("ds-c-multi-autocomplete__chip", chipClassNameProp);
-    const chipContainerClassName = classnames("ds-c-multi-autocomplete__chip-container", chipContainerClassNameProp);
-    const dropdownClassName = classnames("ds-c-multi-autocomplete__dropdown", dropdownClassNameProp);
-    const inputClassName = classnames("ds-c-multi-autocomplete__input", inputClassNameProp);
-    const listClassName = classnames("ds-c-multi-autocomplete__list", listClassNameProp);
-    const listItemClassName = classnames("ds-c-multi-autocomplete__list-item", listItemClassNameProp);
-    const autocompleteClassName = classnames("ds-c-multi-autocomplete__autocomplete", autocompleteClassNameProp);
+    const multiClassName = clsx("ds-c-multi-autocomplete", className);
+    const chipClassName = clsx("ds-c-multi-autocomplete__chip", chipClassNameProp);
+    const chipContainerClassName = clsx("ds-c-multi-autocomplete__chip-container", chipContainerClassNameProp);
+    const dropdownClassName = clsx("ds-c-multi-autocomplete__dropdown", dropdownClassNameProp);
+    const inputClassName = clsx("ds-c-multi-autocomplete__input", inputClassNameProp);
+    const listClassName = clsx("ds-c-multi-autocomplete__list", listClassNameProp);
+    const listItemClassName = clsx("ds-c-multi-autocomplete__list-item", listItemClassNameProp);
+    const autocompleteClassName = clsx("ds-c-multi-autocomplete__autocomplete", autocompleteClassNameProp);
 
     const autocompleteRef = useRef<HTMLInputElement>(null);
 

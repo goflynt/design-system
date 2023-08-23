@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 export interface ButtonContainerProps extends React.PropsWithChildren<unknown> {
@@ -10,7 +10,7 @@ export interface ButtonContainerProps extends React.PropsWithChildren<unknown> {
 }
 
 export function ButtonContainer({ children, className }: ButtonContainerProps) {
-    const rootClassName = classnames("ds-c-button-container", className);
+    const rootClassName = clsx("ds-c-button-container", className);
 
     return <div className={rootClassName}>{children}</div>;
 }

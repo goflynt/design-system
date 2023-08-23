@@ -233,13 +233,13 @@ You can then wrap your input like component using the FieldHoc:
 ```jsx
 // Libs
 import React from "react";
-import classnames from "classnames";
+import clsx from "clsx";
 
 // Utils
 import { FieldHoc } from "@thc-tools/molecules/inputs";
 
 function InputLike({ hasError = false, id, name, onChange, value }) {
-    const className = classnames({ "thc-u-status--error": hasError });
+    const className = clsx({ "thc-u-status--error": hasError });
 
     return <input className={className} id={id} name={name} onChange={onChange} type="text" value={value} />;
 }

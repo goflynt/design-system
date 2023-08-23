@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 export interface CardHeaderProps extends React.PropsWithChildren<unknown> {
@@ -13,7 +13,7 @@ export const CardHeader = React.forwardRef<HTMLDivElement, CardHeaderProps>(func
     { children, className },
     ref
 ) {
-    const rootClassName = classnames("ds-c-card__header", className);
+    const rootClassName = clsx("ds-c-card__header", className);
 
     return (
         <div className={rootClassName} ref={ref}>

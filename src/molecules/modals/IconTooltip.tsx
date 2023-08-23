@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import PropTypes from "prop-types";
 
 // Components
@@ -20,7 +20,7 @@ export function IconTooltip({
     tooltipTitle,
     ...otherProps
 }) {
-    const rootClassName = classnames("ds-c-icon-tooltip", className);
+    const rootClassName = clsx("ds-c-icon-tooltip", className);
 
     return (
         <IconWrapper

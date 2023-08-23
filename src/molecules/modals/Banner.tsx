@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Utils
@@ -62,9 +62,9 @@ export function Banner({
     slideProps,
     ...otherProps
 }: BannerProps) {
-    const rootClassName = classnames("ds-theme--color ds-c-banner", className);
-    const modalClassName = classnames("ds-c-banner__modal", modalClassNameProp);
-    const paperClassName = classnames("ds-c-banner__paper", paperClassNameProp);
+    const rootClassName = clsx("ds-theme--color ds-c-banner", className);
+    const modalClassName = clsx("ds-c-banner__modal", modalClassNameProp);
+    const paperClassName = clsx("ds-c-banner__paper", paperClassNameProp);
 
     const isMounted = useIsMounted();
 

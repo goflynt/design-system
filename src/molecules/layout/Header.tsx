@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -47,10 +47,10 @@ export function Header({
     tabs,
     ...otherProps
 }) {
-    const actionButtonClassName = classnames("ds-c-header__action-button", actionButtonClassNameProp);
-    const dropdownClassName = classnames("ds-c-header__dropdown", dropdownClassNameProp);
-    const listClassName = classnames("ds-c-header__list", listClassNameProp);
-    const moreButtonClassName = classnames("ds-c-header__more-button", moreButtonClassNameProp);
+    const actionButtonClassName = clsx("ds-c-header__action-button", actionButtonClassNameProp);
+    const dropdownClassName = clsx("ds-c-header__dropdown", dropdownClassNameProp);
+    const listClassName = clsx("ds-c-header__list", listClassNameProp);
+    const moreButtonClassName = clsx("ds-c-header__more-button", moreButtonClassNameProp);
 
     let actionNode;
     if (actions.length > 3) {

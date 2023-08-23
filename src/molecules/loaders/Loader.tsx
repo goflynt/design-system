@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Components
@@ -56,7 +56,7 @@ export class Loader extends React.PureComponent<LoaderProps, { hasError: boolean
         const { children, className, meta = {}, waitMutated = false } = this.props;
         const { hasError } = this.state;
 
-        const rootClassName = classnames("ds-c-loader", className);
+        const rootClassName = clsx("ds-c-loader", className);
 
         if (hasError) {
             return <p>Something went wrong.</p>;

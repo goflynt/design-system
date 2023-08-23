@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React, { useCallback } from "react";
 
 // Utils
@@ -81,7 +81,7 @@ export function Tab({
     value,
     ...otherProps
 }: TabProps) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-tab",
         {
             "ds-c-tab--disabled": disabled,
@@ -89,7 +89,7 @@ export function Tab({
         },
         className
     );
-    const iconClassName = classnames("ds-c-tab__icon", iconClassNameProp);
+    const iconClassName = clsx("ds-c-tab__icon", iconClassNameProp);
 
     const handleClick = useCallback(
         (event) => {

@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 
 export interface StepConnectorProps {
     /**
@@ -9,7 +9,7 @@ export interface StepConnectorProps {
 }
 
 export function StepConnector({ className }: StepConnectorProps) {
-    const rootClassName = classnames("ds-c-step-connector", className);
+    const rootClassName = clsx("ds-c-step-connector", className);
 
     return (
         <div className={rootClassName}>

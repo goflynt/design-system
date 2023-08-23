@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Utils
@@ -60,7 +60,7 @@ export const IconWrapper = React.forwardRef<HTMLDivElement, IconWrapperProps>(fu
     },
     ref
 ) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-icon-wrapper",
         {
             "ds-c-icon-wrapper--full-width": fullWidth,
@@ -71,7 +71,7 @@ export const IconWrapper = React.forwardRef<HTMLDivElement, IconWrapperProps>(fu
         },
         className
     );
-    const iconClassName = classnames("ds-c-icon-wrapper__icon", iconClassNameProp, iconProps.className);
+    const iconClassName = clsx("ds-c-icon-wrapper__icon", iconClassNameProp, iconProps.className);
 
     return (
         <div {...otherProps} className={rootClassName} ref={ref}>

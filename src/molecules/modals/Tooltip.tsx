@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React, { useState } from "react";
 import { usePopper } from "react-popper";
 
@@ -110,14 +110,14 @@ export function Tooltip({
 
     const forkedRef = useForkRef(setAnchorEl, isReactElement(children) ? children.props.ref : null);
 
-    const rootClassName = classnames("ds-c-tooltip", className);
-    const contentClassName = classnames(
+    const rootClassName = clsx("ds-c-tooltip", className);
+    const contentClassName = clsx(
         "ds-c-tooltip__content",
         { "ds-c-tooltip__content--ellipsis": hasEllipsis },
         contentClassNameProp
     );
-    const tooltipClassName = classnames("ds-c-tooltip__tooltip", tooltipClassNameProp);
-    const arrowClassName = classnames("ds-c-tooltip__arrow", arrowClassNameProp);
+    const tooltipClassName = clsx("ds-c-tooltip__tooltip", tooltipClassNameProp);
+    const arrowClassName = clsx("ds-c-tooltip__arrow", arrowClassNameProp);
 
     return (
         <div {...otherProps} className={rootClassName} disabled={disabled === true}>

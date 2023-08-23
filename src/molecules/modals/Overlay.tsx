@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Utils
@@ -25,7 +25,7 @@ export interface OverlayProps {
 }
 
 export function Overlay({ className, invisible = false, onClick, open = false, ...otherProps }: OverlayProps) {
-    const overlayClassName = classnames(
+    const overlayClassName = clsx(
         "ds-c-overlay",
         {
             "ds-c-overlay--invisible": invisible,

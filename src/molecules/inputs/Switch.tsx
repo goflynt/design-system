@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Utils
@@ -140,7 +140,7 @@ export const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(function S
 ) {
     const checked = Boolean(checkedProp ?? value);
 
-    const switchClassName = classnames(
+    const switchClassName = clsx(
         "ds-c-switch",
         {
             "ds-c-switch--error": !disabled && hasError,
@@ -149,8 +149,8 @@ export const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(function S
         },
         className
     );
-    const inputClassName = classnames("ds-c-switch__input", inputClassNameProp);
-    const thumbClassName = classnames("ds-c-switch__thumb", thumbClassNameProp);
+    const inputClassName = clsx("ds-c-switch__input", inputClassNameProp);
+    const thumbClassName = clsx("ds-c-switch__thumb", thumbClassNameProp);
 
     return (
         <ControlLabel

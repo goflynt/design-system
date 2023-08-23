@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Components
@@ -52,7 +52,7 @@ export const RadioCard = React.forwardRef<HTMLDivElement, RadioCardProps>(functi
     },
     ref
 ) {
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         "ds-c-radio-card",
         {
             "ds-c-radio-card--checked": checked,

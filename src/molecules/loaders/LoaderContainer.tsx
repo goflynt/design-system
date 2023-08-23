@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 export interface LoaderContainerProps extends React.PropsWithChildren<unknown> {
@@ -10,7 +10,7 @@ export interface LoaderContainerProps extends React.PropsWithChildren<unknown> {
 }
 
 export function LoaderContainer({ children, className, ...otherProps }: LoaderContainerProps) {
-    const rootClassName = classnames("ds-c-loader-container", className);
+    const rootClassName = clsx("ds-c-loader-container", className);
 
     return (
         <div {...otherProps} className={rootClassName}>

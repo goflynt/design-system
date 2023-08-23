@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React, { useContext } from "react";
 
 export type Theme = "light" | "dark" | "color";
@@ -42,7 +42,7 @@ export function ThemeProvider({ children, className, theme: themeProp, ...otherP
         theme = themeProp ?? themeContext;
     }
 
-    const rootClassName = classnames(
+    const rootClassName = clsx(
         {
             "ds-theme--light": theme === "light",
             "ds-theme--dark": theme === "dark",

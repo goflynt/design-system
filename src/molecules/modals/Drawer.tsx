@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Utils
@@ -90,9 +90,9 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(function Dra
 ) {
     const isMounted = useIsMounted();
 
-    const rootClassName = classnames("ds-c-drawer", { "ds-c-drawer--docked": type === "persistent" }, className);
-    const modalClassName = classnames("ds-c-drawer__modal", modalClassNameProp);
-    const paperClassName = classnames(
+    const rootClassName = clsx("ds-c-drawer", { "ds-c-drawer--docked": type === "persistent" }, className);
+    const modalClassName = clsx("ds-c-drawer__modal", modalClassNameProp);
+    const paperClassName = clsx(
         "ds-o-paper",
         "ds-c-drawer__paper",
         `ds-c-drawer__paper--${anchor}`,

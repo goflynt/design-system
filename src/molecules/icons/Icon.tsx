@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import React from "react";
 
 // Utils
@@ -41,7 +41,7 @@ export const Icon = React.forwardRef<SVGSVGElement, IconProps>(function Icon(
     { children, className, icon, onClick, size = "m", ...otherProps },
     ref
 ) {
-    const iconClassName = classnames(
+    const iconClassName = clsx(
         "ds-c-icon",
         {
             "ds-u-icon--XS": size === "xs",

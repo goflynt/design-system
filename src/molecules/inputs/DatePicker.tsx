@@ -1,5 +1,5 @@
 // Libs
-import classnames from "classnames";
+import clsx from "clsx";
 import moment from "moment";
 import React, { useMemo, useRef, useState } from "react";
 import { DayPickerSingleDateController, DayPickerSingleDateControllerShape } from "react-dates";
@@ -54,7 +54,7 @@ export function DatePicker({
     value: valueProp,
     ...otherProps
 }: DatePickerProps) {
-    const rootClassName = classnames("ds-c-date-picker", className);
+    const rootClassName = clsx("ds-c-date-picker", className);
 
     const inputRef = useRef<HTMLInputElement>(null);
     const [open, setOpen] = useState(false);
