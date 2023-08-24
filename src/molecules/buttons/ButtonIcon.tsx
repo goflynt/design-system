@@ -23,7 +23,3 @@ export const ButtonIcon = React.forwardRef<HTMLButtonElement, ButtonIconProps>(f
         </Button>
     );
 });
-
-ButtonIcon.propTypes = {
-    ...Button.propTypes,
-};

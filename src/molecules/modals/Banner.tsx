@@ -73,7 +73,7 @@ export function Banner({
     return (
         <div {...otherProps} className={rootClassName}>
             <Modal {...modalProps} className={modalClassName} onClose={onClose} open={open}>
-                <Slide {...slideProps} appear={isMounted.current} direction="down" in={open}>
+                <Slide {...slideProps} appear={isMounted} direction="down" in={open}>
                     <div {...paperProps} className={paperClassName} style={{ backgroundColor: color }}>
                         {React.Children.map(children, (child) =>
                             alterElement(child, { className: "ds-c-banner__child" })

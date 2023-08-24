@@ -295,9 +295,9 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Inp
                 newValue = Math.min(newValue, max);
             }
 
-            const newEvent = patchFormEventValue(event, inputRef.current, newValue);
+            const newEvent = patchFormEventValue(event, inputRef.current!, newValue);
 
-            onChange?.(newEvent);
+            onChange?.(newEvent as unknown as React.ChangeEvent<HTMLInputElement>);
             inputRef.current?.focus();
         };
 
@@ -307,9 +307,9 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(function Inp
                 newValue = Math.max(newValue, min);
             }
 
-            const newEvent = patchFormEventValue(event, inputRef.current, newValue);
+            const newEvent = patchFormEventValue(event, inputRef.current!, newValue);
 
-            onChange?.(newEvent);
+            onChange?.(newEvent as unknown as React.ChangeEvent<HTMLInputElement>);
             inputRef.current?.focus();
         };
 

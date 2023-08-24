@@ -71,7 +71,7 @@ export function Tabs({
 
         let tabMeta;
         if (tabsNode && currentValue) {
-            const { children } = tabsListRef.current;
+            const { children } = tabsListRef.current!;
 
             if (children && children.length > 0) {
                 const tab = children[valueToIndex[currentValue]];
@@ -158,8 +158,8 @@ export function Tabs({
 
         const selected = childValue === currentValue;
 
-        return React.cloneElement(child, {
-            indicator: selected && !isMounted.current ? indicator : undefined,
+        return React.cloneElement<any>(child, {
+            indicator: selected && !isMounted ? indicator : undefined,
             key: childValue,
             onChange,
             selected,
@@ -173,7 +173,7 @@ export function Tabs({
                 <div className="ds-c-tabs__list-container" ref={tabsListRef}>
                     {children}
                 </div>
-                {isMounted.current && indicator}
+                {isMounted && indicator}
             </div>
         </div>
     );

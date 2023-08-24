@@ -68,7 +68,7 @@ export interface AutocompleteProps {
     /**
      * Resolver for labels
      */
-    labelResolver: (value: number | string | undefined) => Promise<FieldOption>;
+    labelResolver?: (value: number | string | undefined) => Promise<FieldOption>;
     /**
      * Additional className for List
      */
@@ -132,7 +132,7 @@ export interface AutocompleteProps {
     /**
      * Value
      */
-    value: number | string | undefined;
+    value?: number | string | undefined;
 }
 
 export const Autocomplete = React.forwardRef<HTMLInputElement, AutocompleteProps>(function Autocomplete(
@@ -173,11 +173,7 @@ export const Autocomplete = React.forwardRef<HTMLInputElement, AutocompleteProps
     const rootClassName = clsx("ds-c-autocomplete", className);
 
     const inputClassName = clsx("ds-c-autocomplete__input", inputClassNameProp);
-    const dropdownClassName = clsx(
-        "ds-c-autocomplete__dropdown",
-        dropdownClassNameProp,
-        dropdownProps?.className
-    );
+    const dropdownClassName = clsx("ds-c-autocomplete__dropdown", dropdownClassNameProp, dropdownProps?.className);
     const listClassName = clsx("ds-c-autocomplete__list", listClassNameProp);
     const listItemClassName = clsx("ds-c-autocomplete__list-item", listItemClassNameProp);
 
@@ -193,7 +189,7 @@ export const Autocomplete = React.forwardRef<HTMLInputElement, AutocompleteProps
         (event) => {
             // If we begin to tap again we reset previously selected option
             if (valueProp !== undefined && valueProp !== "") {
-                const newEvent = patchFormEventValue(event, inputRef.current, undefined);
+                const newEvent = patchFormEventValue(event, inputRef.current!, undefined);
 
                 setSearchValue("");
                 onChange(newEvent);
@@ -227,7 +223,7 @@ export const Autocomplete = React.forwardRef<HTMLInputElement, AutocompleteProps
 
     const handleOptionSelect = useCallback(
         (event, optionValue) => {
-            const newEvent = patchFormEventValue(event, inputRef.current, optionValue);
+            const newEvent = patchFormEventValue(event, inputRef.current!, optionValue);
 
             setOpen(false);
             onChange(newEvent);
@@ -236,8 +232,8 @@ export const Autocomplete = React.forwardRef<HTMLInputElement, AutocompleteProps
     );
 
     useEffect(() => {
-        if (valueProp) {
-            labelResolver(valueProp).then((newValue) => setValue(newValue.label));
+        if (valueProp && labelResolver) {
+            labelResolver(valueProp).then((newValue) => setValue(newValue.label ?? ""));
         } else {
             setValue("");
         }

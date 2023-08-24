@@ -221,5 +221,3 @@ export function Field<T extends FieldTypes = "text">({
 
     return <FieldComponent {...fieldProps} />;
 }
-
-Field.propTypes = {};

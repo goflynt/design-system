@@ -1,35 +1,48 @@
 // Libs
 import clsx from "clsx";
-import PropTypes from "prop-types";
 import React from "react";
 
-export const PAGE_CONTENT_TYPES = {
-    centered: "centered",
-    default: "default",
-    flex: "flex",
-    withPanel: "withPanel",
-};
+export type PageContentTypes = "centered" | "default" | "flex" | "withPanel";
+
+export interface PageContentProps extends React.PropsWithChildren<unknown> {
+    /**
+     * If is full height
+     */
+    fullHeight?: boolean;
+    /**
+     * Additional className
+     */
+    className?: string;
+    /**
+     * If is full width
+     */
+    fullWidth?: boolean;
+    /**
+     * Type of page layout
+     */
+    type?: PageContentTypes;
+}
 
 export function PageContent({
     children,
     className,
     fullHeight = false,
     fullWidth = false,
-    type = PAGE_CONTENT_TYPES.default,
-}) {
+    type = "default",
+}: PageContentProps) {
     const rootClassName = clsx(
         "ds-c-page-content",
         {
-            "ds-c-page-content--centered": type === PAGE_CONTENT_TYPES.centered,
-            "ds-c-page-content--flex": type === PAGE_CONTENT_TYPES.flex,
+            "ds-c-page-content--centered": type === "centered",
+            "ds-c-page-content--flex": type === "flex",
             "ds-c-page-content--full-height": fullHeight,
             "ds-c-page-content--full-width": fullWidth,
-            "ds-c-page-content--with-panel": type === PAGE_CONTENT_TYPES.withPanel,
+            "ds-c-page-content--with-panel": type === "withPanel",
         },
         className
     );
 
-    if (type === PAGE_CONTENT_TYPES.withPanel) {
+    if (type === "withPanel") {
         const childrenArray = React.Children.toArray(children);
 
         return (
@@ -42,26 +55,3 @@ export function PageContent({
 
     return <div className={rootClassName}>{children}</div>;
 }
-
-PageContent.propTypes = {
-    /**
-     * Children to display
-     */
-    children: PropTypes.node,
-    /**
-     * If is full height
-     */
-    fullHeight: PropTypes.bool,
-    /**
-     * Additional className
-     */
-    className: PropTypes.string,
-    /**
-     * If is full width
-     */
-    fullWidth: PropTypes.bool,
-    /**
-     * Type of page layout
-     */
-    type: PropTypes.oneOf(Object.values(PAGE_CONTENT_TYPES)),
-};

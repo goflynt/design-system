@@ -50,7 +50,7 @@ export interface ButtonDropdown {
     /**
      * Anchor origin
      */
-    anchorOrigin: DropdownProps["anchorOrigin"];
+    anchorOrigin?: DropdownProps["anchorOrigin"];
     /**
      * Additional className
      */

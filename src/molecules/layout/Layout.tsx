@@ -1,11 +1,25 @@
 // Libs
 import clsx from "clsx";
-import PropTypes from "prop-types";
 
 // Utils
 import { alterElement } from "../../core/utils";
 
-export function Layout({ children, className, header, menu }) {
+export interface LayoutProps extends React.PropsWithChildren<unknown> {
+    /**
+     * Additional className
+     */
+    className?: string;
+    /**
+     * Header to display
+     */
+    header: React.ReactNode;
+    /**
+     * Menu to display
+     */
+    menu: React.ReactNode;
+}
+
+export function Layout({ children, className, header, menu }: LayoutProps) {
     const rootClassName = clsx("ds-c-layout", className);
 
     return (
@@ -16,18 +30,3 @@ export function Layout({ children, className, header, menu }) {
         </div>
     );
 }
-
-Layout.propTypes = {
-    /**
-     * Page to display
-     */
-    children: PropTypes.node,
-    /**
-     * Header to display
-     */
-    header: PropTypes.node,
-    /**
-     * Menu to display
-     */
-    menu: PropTypes.node,
-};

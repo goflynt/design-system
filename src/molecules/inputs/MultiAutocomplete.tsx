@@ -65,10 +65,6 @@ export interface MultiAutocompleteProps {
      */
     icon?: Icons;
     /**
-     * Icon if focused
-     */
-    iconFocus?: Icons;
-    /**
      * Identifier
      */
     id?: string;
@@ -170,7 +166,6 @@ export function MultiAutocomplete({
     dropdownProps,
     hasError,
     icon = "enter",
-    iconFocus = "close",
     id,
     inputClassName: inputClassNameProp,
     inputProps,
@@ -226,7 +221,7 @@ export function MultiAutocomplete({
         (event, optionValue) => {
             const newEvent = patchFormEventValue(
                 event,
-                autocompleteRef.current,
+                autocompleteRef.current!,
                 value.filter((v) => v !== optionValue)
             );
 
@@ -261,7 +256,6 @@ export function MultiAutocomplete({
                 dropdownProps={dropdownProps}
                 hasError={hasError}
                 icon={icon}
-                iconFocus={iconFocus}
                 id={id}
                 inputClassName={inputClassName}
                 inputProps={inputProps}

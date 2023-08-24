@@ -1,21 +1,56 @@
 // Libs
 import clsx from "clsx";
-import PropTypes from "prop-types";
 import React from "react";
 
 // Utils
 
 // Components
-import { BUTTON_TYPES, Button, ButtonIcon } from "../buttons";
-import { List } from "../lists";
-import { ButtonDropdown } from "../modals";
+import { Button, ButtonIcon, ButtonIconProps, ButtonTypes } from "../buttons";
+import { Icons } from "../icons";
+import { ListItemProps, ListProps } from "../lists";
+import { ButtonDropdown, DropdownProps } from "../modals";
 
-function renderAction(actionButtonClassName, actionButtonProps, actionProp) {
+interface HeaderAction {
+    /**
+     * Click handler
+     */
+    action: () => void;
+    /**
+     * Type of button
+     */
+    buttonType: "standard" | "icon";
+    /**
+     * If is disabled
+     */
+    disabled?: boolean;
+    /**
+     * Icon for action
+     */
+    icon?: Icons;
+    /**
+     * Key for react
+     */
+    key: string;
+    /**
+     * Label for action
+     */
+    label?: string;
+    /**
+     * Type of button
+     */
+    type?: ButtonTypes;
+}
+
+function renderAction(
+    actionButtonClassName: string,
+    actionButtonProps: ListItemProps | undefined,
+    actionProp: HeaderAction
+) {
     if (React.isValidElement(actionProp)) {
         return actionProp;
     }
 
-    const { action, buttonType = "standard", key, label, type = BUTTON_TYPES.SECONDARY, ...otherProps } = actionProp;
+    const { action, buttonType = "standard", key, label, type = "secondary", ...otherProps } = actionProp;
     const ButtonComponent = buttonType === "icon" ? ButtonIcon : Button;
 
     return (
@@ -32,6 +67,53 @@ function renderAction(actionButtonClassName, actionButtonProps, actionProp) {
     );
 }
 
+export interface HeaderProps extends React.PropsWithChildren<unknown> {
+    /**
+     * Actions to display
+     */
+    actions: HeaderAction[];
+    /**
+     * Additional className for action buttons
+     */
+    actionButtonClassName?: string;
+    /**
+     * Additional props for action buttons
+     */
+    actionButtonProps?: ListItemProps;
+    /**
+     * Additional className
+     */
+    className?: string;
+    /**
+     * Additional className for Dropdown
+     */
+    dropdownClassName?: string;
+    /**
+     * Additional props for Dropdown
+     */
+    dropdownProps?: DropdownProps;
+    /**
+     * Additional className for List
+     */
+    listClassName?: string;
+    /**
+     * Additional prop for List
+     */
+    listProps?: ListProps;
+    /**
+     * Additional className for MoreButton
+     */
+    moreButtonClassName?: string;
+    /**
+     * Additional props for MoreButton
+     */
+    moreButtonProps?: ButtonIconProps;
+    /**
+     * Additional tabs
+     */
+    tabs?: React.ReactNode;
+}
+
 export function Header({
     actions = [],
     actionButtonClassName: actionButtonClassNameProp,
@@ -46,7 +128,7 @@ export function Header({
     moreButtonProps,
     tabs,
     ...otherProps
-}) {
+}: HeaderProps) {
     const actionButtonClassName = clsx("ds-c-header__action-button", actionButtonClassNameProp);
     const dropdownClassName = clsx("ds-c-header__dropdown", dropdownClassNameProp);
     const listClassName = clsx("ds-c-header__list", listClassNameProp);
@@ -84,84 +166,3 @@ export function Header({
         </div>
     );
 }
-
-Header.propTypes = {
-    /**
-     * Actions to display
-     */
-    actions: PropTypes.arrayOf(
-        PropTypes.oneOfType([
-            PropTypes.node,
-            PropTypes.shape({
-                /**
-                 * Click handler
-                 */
-                action: PropTypes.func,
-                /**
-                 * Type of button
-                 */
-                buttonType: PropTypes.oneOf(["standard", "icon"]),
-                /**
-                 * If is disabled
-                 */
-                disabled: PropTypes.bool,
-                /**
-                 * Icon for action
-                 */
-                icon: PropTypes.string,
-                /**
-                 * Key for react
-                 */
-                key: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-                /**
-                 * Label for action
-                 */
-                label: PropTypes.string,
-                /**
-                 * Type of button
-                 */
-                type: PropTypes.oneOf(Object.values(BUTTON_TYPES)),
-            }),
-        ])
-    ),
-    /**
-     * Additional className for action buttons
-     */
-    actionButtonClassName: PropTypes.string,
-    /**
-     * Additional props for action buttons
-     */
-    actionButtonProps: PropTypes.shape(Button.propTypes),
-    /**
-     * Children (left part)
-     */
-    children: PropTypes.node,
-    /**
-     * Additional className
-     */
-    className: PropTypes.string,
-    /**
-     * Additional className for Dropdown
-     */
-    dropdownClassName: PropTypes.string,
-    /**
-     * Additional props for Dropdown
-     */
-    // dropdownProps: PropTypes.shape(Dropdown.propTypes), It makes it crash...
-    /**
-     * Additional className for List
-     */
-    listClassName: PropTypes.string,
-    /**
-     * Additional prop for List
-     */
-    listProps: PropTypes.shape(List.propTypes),
-    /**
-     * Additional className for MoreButton
-     */
-    moreButtonClassName: PropTypes.string,
-    /**
-     * Additional props for MoreButton
-     */
-    moreButtonProps: PropTypes.shape(ButtonIcon.propTypes),
-};

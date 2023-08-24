@@ -1,25 +1,67 @@
 // Libs
 import clsx from "clsx";
-import PropTypes from "prop-types";
 
 // Components
-import { ICON_POSITION, ICON_SIZE, Icon, IconWrapper } from "../icons";
-import { Tooltip } from "./Tooltip";
+import { Icon, IconPosition, IconProps, IconSize, IconWrapper, Icons } from "../icons";
+import { Tooltip, TooltipProps } from "./Tooltip";
+
+export interface IconTooltipProps extends React.PropsWithChildren<unknown> {
+    /**
+     * Additional className
+     */
+    className?: string;
+    /**
+     * Tooltip icon
+     */
+    icon?: Icons;
+    /**
+     * Additional Icon className
+     */
+    iconClassName?: string;
+    /**
+     * Icon position
+     */
+    iconPosition?: IconPosition;
+    /**
+     * Additional iconProps
+     */
+    iconProps?: IconProps;
+    /**
+     * Icon size
+     */
+    iconSize?: IconSize;
+    /**
+     * Tooltip
+     */
+    tooltip?: React.ReactNode;
+    /**
+     * Additional Tooltip className
+     */
+    tooltipClassName?: string;
+    /**
+     * Additional Tooltip props
+     */
+    tooltipProps?: TooltipProps;
+    /**
+     * Tooltip title
+     */
+    tooltipTitle?: React.ReactNode;
+}
 
 export function IconTooltip({
     children,
     className,
     icon = "question-circle",
     iconClassName = "ds-u-text--secondary",
-    iconPosition = ICON_POSITION.RIGHT,
+    iconPosition = "right",
     iconProps,
-    iconSize = ICON_SIZE.S,
+    iconSize = "s",
     tooltip,
     tooltipClassName,
     tooltipProps,
     tooltipTitle,
     ...otherProps
-}) {
+}: IconTooltipProps) {
     const rootClassName = clsx("ds-c-icon-tooltip", className);
 
     return (
@@ -40,50 +82,3 @@ export function IconTooltip({
         </IconWrapper>
     );
 }
-
-IconTooltip.propTypes = {
-    /**
-     * Children to display
-     */
-    children: PropTypes.node,
-    /**
-     * Additional className
-     */
-    className: PropTypes.string,
-    /**
-     * Tooltip icon
-     */
-    icon: PropTypes.string,
-    /**
-     * Additional Icon className
-     */
-    iconClassName: PropTypes.string,
-    /**
-     * Icon position
-     */
-    iconPosition: IconWrapper.propTypes.position,
-    /**
-     * Additional iconProps
-     */
-    iconProps: PropTypes.shape(Icon.propTypes),
-    /**
-     * Icon size
-     */
-    iconSize: IconWrapper.propTypes.size,
-    /**
-     * Tooltip
-     */
-    tooltip: PropTypes.node,
-    /**
-     * Additional Tooltip className
-     */
-    tooltipClassName: PropTypes.string,
-    /**
-     * Additional Tooltip props
-     */
-    tooltipProps: PropTypes.shape(Tooltip.propTypes),
-    /**
-     * Tooltip title
-     */
-    tooltipTitle: PropTypes.node,
-};

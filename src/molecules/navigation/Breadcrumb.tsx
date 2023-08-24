@@ -62,7 +62,7 @@ export function Breadcrumb({
     );
     const iconClassName = clsx("ds-c-breadcrumb__icon", iconClassNameProp);
 
-    const ContainerComponent = !to || active ? "div" : Link;
+    const ContainerComponent: any = !to || active ? "div" : Link;
 
     return (
         <ContainerComponent {...otherProps} className={rootClassName} to={to}>
