@@ -2,10 +2,10 @@
 import React from "react";
 
 // Components
-import { ThemeProvider } from "../../src/core/ThemeContext";
+import { Theme, ThemeProvider } from "../../src/core/ThemeContext";
 
-function themeContainerBuilder(lightColor, darkColor, negMargin) {
-    return function ThemeContainer({ theme = "light", children }) {
+function themeContainerBuilder(lightColor: string, darkColor: string, negMargin: boolean) {
+    return function ThemeContainer({ theme = "light", children }: React.PropsWithChildren<{ theme?: Theme }>) {
         return (
             <ThemeProvider
                 theme={theme}

@@ -1,21 +1,14 @@
 // Libs
 import React, { useState } from "react";
 
-// Utils
-import { enumArgs } from "../../../../.storybook/utils/args";
-
 // Components
 import { Field } from "../Field";
 import { Switch, SwitchField } from "../Switch";
-import { CONTROL_LABEL_POSITION } from "../ControlLabel";
 
 export default {
     title: "Design System/Molecules/Inputs/Switch",
     component: Switch,
     subcomponents: { Field },
-    argTypes: {
-        labelPosition: enumArgs(CONTROL_LABEL_POSITION, CONTROL_LABEL_POSITION.RIGHT, "select"),
-    },
     parameters: {
         docs: {
             description: {

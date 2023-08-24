@@ -24,7 +24,7 @@ export interface CardContainerProps extends React.PropsWithChildren<unknown> {
     /**
      * Orientation for container
      */
-    orientation: CardContainerOrientation;
+    orientation?: CardContainerOrientation;
 }
 
 export const CardContainer = React.forwardRef<HTMLDivElement, CardContainerProps>(function CardContainer(

@@ -1,9 +1,6 @@
 // Libs
 import React from "react";
 
-// Utils
-import { iconEnumArg } from "../../../../.storybook/utils/args";
-
 // Component
 import { IconWrapper } from "../IconWrapper";
 
@@ -13,9 +10,6 @@ export default {
     args: {
         icon: "globe",
         children: "I am wrapped with a fabulous icon",
-    },
-    argTypes: {
-        icon: iconEnumArg,
     },
     parameters: {
         docs: {

@@ -1,12 +1,11 @@
 // Libs
-import React from "react";
 
 // Components
 import { SepiaThemeDecorator } from "../../../../.storybook/utils/Decorators";
 import { Button } from "../../buttons";
 import { Card } from "../Card";
 import { CardActions } from "../CardActions";
-import { CardContainer, CARD_CONTAINER_ORIENTATION } from "../CardContainer";
+import { CardContainer } from "../CardContainer";
 import { CardContent } from "../CardContent";
 import { CardSeparator } from "../CardSeparator";
 import { CardTitle } from "../CardTitle";
@@ -18,7 +17,6 @@ export default {
     args: {
         onClick: undefined,
     },
-    argTypes: {},
     parameters: {
         docs: {
             description: {
@@ -115,13 +113,13 @@ export function CardContainerStory() {
                     <CardSeparator />
                     <CardContent>I&apos;m 2nd content</CardContent>
                 </Card>
-                <CardContainer orientation={CARD_CONTAINER_ORIENTATION.HORIZONTAL}>
+                <CardContainer orientation="horizontal">
                     <Card>
                         <CardTitle>Card 3</CardTitle>
                         <CardSeparator />
                         <CardContent>I&apos;m 3rd content</CardContent>
                     </Card>
-                    <CardContainer orientation={CARD_CONTAINER_ORIENTATION.VERTICAL}>
+                    <CardContainer orientation="vertical">
                         <Card>
                             <CardTitle>Card 4</CardTitle>
                             <CardSeparator />

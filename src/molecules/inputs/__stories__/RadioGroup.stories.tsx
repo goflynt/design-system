@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 
 // Components
-import { RadioGroup, RADIO_GROUP_TYPE } from "../RadioGroup";
+import { RadioGroup } from "../RadioGroup";
 
 export default {
     title: "Design System/Molecules/Inputs/RadioGroup",
@@ -67,7 +67,7 @@ export const RadioGroupCard = Template.bind({});
 RadioGroupCard.args = {
     id: Math.random(),
     name: Math.random().toString(),
-    type: RADIO_GROUP_TYPE.CARD,
+    type: "card",
     options: [
         {
             primary: "Yes, send me IMMEDIATELY a unicorn through the mail",

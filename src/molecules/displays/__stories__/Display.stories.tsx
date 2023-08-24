@@ -1,8 +1,7 @@
 // Libs
-import React from "react";
 
 // Components
-import { Display, DISPLAY_TYPES } from "../Display";
+import { Display } from "../Display";
 import { DisplayContainer } from "../DisplayContainer";
 
 export default {
@@ -40,11 +39,11 @@ export function Orientation() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "120px" }}>
             <div>
                 <h2>Horizontal display</h2>
-                <Display label="Product" value="Unicorn" type={DISPLAY_TYPES.ROW} />
+                <Display label="Product" value="Unicorn" type="row" />
             </div>
             <div>
                 <h2>Vertical display</h2>
-                <Display label="Product" value="Unicorn" type={DISPLAY_TYPES.COLUMN} />
+                <Display label="Product" value="Unicorn" type="column" />
             </div>
         </div>
     );
@@ -68,11 +67,11 @@ export function Icons() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "120px" }}>
             <div>
                 <h2>Horizontal display</h2>
-                <Display label="Product" value="Unicorn" type={DISPLAY_TYPES.ROW} icon="globe" />
+                <Display label="Product" value="Unicorn" type="row" icon="globe" />
             </div>
             <div>
                 <h2>Vertical display</h2>
-                <Display label="Product" value="Unicorn" type={DISPLAY_TYPES.COLUMN} icon="globe" />
+                <Display label="Product" value="Unicorn" type="column" icon="globe" />
             </div>
         </div>
     );
@@ -108,7 +107,7 @@ export function DisplayContainerStory() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "120px" }}>
             <div>
                 <h2>Vertical displays</h2>
-                <DisplayContainer displayType={DISPLAY_TYPES.COLUMN}>
+                <DisplayContainer displayType="column">
                     <Display label="Product" value="Zebra" />
                     <Display label="Product" value="Giraffe" />
                     <Display label="Product" value="Lion" />
@@ -116,7 +115,7 @@ export function DisplayContainerStory() {
             </div>
             <div>
                 <h2>Horizontal displays</h2>
-                <DisplayContainer displayType={DISPLAY_TYPES.ROW}>
+                <DisplayContainer displayType="row">
                     <Display label="Product" value="Bear" />
                     <Display label="Product" value="Bear cub" />
                     <Display label="Product" value="Otter" />

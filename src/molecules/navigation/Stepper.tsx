@@ -83,7 +83,7 @@ export function Stepper({
     ...otherProps
 }: StepperProps) {
     const rootClassName = clsx("ds-c-stepper", className);
-    const { translate } = useTranslation(translationKey);
+    const { t } = useTranslation(translationKey);
 
     const childrenArray = React.Children.toArray(children);
     const steps = childrenArray.map((step, index) => {
@@ -105,7 +105,7 @@ export function Stepper({
                     onClick={() => onStepChange(contextValue.activeStep - 1)}
                     disabled={disabledPreviousButton ?? contextValue.activeStep === 0}
                 >
-                    {translate(previousLabel)}
+                    {t(previousLabel)}
                 </Button>
                 {steps}
                 {contextValue.activeStep < childrenArray.length - 1 &&
@@ -116,13 +116,13 @@ export function Stepper({
                             onClick={() => onStepChange(contextValue.activeStep + 1)}
                             disabled={disabledNextButton}
                         >
-                            {translate(nextLabel)}
+                            {t(nextLabel)}
                         </Button>
                     ))}
                 {contextValue.activeStep === childrenArray.length - 1 &&
                     (validateButton ?? (
                         <Button icon="check" onClick={onValidate} disabled={disabledValidateButton}>
-                            {translate(validateLabel)}
+                            {t(validateLabel)}
                         </Button>
                     ))}
             </div>

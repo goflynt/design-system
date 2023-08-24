@@ -1,7 +1,7 @@
 import { isEmpty } from "lodash";
 
 export function getCSSVariable(variableName: string, element = document.body) {
-    if (isEmpty(variableName) || !variableName.startsWith("--thc")) {
+    if (isEmpty(variableName) || !variableName.startsWith("--ds")) {
         throw new Error("You have to give a valid css variable name like: --ds-a-css-variable");
     }
 
@@ -9,7 +9,7 @@ export function getCSSVariable(variableName: string, element = document.body) {
 }
 
 export function setCSSVariable(variableName: string, value: string | null, element = document.body) {
-    if (isEmpty(variableName) || !variableName.startsWith("--thc")) {
+    if (isEmpty(variableName) || !variableName.startsWith("--ds")) {
         throw new Error("You have to give a valid css variable name like: --ds-a-css-variable");
     }
 

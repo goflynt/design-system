@@ -1,5 +1,4 @@
 /* Libs */
-@import "~react-toastify/dist/ReactToastify.css";
 @import "~react-dates/lib/css/_datepicker.css";
 
 /* Resets */
@@ -45,9 +44,7 @@
 @import "./molecules/tables/index.css";
 
 /* Organisms */
-@import "./organisms/filters/index.css";
 @import "./organisms/forms/index.css";
-@import "./organisms/modals/index.css";
 
 /* Atoms - Utils */
 @import "./atoms/icon.atoms.css";

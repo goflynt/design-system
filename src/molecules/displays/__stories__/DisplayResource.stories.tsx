@@ -1,11 +1,8 @@
 // Libs
-import React from "react";
-
-// Utils
-import { iconEnumArg } from "../../../../.storybook/utils/args";
 
 // Components
-import { DisplayResource, DISPLAY_RESOURCE_STATUS } from "../DisplayResource";
+import { Icons } from "../../icons";
+import { DisplayResource, DisplayResourceStatus } from "../DisplayResource";
 
 export default {
     title: "Design System/Molecules/Displays/DisplayResource",
@@ -13,9 +10,6 @@ export default {
     args: {
         label: "I'm label for that display",
         helper: "I'm helper for that display",
-    },
-    argTypes: {
-        icon: iconEnumArg,
     },
     parameters: {
         docs: {
@@ -38,7 +32,7 @@ const Template = (args) => <DisplayResource {...args} />;
 
 export const Primary = Template.bind({});
 
-const VARIATION_ICONS = {
+const VARIATION_ICONS: Record<DisplayResourceStatus, Icons> = {
     info: "info",
     success: "success",
     warning: "warning",
@@ -46,7 +40,14 @@ const VARIATION_ICONS = {
 };
 
 export function Variations() {
-    const CustomDisplayResource = ({ status, disabled, ...otherProps }) => (
+    const CustomDisplayResource = ({
+        status = "info",
+        disabled,
+        ...otherProps
+    }: {
+        status?: DisplayResourceStatus;
+        disabled?: boolean;
+    }) => (
         <Template
             {...otherProps}
             status={status}
@@ -61,8 +62,8 @@ export function Variations() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px" }}>
             <CustomDisplayResource />
             <CustomDisplayResource disabled />
-            {Object.values(DISPLAY_RESOURCE_STATUS).map((status) => (
-                <CustomDisplayResource status={status} />
+            {Object.values(Object.keys(VARIATION_ICONS)).map((status) => (
+                <CustomDisplayResource key={status} status={status as DisplayResourceStatus} />
             ))}
         </div>
     );

@@ -1,12 +1,9 @@
 // Libs
-import React, { useState } from "react";
-
-// Infrastructure
-import { enumArgs, iconEnumArg } from "../../../../.storybook/utils/args";
+import { useState } from "react";
 
 // Components
 import { Button } from "../../buttons";
-import { Chip, CHIP_ICON_SIZE, CHIP_ICON_POSITION } from "../Chip";
+import { Chip } from "../Chip";
 import { ChipAction } from "../ChipAction";
 import { ChipContainer } from "../ChipContainer";
 
@@ -15,13 +12,10 @@ export default {
     component: Chip,
     args: {
         label: "Label",
-        iconSize: CHIP_ICON_SIZE.XS,
-        iconPosition: CHIP_ICON_POSITION.RIGHT,
+        iconSize: "xs",
+        iconPosition: "right",
     },
     argTypes: {
-        icon: iconEnumArg,
-        iconSize: enumArgs(CHIP_ICON_SIZE, CHIP_ICON_SIZE.XS),
-        iconPosition: enumArgs(CHIP_ICON_POSITION, CHIP_ICON_POSITION.RIGHT),
         color: {
             control: {
                 type: "color",

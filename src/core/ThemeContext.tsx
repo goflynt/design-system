@@ -1,6 +1,7 @@
 // Libs
 import clsx from "clsx";
 import React, { useContext } from "react";
+import { DivProps } from "./utils";
 
 export type Theme = "light" | "dark" | "color";
 
@@ -20,7 +21,7 @@ export function useTheme() {
     return useContext(ThemeContext);
 }
 
-export interface ThemeProviderProps extends React.PropsWithChildren<unknown> {
+export interface ThemeProviderProps extends React.PropsWithChildren<DivProps> {
     /**
      * Additional className for Theme
      */

@@ -6,7 +6,7 @@ import React from "react";
 import { alterElement, wrapKeyUp, wrapLabel, wrapPrevent } from "../../core/utils";
 
 // Components
-import { Icon, IconPosition, IconProps, IconWrapper, IconWrapperProps } from "../icons";
+import { Icon, IconPosition, IconProps, IconWrapper, IconWrapperProps, Icons } from "../icons";
 import { Tooltip } from "../modals";
 
 export type DisplayType = "row" | "column";
@@ -40,7 +40,7 @@ export interface DisplayProps extends React.PropsWithChildren<unknown> {
     /**
      * Icon component
      */
-    icon: IconWrapperProps["icon"];
+    icon?: Icons;
     /**
      * Additional className for icon
      */

@@ -68,7 +68,7 @@ export function Banner({
 
     const isMounted = useIsMounted();
 
-    const color = colorProp.startsWith("--thc") ? getCSSVariable(colorProp) : colorProp;
+    const color = colorProp.startsWith("--ds") ? getCSSVariable(colorProp) : colorProp;
 
     return (
         <div {...otherProps} className={rootClassName}>

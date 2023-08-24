@@ -1,12 +1,7 @@
 // Libs
-import React from "react";
-
-// Infrastructure
-import { enumArgs, iconEnumArg } from "../../../../.storybook/utils/args";
 
 // Components
-import { Button, BUTTON_ICON_SIZE, BUTTON_ICON_POSITION } from "../Button";
-import { ButtonAngle } from "../ButtonAngle";
+import { Button } from "../Button";
 import { ButtonIcon } from "../ButtonIcon";
 
 export default {
@@ -14,13 +9,8 @@ export default {
     component: Button,
     args: {
         label: "Button",
-        iconSize: BUTTON_ICON_SIZE.M,
-        iconPosition: BUTTON_ICON_POSITION.LEFT,
-    },
-    argTypes: {
-        icon: iconEnumArg,
-        iconSize: enumArgs(BUTTON_ICON_SIZE, BUTTON_ICON_SIZE.M),
-        iconPosition: enumArgs(BUTTON_ICON_POSITION, BUTTON_ICON_POSITION.LEFT),
+        iconSize: "m",
+        iconPosition: "left",
     },
     parameters: {
         docs: {
@@ -98,37 +88,6 @@ WithIcon.parameters = {
     docs: {
         description: {
             story: "Button can be decorated with an Icon before or after the label",
-        },
-    },
-};
-
-export function AngleButtons() {
-    return (
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 4fr)", gap: "10px " }}>
-            <div />
-            <div>Primary</div>
-            <div>Secondary</div>
-            <div>Caution</div>
-            <div>Enabled</div>
-            <ButtonAngle type="primary" icon="close" />
-            <ButtonAngle type="secondary" icon="close" />
-            <ButtonAngle type="caution" icon="close" />
-            <div>Disabled</div>
-            <ButtonAngle disabled type="primary" icon="close" />
-            <ButtonAngle disabled type="secondary" icon="close" />
-            <ButtonAngle disabled type="caution" icon="close" />
-        </div>
-    );
-}
-AngleButtons.parameters = {
-    controls: { disabled: true },
-    docs: {
-        description: {
-            story: `
-\`\`\`js
-import { ButtonAngle } from "./components/molecules/buttons"
-\`\`\`
-`,
         },
     },
 };

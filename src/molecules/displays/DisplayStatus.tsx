@@ -48,8 +48,8 @@ export function DisplayStatus({
     translationKey,
     ...otherProps
 }: DisplayStatusProps) {
-    const { translate: translateDisplay } = useTranslation(translationKey ?? DESIGN_SYSTEM_DISPLAY_TK);
-    const { translate: translateCommon } = useTranslation(translationKey ?? DESIGN_SYSTEM_COMMON_TK);
+    const { t: translateDisplay } = useTranslation(translationKey ?? DESIGN_SYSTEM_DISPLAY_TK);
+    const { t: translateCommon } = useTranslation(translationKey ?? DESIGN_SYSTEM_COMMON_TK);
 
     const rootClassName = clsx(
         "ds-c-display-status",

@@ -97,7 +97,7 @@ export function Chip({
     const iconClassName = clsx("ds-c-chip__icon", iconClassNameProp);
 
     let color = (disabled || type === "outlined" ? undefined : colorProp) ?? undefined;
-    if (color && color.startsWith("--thc")) {
+    if (color && color.startsWith("--ds")) {
         color = getCSSVariable(color);
     }
 
